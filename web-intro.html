@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Building Your First Website: An Introduction to HTML and CSS &mdash; test 2014.09.07 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2014.09.07',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    <link rel="top" title="test 2014.09.07 documentation" href="index.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  <article class="slide level-1" id="building-your-first-website-an-introduction-to-html-and-css">
+<h1>Building Your First Website: An Introduction to HTML and CSS</h1>
+
+</article>
+<article class="slide level-2" id="what-is-html">
+<h2>What is HTML?</h2>
+<ul class="simple">
+<li><strong>HTML</strong> or <strong>Hyper Text Markup Language</strong> is &quot;a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages&quot; ~Google</li>
+<li>Basically, it's used to create the layout of your webpage out of fundamental building blocks.  HTML is the skeleton of your page.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can think of this like the floor plans to a house--where do all the rooms go?  How big are they?  What are their functions?</p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_static/img/1_12_.jpg"><img alt="_static/img/1_12_.jpg" src="_static/img/1_12_.jpg" /></a>
+</div>
+
+</article>
+<article class="slide level-3" id="what-is-css">
+<h3>What is CSS?</h3>
+<ul class="simple">
+<li><strong>CSS</strong> or <strong>Cascading Style Sheets</strong> are &quot;a style sheet language used for describing the look and formatting of a document written in a markup language.&quot; ~Google</li>
+<li>CSS is the colors, fonts, alignments, and other aesthetic elements of your webpage.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">CSS is what gives your HTML structure it's unique beauty--it's the paint color, the shades, the carpet, and so on.</p>
+</div>
+
+</article>
+<article class="slide level-2" id="now-for-the-fun-part">
+<h2>Now for the fun part!</h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When an HTTP client (generally a Web browser) requests a URL that points to a directory structure instead of an actual Web page within the directory, the Web server will generally serve a general page, which is often referred to as a main or &quot;index&quot; page.  The traditional filename for such a page is index.html, but most modern HTTP servers offer a configurable list of filenames that the server can use as an index..</p>
+</div>
+
+</article>
+<article class="slide level-3" id="boiler-plate">
+<h3>Boiler Plate</h3>
+<p>There are a few tags that are essential to any HTML document</p>
+<div class="figure align-center">
+<img alt="_static/img/tags.png" src="_static/img/tags.png" />
+</div>
+
+</article>
+<article class="slide level-3" id="doctype">
+<h3>Doctype</h3>
+<p><strong>&lt;!DOCTYPE html&gt;</strong>  Declaring your document type will tell your browser which markup language you're using and allow it to parse everything correctly.  It's also case-sensitive!</p>
+
+</article>
+<article class="slide level-3" id="html-tag">
+<h3>HTML tag</h3>
+<p><strong>&lt;html&gt;</strong> The html tag signals the beginning of your webpage, and is the container for all other elements.  It's sometimes called the &quot;root element&quot;</p>
+
+</article>
+<article class="slide level-3" id="head-tag">
+<h3>Head tag</h3>
+<dl class="docutils">
+<dt><strong>&lt;head&gt;</strong> The head element is the container for all &quot;head&quot; elements. This provides metadata about your site such as the title, keywords, author, and links to any external pages.</dt>
+<dd><ul class="first last simple">
+<li>&lt;link type=&quot;text/css&quot; src=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;</li>
+<li>&lt;title&gt;Title of your site&lt;/title&gt;</li>
+<li>&lt;meta content=&quot;Content&quot; name=&quot;author OR keywords OR date, so on&quot;&gt;</li>
+</ul>
+</dd>
+</dl>
+
+</article>
+<article class="slide level-3" id="body-tag">
+<h3>Body tag</h3>
+<p><strong>&lt;body&gt;</strong> The body element marks the beginning of the structure of our webpage</p>
+
+</article>
+<article class="slide level-3" id="some-other-common-tags">
+<h3>Some Other common tags</h3>
+<ul class="simple">
+<li><em>&lt;div&gt;</em> Div's are the most common way to allocate a box for some use on your webpage.  Whether it's a menu, content, or any other part of your page, it's almost certainly wrapped in a div or two.</li>
+<li><em>&lt;span&gt;</em> Span's are used if you want to change a specific section of text.  ie. to make a sentence red, you'd use span.</li>
+<li><em>&lt;h1&gt;, &lt;h2&gt;...&lt;h6&gt;</em> Headers, ranging from largest to smallest by default (but this can be overriden).  There can only be one &lt;h1&gt; tag per page.</li>
+<li><em>&lt;p&gt;</em> Paragraph tag, defines a paragraph</li>
+<li><em>&lt;a&gt;</em> &quot;Anchor&quot; tag, defines a link to something--either a page within your site, an anchor on the page, or an external link.</li>
+</ul>
+
+</article>
+<article class="slide level-3" id="is-there-a-tag-for-x">
+<h3>Is there a tag for x?</h3>
+<p>Probably!  W3schools has a reference page that can answer that question: <a class="reference external" href="http://www.w3schools.com/tags/default.asp">http://www.w3schools.com/tags/default.asp</a></p>
+<p>On the topic of w3schools: <a class="reference external" href="http://www.w3fools.com/">http://www.w3fools.com/</a></p>
+
+</article>
+<article class="slide level-3" id="so-what-about-the-styles-css">
+<h3>So what about the &quot;styles.css&quot;?</h3>
+<ul class="simple">
+<li>Cascading style sheets use Ids, classes, or the elements themselves to style each element of a webpage.  Styles include adding colors, fonts, circles, and other pretty things to your page.</li>
+</ul>
+
+</article>
+<article class="slide level-3" id="stylesheets">
+<h3>Stylesheets</h3>
+<ul>
+<li><dl class="first docutils">
+<dt>CSS styles can be inserted any one of three ways:</dt>
+<dd><ul class="first last simple">
+<li>Inline</li>
+<li>Internal Stylesheet</li>
+<li>External Stylesheet</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">External Stylesheets are ideal for most projects because they give you control over multiple elements at a time, allow you to use the same styles in multiple pages on your site, and generally keep your files clean.</p>
+</li>
+</ul>
+
+</article>
+<article class="slide level-3" id="ids">
+<h3>Ids</h3>
+<p>If you only want to style one instance of something, use an id. For instance if you have a list, but want the first item to be in green, you would give that item an id.</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nf">#firstlistitem</span><span class="p">{</span>
+      <span class="k">color</span><span class="o">:</span> <span class="nb">green</span><span class="p">;</span>
+      <span class="k">font-size</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-3" id="classes">
+<h3>Classes</h3>
+<p>If you want to style multiple instances of that thing, you would give it a class.  For instance, if you wanted the first three items to be green, you'd give them all a class.</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nc">.myparagraphs</span><span class="p">{</span>
+      <span class="k">color</span><span class="o">:</span> <span class="nb">green</span><span class="p">;</span>
+      <span class="k">font-size</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-3" id="elements">
+<h3>Elements</h3>
+<p>If you want all instances of that thing to have the style, you can refer to it by element type.  For instance, we'd define all list items within a div to be green.</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nt">li</span><span class="p">{</span>
+      <span class="k">color</span><span class="o">:</span> <span class="nb">green</span><span class="p">;</span>
+      <span class="k">font-size</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-3" id="on-the-subject-of-colors">
+<h3>On the subject of colors</h3>
+<ul>
+<li><dl class="first docutils">
+<dt>There are a few ways to tell CSS what color you'd like to use:</dt>
+<dd><ul class="first simple">
+<li>Naming the color</li>
+<li>Using the first three numbers of the hex value</li>
+<li>Using the full hex value for more complex or specific colors</li>
+</ul>
+<p class="last"><a class="reference external" href="http://www.mathsisfun.com/hexadecimal-decimal-colors.html">http://www.mathsisfun.com/hexadecimal-decimal-colors.html</a></p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-css"><div class="highlight"><pre><span class="nf">#p</span><span class="p">{</span>
+        <span class="k">color</span><span class="o">:</span> <span class="nb">black</span><span class="p">;</span>
+        <span class="k">color</span><span class="o">:</span> <span class="m">#000</span><span class="p">;</span>
+        <span class="k">color</span><span class="o">:</span> <span class="m">#000001</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+</article>
+<article class="slide level-2" id="let-s-add-some-css-to-our-page">
+<h2>Let's add some CSS to our page!</h2>
+
+</article>
+<article class="slide level-3" id="html-and-css-resources">
+<h3>HTML and CSS resources</h3>
+<ul class="simple">
+<li><strong>Mozilla Developer Network</strong> <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML">https://developer.mozilla.org/en-US/docs/Web/HTML</a></li>
+<li><strong>Codecademy</strong> <a class="reference external" href="http://www.codecademy.com/tracks/web">http://www.codecademy.com/tracks/web</a></li>
+<li><strong>HTML.net</strong> <a class="reference external" href="http://html.net/">http://html.net/</a></li>
+<li><strong>A Beginner's Guide to HTML and CSS</strong>  <a class="reference external" href="http://learn.shayhowe.com/html-css/">http://learn.shayhowe.com/html-css/</a></li>
+</ul>
+<p>...And many more.  Google will know.</p>
+
+</article>
+
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>
