@@ -1,0 +1,10 @@
+#!/home/lucy/githubs/websites/slides/src/v/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'hieroglyph==0.6.5','console_scripts','hieroglyph-quickstart'
+__requires__ = 'hieroglyph==0.6.5'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('hieroglyph==0.6.5', 'console_scripts', 'hieroglyph-quickstart')()
+    )
