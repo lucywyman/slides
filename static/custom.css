@@ -1,4 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+img{
+    padding: 10px;
+}
+
 body{
     background: #92C7A3;
 }
