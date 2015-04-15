@@ -46,7 +46,7 @@ h1, h2{
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 3em;
-    height: 120px;
+    height: 100px;
     padding: 10px;
 }
 
@@ -70,7 +70,7 @@ h1, h2{
 
 .white ul li{
     display: block;
-    height: 120px;
+    height: 100px;
     padding: 10px;
 }
 
