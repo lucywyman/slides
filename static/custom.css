@@ -50,8 +50,8 @@ h1, h2{
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    font-size: 3em;
-    height: 80px;
+    font-size: 2.5em;
+    height: 70px;
     padding: 10px;
 }
 
@@ -75,7 +75,8 @@ h1, h2{
 
 .white ul li{
     display: block;
-    height: 80px;
+    height: 70px;
+    font-size: 2.5em;
     padding: 10px;
 }
 
@@ -84,7 +85,7 @@ h1, h2{
     color: #000;
     font-family: 'Open sans', sans-serif;
     font-weight: 600;
-    font-size: 3em;
+    font-size: 2.5em;
     line-height: .9em;
     vertical-align: bottom;
 } 
