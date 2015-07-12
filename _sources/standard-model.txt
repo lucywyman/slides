@@ -1,8 +1,11 @@
-Intoduction to the Standard Model: what it is and why it's awesome
-==================================================================
+Intoduction to the Standard Model
+=================================
 
 So what exactly is this thing?
 ------------------------------
+
+.. figure:: static/standard-model.png
+    :height: 500px
 
 Basically...
 ------------
@@ -102,6 +105,9 @@ Gauge Bosons
 
 * Bosons are also known as Force-carrying particles, and they are what "carry" the four fundamental forces.
 * This goes a little beyond what you might think though: photons, for instance are considered bosons.
+
+.. nextslide::
+
 * Bosons:
   	* Gluons: strong-force carrying particles.  These are the reason we're not all just a bunch of quarks floating around.  There's also 8 flavors of gluon.
 	* Photon: Carries electromagnetic radiation.  They're awesome cause they have wave-particle duality
@@ -120,9 +126,9 @@ Boson Properties
 How do these all come together?
 -------------------------------
 
-.. .. figure:: /_static/img/bosons-hadrons-fermions.png
+.. figure:: static/Bosons-Hadrons-Fermions.png
 	:align: center
-	:scale: 20%
+	:height: 200px
 
 Whoa, that's a lot of things
 ----------------------------
@@ -144,6 +150,3 @@ These basic particles and their properties are what describe interactions and ma
 What about the Higgs boson?  Wasn't that a big deal?
 ----------------------------------------------------
 https://www.youtube.com/watch?v=9Uh5mTxRQcg
-
-
-

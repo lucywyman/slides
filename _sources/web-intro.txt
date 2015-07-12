@@ -1,9 +1,10 @@
-============================================================
-Building Your First Website: An Introduction to HTML and CSS
-============================================================
+From the Ground Up: 
+===================
+
+Building your first website
 
 What is HTML?
-=============
+-------------
 
 * **HTML** or **Hyper Text Markup Language** is "a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages" ~Google
 * Basically, it's used to create the layout of your webpage out of fundamental building blocks.  HTML is the skeleton of your page.
@@ -42,6 +43,7 @@ Head tag
 --------
 
 **<head>** The head element is the container for all "head" elements. This provides metadata about your site such as the title, keywords, author, and links to any external pages.
+
 	- <link type="text/css" src="styles.css" rel="stylesheet">
 	- <title>Title of your site</title>
 	- <meta content="Content" name="author OR keywords OR date, so on">

@@ -7,13 +7,13 @@
     
     <title>Sass: What it is, how it&#39;s used, and why it&#39;s so Syntactically Awesome &mdash; slides</title>
     
-    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
-    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    <link rel="stylesheet" href="static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="static/single.css" type="text/css" />
     
-    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="stylesheet" href="static/custom.css" type="text/css" />
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     
     
     
@@ -26,20 +26,20 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/common.js"></script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/common.js"></script>
     
-    <script type="text/javascript" src="_static/slides.js"></script>
-    <script type="text/javascript" src="_static/sync.js"></script>
-    <script type="text/javascript" src="_static/controller.js"></script>
-    <script type="text/javascript" src="_static/init.js"></script>
+    <script type="text/javascript" src="static/slides.js"></script>
+    <script type="text/javascript" src="static/sync.js"></script>
+    <script type="text/javascript" src="static/controller.js"></script>
+    <script type="text/javascript" src="static/init.js"></script>
     
     
     <link rel="top" title="slides" href="index.html" />
-    <link rel="next" title="Your Roots Are Showing" href="polynomials.html" />
-    <link rel="prev" title="Dr. Jekyll and Mr. Pelican" href="jekyll-pelican-text.html" /> 
+    <link rel="next" title="Linux System Fundamentals" href="single-system-fundamentals.html" />
+    <link rel="prev" title="Your Roots Are Showing" href="polynomials.html" /> 
   </head>
   <body>
 
@@ -58,53 +58,13 @@
 
 
 </article>
-<article class="slide level-1" id="what-is-sass">
+<article class="slide level-2" id="what-is-sass">
 
-<h1>What is Sass?</h1>
+<h2>What is Sass?</h2>
 
-
-
-
-
-</article>
-<article class="slide level-1" id="impudent-back-talk">
-
-<h1>Impudent back talk?</h1>
-
-<p class="build"><a class="reference external" href="http://google.com">Well, yes, but no.</a></p>
-
-
-
-
-</article>
-<article class="slide level-1" id="to-sauce-or-be-saucy-to">
-
-<h1>To sauce or be saucy to?</h1>
-
-<div class="build admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Maybe this will help</p>
-</div>
-<p class="build">Closer.</p>
-
-
-
-
-</article>
-<article class="slide level-1" id="stewed-fruit">
-
-<h1>Stewed Fruit?</h1>
-
-<p class="build"><a class="reference external" href="http://dictionary.reference.com/browse/sass">What?</a></p>
-
-
-
-
-</article>
-<article class="slide level-2" id="page">
-
-<h2>page</h2>
-
+<p>Sass--or Syntactically Awesome StyleSheets--is &quot;an extension of CSS that adds power and elegance to the basic language&quot; (Sass docs).</p>
+<p>It provides us with several handy features that help keep CSS clean and functional.</p>
+<p>You can think of it as a set of tools which make styling your website easier; kind of like trading a screw-driver for a powerdrill.</p>
 <div class="figure align-center">
 <a class="reference internal image-reference" href="_images/sass.jpg"><img alt="_images/sass.jpg" src="_images/sass.jpg" /></a>
 </div>
@@ -113,28 +73,15 @@
 
 
 </article>
-<article class="slide level-1" id="but-wait-how-does-it-work">
+<article class="slide level-2" id="but-wait-how-does-it-work">
 
-<h1>But wait, how does it work?</h1>
+<h2>But wait, how does it work?</h2>
 
-
-
-
-
-</article>
-<article class="slide level-1" id="why-should-i-use-it">
-
-<h1>Why should I use it?</h1>
-
-
-
-
-
-</article>
-<article class="slide level-1" id="is-it-turing-complete">
-
-<h1>Is it Turing-Complete?</h1>
-
+<p>(Warning: jargon ahead)
+Sass is a scripting language which is interpreted in CSS by a preprocessor. It actually has two syntaxes!</p>
+<p>The first, Sass (.sass file extension), is an indented syntax similar to haml.  This means that blocks are determined by whitespace.  This syntax is older, and has fallen out of style.</p>
+<p>The second, Sassy CSS (.scss file extension), is an extension of CSS3 syntax.  Any valid CSS statement is also a valid SCSS statement, which makes it more user-friendly.</p>
+<p><code class="code docutils literal"><span class="pre">sass-convert</span></code> will convert between the two.</p>
 
 
 
@@ -144,9 +91,11 @@
 
 <h2>Ok, so what's the big deal?</h2>
 
-<ul class="build simple">
+<p>Sass has a couple of really cool features that I will be covering today:</p>
+<ul class="simple">
 <li>Variables</li>
 <li>Nesting</li>
+<li>Import</li>
 <li>Mixins</li>
 <li>Inheritance</li>
 <li>Operators</li>
@@ -156,30 +105,23 @@
 
 
 </article>
-<article class="slide level-1" id="variables">
+<article class="slide level-2" id="variables">
 
-<h1>Variables</h1>
+<h2>Variables</h2>
 
+<p>You read right--Sass uses variables!</p>
+<div class="highlight-sass"><div class="highlight"><pre>$primary: #B2D5BA;
+$secondary: #3299BB;
+$font: &#39;Open Sans&#39;, sans-serif;
 
+h1, h2, h3, h4, p, a{
+    font-family: $font;
+    color: $secondary;
+    }
 
-
-
-</article>
-<article class="slide level-2" id="boo">
-
-<h2>Boo</h2>
-
-<div class="highlight-css"><div class="highlight"><pre><span class="nc">.thing1</span><span class="p">{</span>
-    <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.thing2</span><span class="p">{</span>
-    <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.thing3</span><span class="p">{</span>
-    <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
-<span class="p">}</span>
+article{
+    background: $primary;
+    }
 </pre></div>
 </div>
 
@@ -187,74 +129,38 @@
 
 
 </article>
-<article class="slide level-2" id="yay">
+<article class="slide level-2" id="nesting">
 
-<h2>Yay</h2>
+<h2>Nesting</h2>
 
-<div class="highlight-css"><div class="highlight"><pre>$white: #fff;
+<p>Sass supports nesting your statements.</p>
+<div class="highlight-sass"><div class="highlight"><pre>#navigation{
+    width: 100%;
+    background: $secondary;
 
-.thing1{
-    color: $white;
-}
-
-.thing2{
-    color: $white;
-}
-
-.thing3{
-    color: $white;
-}
-</pre></div>
-</div>
-
-
-
-
-</article>
-<article class="slide level-1" id="nesting">
-
-<h1>Nesting</h1>
-
-
-
-
-
-</article>
-<article class="slide level-2" id="raisins">
-
-<h2>Raisins</h2>
-
-<div class="highlight-css"><div class="highlight"><pre><span class="nf">#thing1</span> <span class="p">{</span>
-    <span class="o">...</span>
-<span class="p">}</span>
-
-<span class="nf">#thing1</span> <span class="nc">.thing2</span> <span class="p">{</span>
-    <span class="o">...</span>
-<span class="p">}</span>
-
-<span class="nf">#thing1</span> <span class="nc">.thing2</span> <span class="nt">a</span> <span class="p">{</span>
-    <span class="o">...</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-
-
-
-
-</article>
-<article class="slide level-2" id="hugs">
-
-<h2>Hugs</h2>
-
-<div class="highlight-sass"><div class="highlight"><pre>#thing1 {
-    ...
-    .thing2 {
-        ...
-        a {
-            ...
+    li{
+        display: inline-block;
+        }
+    p{
+        font-size: 16px;
         }
     }
-}
+</pre></div>
+</div>
+<p>No more redundant and unorganized code!</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="inheritance">
+
+<h2>Inheritance</h2>
+
+<p>You can inherit from other elements, then modify them to the element you're currently styling</p>
+<div class="highlight-sass"><div class="highlight"><pre>.block{
+@extend .other-block;
+color:
 </pre></div>
 </div>
 
@@ -262,30 +168,19 @@
 
 
 </article>
-<article class="slide level-1" id="inheritance">
+<article class="slide level-2" id="mixins">
 
-<h1>Inheritance</h1>
+<h2>Mixins</h2>
 
+<p>Basically macros, with a cute name</p>
+<div class="highlight-sass"><div class="highlight"><pre>@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+   }
 
-
-
-
-</article>
-<article class="slide level-2" id="toad-s-feet">
-
-<h2>Toad's feet</h2>
-
-<div class="highlight-css"><div class="highlight"><pre><span class="nc">.thing1</span> <span class="p">{</span>
-    <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#444</span><span class="p">;</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.thing2</span> <span class="p">{</span>
-    <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#444</span><span class="p">;</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span>
-<span class="p">}</span>
+.box {@include border-radius(10px);}
 </pre></div>
 </div>
 
@@ -293,94 +188,12 @@
 
 
 </article>
-<article class="slide level-2" id="puppies">
+<article class="slide level-2" id="operators">
 
-<h2>Puppies</h2>
+<h2>Operators</h2>
 
-<div class="build highlight-css"><div class="highlight"><pre><span class="o">%</span><span class="nt">common</span> <span class="p">{</span>
-    <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#444</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.thing1</span> <span class="p">{</span>
-    <span class="o">@</span><span class="n">extend</span> <span class="o">%</span><span class="n">common</span><span class="p">;</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.thing2</span> <span class="p">{</span>
-    <span class="o">@</span><span class="n">extend</span> <span class="o">%</span><span class="n">common</span><span class="p">;</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="m">0px</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-
-
-
-
-</article>
-<article class="slide level-1" id="mixins">
-
-<h1>Mixins</h1>
-
-
-
-
-
-</article>
-<article class="slide level-2" id="ie6">
-
-<h2>IE6</h2>
-
-<div class="highlight-css"><div class="highlight"><pre><span class="nc">.thing1</span> <span class="p">{</span>
-    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
-    <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
-    <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
-    <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.thing2</span> <span class="p">{</span>
-    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
-    <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
-    <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
-    <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-
-
-
-
-</article>
-<article class="slide level-2" id="firefox">
-
-<h2>Firefox</h2>
-
-<div class="highlight-css"><div class="highlight"><pre><span class="k">@mixin</span> <span class="nt">border-radius</span><span class="o">($</span><span class="nt">radius</span><span class="o">)</span><span class="p">{</span>
-    <span class="nt">-webkit-border-radius</span><span class="o">:</span> <span class="o">$</span><span class="nt">radius</span><span class="o">;</span>
-    <span class="nt">-moz-border-radius</span><span class="o">:</span> <span class="o">$</span><span class="nt">radius</span><span class="o">;</span>
-    <span class="nt">-o-border-radius</span><span class="o">:</span> <span class="o">$</span><span class="nt">radius</span><span class="o">;</span>
-    <span class="nt">border-radius</span><span class="o">:</span> <span class="o">$</span><span class="nt">radius</span><span class="o">;</span>
-<span class="p">}</span>
-
-<span class="nc">.thing1</span> <span class="p">{</span>
-    <span class="o">@</span><span class="n">include</span> <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="p">(</span><span class="m">10px</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nc">.thing2</span> <span class="p">{</span>
-    <span class="o">@</span><span class="n">include</span> <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="p">(</span><span class="m">12px</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-
-
-
-
-</article>
-<article class="slide level-1" id="operators">
-
-<h1>Operators</h1>
-
-<div class="highlight-css"><div class="highlight"><pre>$width: 500px;
+<p>Although the types must match up (no 100%-70px), you can also perform basic arithmetic with your css</p>
+<div class="highlight-sass"><div class="highlight"><pre>$width: 500px;
 $height: 200px;
 
 div{
@@ -393,25 +206,35 @@ div{
 
 
 </article>
-<article class="slide level-1" id="and-more">
+<article class="slide level-2" id="conditional-logic">
 
-<h1>And more!</h1>
+<h2>Conditional Logic</h2>
+
+<p>If, for, each, while...</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="other-cool-features">
+
+<h2>Other cool features:</h2>
 
 <ul class="simple">
-<li>Conditional logic</li>
 <li>Data types</li>
 <li>Lists and maps</li>
 <li>!default</li>
 <li>&#64;debug</li>
+<li></li>
 </ul>
 
 
 
 
 </article>
-<article class="slide level-1" id="the-future">
+<article class="slide level-2" id="the-future">
 
-<h1>The Future</h1>
+<h2>The Future</h2>
 
 
 

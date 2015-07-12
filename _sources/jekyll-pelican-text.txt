@@ -89,7 +89,7 @@ Things that Jekyll does well:
 * Widely used -- every issue has been solved by someone on Stack Overflow
 * Written in Ruby
 
-.. figure:: _static/stack-overflow.jpg
+.. figure:: static/stack-overflow.jpg
     :align: center
 
 The Cons:
@@ -108,7 +108,7 @@ Things that Pelican does well:
 * Tons of settings, very customizable
 * Written in Python
 
-.. figure:: _static/customize_keyboard_key.png
+.. figure:: static/customize_keyboard_key.png
     :align: center
 
 The Cons:
@@ -125,7 +125,7 @@ Things that both do well:
 * Development servers
 * Work with Sass and ReStructured text
 
-.. .. figure:: _static/sass-ass.jpg
+.. .. figure:: static/sass-ass.jpg
     :align: center
     :height: 200px
 
@@ -143,7 +143,7 @@ Things that neither do well:
 
 .. nextslide::
 
-.. figure:: _static/tech_support.png
+.. figure:: static/tech_support.png
     :width: 60pc
     :align: center
 
@@ -154,7 +154,7 @@ The Conclusion:
 * Again, it depends on what your priorities are
 * But there are other options...
 
-.. figure:: _static/summary.jpg
+.. figure:: static/summary.jpg
     :align: center
 
 Other SSGs:

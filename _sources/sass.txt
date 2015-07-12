@@ -9,7 +9,7 @@ It provides us with several handy features that help keep CSS clean and function
 
 You can think of it as a set of tools which make styling your website easier; kind of like trading a screw-driver for a powerdrill. 
 
-.. figure:: _static/sass.jpg
+.. figure:: static/sass.jpg
     :align: center
     :scale: 25%
 

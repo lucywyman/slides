@@ -1,5 +1,5 @@
-Linux Basics
-============
+Linux System Fundamentals
+=========================
 
 Today's Agenda
 --------------
@@ -7,7 +7,7 @@ Today's Agenda
 * The Terminal & Shell
     * Scripts, file paths, special characters
 
-.. figure:: _static/Tux.png
+.. figure:: static/Tux.png
     :align: right
 
 * Productivity tricks
@@ -22,9 +22,6 @@ Today's Agenda
 Operating Systems
 -----------------
 
-.. figure:: _static/os.gif
-    :align: right
-
 * What is an OS
 * GNU/Linux, BSD, Windows, OS X, Plan 9
 * Different use cases - desktop, server, phone
@@ -32,7 +29,7 @@ Operating Systems
 The Terminal
 ------------
 
-.. figure:: _static/crashcart.jpg
+.. figure:: static/crashcart.jpg
     :align: right
     :height: 100px
 
@@ -40,13 +37,13 @@ The Terminal
     * Now that's a crash cart
 * Terminal emulator
 * Shell: Use bash; others include csh, zsh, tsch
-    * ``~/.bashrc``
+    * :code:`~/.bashrc`
 
-.. figure:: _static/televideo_terminal.jpg
+.. figure:: static/televideo_terminal.jpg
     :align: right
-    :height: 40pc
+    :height: 100px
 
-.. figure:: _static/teletype_terminal.jpg
+.. figure:: static/teletype_terminal.jpg
     :align: left
 
 Basic Shell Commands
@@ -61,7 +58,7 @@ Basic Shell Commands
   :Pipes: redirection (pipe.txt, redirect.txt)
   :Special variables: $?, $$ (pid.sh), !!, !*, !$
 
-.. figure:: _static/bash.png
+.. figure:: static/bash.png
     :align: right
     :height: 75pc
 
@@ -141,7 +138,7 @@ Special Characters
 * !, ?, \*, &&, &
 * Regular expressions - for matching patterns of text
 
-.. figure:: _static/xkcd_regex.png
+.. figure:: static/xkcd_regex.png
     :align: center
     :height: 50pc
 
@@ -154,7 +151,7 @@ Type less
     * ``~/.bashrc``
 * Tab completion
 
-.. figure:: _static/space_cadet_keyboard.gif
+.. figure:: static/space_cadet_keyboard.gif
     :align: center
     :height: 75pc
 
@@ -163,7 +160,7 @@ Automation > Typing > Mouse
 Help, get me out of here!
 -------------------------
 
-.. figure:: _static/exit.jpg
+.. figure:: static/exit.jpg
     :align: center
 
 * ctrl+c kills or quits process
@@ -212,7 +209,7 @@ Documentation
 
 Man pages, blogs you find by Googling, StackOverflow
 
-.. figure:: _static/google.gif
+.. figure:: static/google.gif
     :align: center
     :height: 50pc
 
@@ -287,7 +284,7 @@ Managing users
     $ userdel $USER
     $ passwd
 
-.. figure:: _static/xkcd215.png
+.. figure:: static/xkcd215.png
     :align: center
 
 .. code-block:: bash
@@ -326,7 +323,7 @@ Root/Superuser
 * UID 0
 * ``sudo``
 
-.. figure:: _static/xkcd149.png
+.. figure:: static/xkcd149.png
     :align: center
 
 Acting as another user
@@ -339,7 +336,7 @@ Acting as another user
     $ sudo su -         # use user password instead of root's
     $ sudo su $USER     # become $USER with your password
 
-.. figure:: _static/xkcd_838.png
+.. figure:: static/xkcd_838.png
     :height: 80pc
 
 If someone has permissions errors:
@@ -551,7 +548,7 @@ Package Management
 .. RPM & yum (RedHat, CentOS, Fedora)
 .. ----------------------------------
 .. 
-.. .. image:: _static/rpm.png
+.. .. image:: static/rpm.png
 ..     :align: right
 ..     :width: 30pc
 .. 
@@ -560,7 +557,7 @@ Package Management
 ..   Binary file format which includes metadata about the package and the
 ..   application binaries as well.
 .. 
-.. .. image:: _static/yum.png
+.. .. image:: static/yum.png
 ..     :align: right
 ..     :width: 30pc
 .. 
@@ -622,7 +619,7 @@ Package Management
 ..   Binary file format which includes metadata about the package and the
 ..   application binaries as well.
 .. 
-.. .. image:: _static/debian.png
+.. .. image:: static/debian.png
 ..     :align: right
 .. 
 .. **DPKG**
@@ -746,7 +743,7 @@ Review
 IRC
 ---
 
-.. figure:: _static/multiple_networks.gif
+.. figure:: static/multiple_networks.gif
     :height: 40pc
     :align: center
 
@@ -785,7 +782,7 @@ Use irssi or weechat in screen
 Networks
 --------
 
-.. figure:: _static/multiple_networks.gif
+.. figure:: static/multiple_networks.gif
     :height: 30pc
     :align: center
 
@@ -891,7 +888,7 @@ Terminology
 * ping/pong
 * flapping
 
-.. figure:: _static/jargon.jpg
+.. figure:: static/jargon.jpg
     :align: right
     :height: 50pc
 

@@ -13,7 +13,7 @@ e.g. :math:`x+5 = y`
 
 .. rst-class:: build
 
-    .. figure:: _static/heart.jpg
+    .. figure:: static/heart.jpg
         :align: center
         :height: 300px
 
@@ -29,7 +29,7 @@ is only true if we set x equal to -5.
 
 .. rst-class:: build
 
-    .. figure:: _static/carrot.jpg
+    .. figure:: static/carrot.jpg
         :align: center
         :height: 200px
 
@@ -69,12 +69,12 @@ Easy Roots
 
 .. nextslide::
 
-.. figure:: _static/cubic.gif
+.. figure:: static/cubic.gif
     :align: center
 
 .. nextslide::
 
-.. figure:: _static/quartic-formula.png
+.. figure:: static/quartic-formula.png
     :align: center
 
 The problem:
@@ -99,7 +99,7 @@ The basic idea: :math:`x_{n+1} = x_n + \frac{f(x_n)}{f'(x_n)}`
 
 .. rst-class:: build
 
-    .. figure:: _static/NewtonRGB.jpg
+    .. figure:: static/NewtonRGB.jpg
         :align: center
         :height: 500px
 
@@ -111,7 +111,7 @@ Fixed Point Iteration
 
 .. rst-class:: build
 
-    .. figure:: _static/cobweb.gif
+    .. figure:: static/cobweb.gif
         :align: center
 
 Secant
@@ -131,7 +131,7 @@ root is above or below :math:`\frac{a-b}{2}`, and then set
 Root Density Plot
 -----------------
 
-.. figure:: _static/deg5.png
+.. figure:: static/deg5.png
     :align: center
 
 Mandelbrot Set
@@ -140,7 +140,7 @@ Mandelbrot Set
 The set of complex numbers c such that :math:`z_{n+1} = {z_n}^2 + c`
 remains bounded (doesn't diverge under iteration)(I think)
 
-.. figure:: _static/mandelbrot.jpg
+.. figure:: static/mandelbrot.jpg
     :align: center
     :height: 300px
 
@@ -153,7 +153,7 @@ This means that small errors can dramatically affect results.
 Wilkinson's Polynomial
 ----------------------
 
-.. figure:: _static/wilkinson.png
+.. figure:: static/wilkinson.png
     :align: center
 
 .. rst-class:: build 
@@ -162,7 +162,7 @@ Wilkinson's Polynomial
     :math:`(x-1)(x-2)(x-3) ... (x-n)`, we know that it has roots
     at the integers up to n. 
 
-    .. figure:: _static/wilkinson-expanded.png
+    .. figure:: static/wilkinson-expanded.png
         :align: center
         :height: 300px
 
