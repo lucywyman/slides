@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Your Roots Are Showing &mdash; slides</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2015.07.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    
+    <link rel="top" title="slides" href="index.html" />
+    <link rel="next" title="Sass: What it is, how it&#39;s used, and why it&#39;s so Syntactically Awesome" href="sass.html" />
+    <link rel="prev" title="Sass: What it is, how it&#39;s used, and why it&#39;s so Syntactically Awesome" href="oscon-sass.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="your-roots-are-showing">
+
+<h1>Your Roots Are Showing</h1>
+
+<p>An exploration of polynomial roots and pretty fractals</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="polynomials">
+
+<h2>Polynomials</h2>
+
+<p>Polynomials are a function of the form
+<img class="math" src="_images/math/a82cbcc6d210baa6f22862c7b0a6d6047147ee49.png" alt="a_0 + a_1x + a_2x^2 + ... + a_nx^n, a_n \neq 0"/></p>
+<p>e.g. <img class="math" src="_images/math/9acd466a6dda847cfb99a9f44e95fa44fad2eceb.png" alt="x+5 = y"/></p>
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="_images/heart.jpg"><img alt="_images/heart.jpg" src="_images/heart.jpg" style="height: 300px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="ok-so-what-s-a-root">
+
+<h2>Ok, so what's a root?</h2>
+
+<p>The root of a polynomial <img class="math" src="_images/math/3eca8557203e86160952e1c0f735f7417f3285b1.png" alt="p"/> is a value <img class="math" src="_images/math/7dd2a5ea01fbd72ad2a58dd1f3d6ecbfde6208a1.png" alt="a"/>
+such that <img class="math" src="_images/math/ecd5257ac185ca6d193a70507a1c87a3779241ee.png" alt="p(a) = 0"/>.</p>
+<p>e.g. The root of <img class="math" src="_images/math/b33a65ac8e57434cf6fc65c70b5ab8924dd0d652.png" alt="x+5 = 0"/> is -5, because the expression
+is only true if we set x equal to -5.</p>
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="_images/carrot.jpg"><img alt="_images/carrot.jpg" src="_images/carrot.jpg" style="height: 200px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="why-are-these-a-big-deal">
+
+<h2>Why are these a big deal?</h2>
+
+<p>It's often handy to know for what values a function will evaluate to 0.
+As a simple example, the trajectory of a projectile can be modelled
+with a quadratic equation, and the roots will tell you where the
+projectile will hit the ground.</p>
+<p>More useful, factoring equations is at the heart of RSA, a
+widely use cryptographic scheme.</p>
+<p>More interesting, it's used to find the eigenvalues of a matrix.</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="multiplicities">
+
+<h2>Multiplicities</h2>
+
+<p>The number of times a polynomial has a root at a given point.</p>
+<p>e.g. <img class="math" src="_images/math/d4dd28863c85ec3de7d4000f1f7721081961bee0.png" alt="(x+1)(x+1)(x+1) = x^3 + 3x^2 + 3x + 1"/> has multiplicity
+3 at x = -1.</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="bounds-on-roots">
+
+<h2>Bounds on Roots</h2>
+
+<p>The one I understand best: <img class="math" src="_images/math/bf2d01aa1de8ee211adee0731e3092de8df02478.png" alt="x &lt; max(a_i)"/> (Cauchy)</p>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/Properties_of_polynomial_roots#Bounds_on_.28complex.29_polynomial_roots">Wikipedia's answer</a></p>
+
+
+
+
+</article>
+<article class="slide level-2" id="easy-roots">
+
+<h2>Easy Roots</h2>
+
+<ul class="simple">
+<li>Linear: For <img class="math" src="_images/math/716421b967fe9d5d66b882d034224a9951dc2010.png" alt="a_1x + a_0 = 0"/> <img class="math" src="_images/math/1d2b30dcc08fb2a8d77f4431c4a87ef10b7dbead.png" alt="x = \frac{-a_0}{a_1}"/></li>
+<li>Quadratic: <img class="math" src="_images/math/89fd1175b102d9e8d0829125fff220af8d05bd01.png" alt="x = \frac{-a_2 \pm \sqrt{a_2 - 4*a_1*a_3}}{2*a_1}"/></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id1">
+
+<h2>Easy Roots</h2>
+
+<div class="figure align-center">
+<img alt="_images/cubic.gif" src="_images/cubic.gif" />
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="id2">
+
+<h2>Easy Roots</h2>
+
+<div class="figure align-center">
+<img alt="_images/quartic-formula.png" src="_images/quartic-formula.png" />
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="the-problem">
+
+<h2>The problem:</h2>
+
+<p>In 1824, Niels Henrik Abel (with help from LaGrange and Ruffini)
+proved that it was not possible to
+algebraically find the roots of polynomial of degree greater than 5.</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="other-possibilities">
+
+<h2>Other Possibilities:</h2>
+
+<ul class="simple">
+<li>Newton's Method</li>
+<li>Fixed Point Iteration</li>
+<li>Secant Method</li>
+<li>Bisection</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="newton-s-method">
+
+<h2>Newton's Method</h2>
+
+<p>The basic idea: <img class="math" src="_images/math/93e45a269af5115219f3cc61319c8b8b1f98f559.png" alt="x_{n+1} = x_n + \frac{f(x_n)}{f'(x_n)}"/></p>
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="_images/NewtonRGB.jpg"><img alt="_images/NewtonRGB.jpg" src="_images/NewtonRGB.jpg" style="height: 500px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="fixed-point-iteration">
+
+<h2>Fixed Point Iteration</h2>
+
+<p><img class="math" src="_images/math/effa8d61a6b753b55799ebb535590e0b2458d738.png" alt="x_{n+1} = g(x_n)"/> where <img class="math" src="_images/math/3a4eb1f226baf3cbf0714beabfd36aa7bb0b91ee.png" alt="g(x_n) = x_n - \frac{f(x_n)}{f'(x_n)}"/></p>
+<div class="build figure align-center">
+<img alt="_images/cobweb.gif" src="_images/cobweb.gif" />
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="secant">
+
+<h2>Secant</h2>
+
+<p>Draw a secant line between <img class="math" src="_images/math/3fd73ff44217075160a1ae00063f236c58816410.png" alt="a, b | a&lt; \alpha, b&gt; \alpha"/>
+, and set x-axis intercept as new a.</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="bisection">
+
+<h2>Bisection</h2>
+
+<p>Choose values <img class="math" src="_images/math/e7288b5545ba9252868e1a7c21f9c203b60be44f.png" alt="a, b | a &lt; \alpha, b&gt; \alpha"/>, determine whether
+root is above or below <img class="math" src="_images/math/a2eb646fb5511cbd7169a9fa1d19b2f38241d8d3.png" alt="\frac{a-b}{2}"/>, and then set
+<img class="math" src="_images/math/a2eb646fb5511cbd7169a9fa1d19b2f38241d8d3.png" alt="\frac{a-b}{2}"/> to be the new a or b.</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="root-density-plot">
+
+<h2>Root Density Plot</h2>
+
+<div class="figure align-center">
+<img alt="_images/deg5.png" src="_images/deg5.png" />
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="mandelbrot-set">
+
+<h2>Mandelbrot Set</h2>
+
+<p>The set of complex numbers c such that <img class="math" src="_images/math/eda8045f2c2877d7bda8f3457bd588f2cc733297.png" alt="z_{n+1} = {z_n}^2 + c"/>
+remains bounded (doesn't diverge under iteration)(I think)</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/mandelbrot.jpg"><img alt="_images/mandelbrot.jpg" src="_images/mandelbrot.jpg" style="height: 300px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="problem-conditioning">
+
+<h2>Problem Conditioning</h2>
+
+<p>Finding polynomial roots is an ill-conditioned problem.
+This means that small errors can dramatically affect results.</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="wilkinson-s-polynomial">
+
+<h2>Wilkinson's Polynomial</h2>
+
+<div class="figure align-center">
+<img alt="_images/wilkinson.png" src="_images/wilkinson.png" />
+</div>
+<p class="build">In plain english: by creating a polynomial
+<img class="math" src="_images/math/a6e9e03318591d8aa75f19441724ff07ec99b0a7.png" alt="(x-1)(x-2)(x-3) ... (x-n)"/>, we know that it has roots
+at the integers up to n.</p>
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="_images/wilkinson-expanded.png"><img alt="_images/wilkinson-expanded.png" src="_images/wilkinson-expanded.png" style="height: 300px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="why-is-this-hard">
+
+<h2>Why is this hard?</h2>
+
+<p>As we've seen, finding roots is really more of an art than a science.</p>
+
+
+
+
+</article>
+<article class="slide level-1" id="questions">
+
+<h1>Questions?</h1>
+
+
+
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>

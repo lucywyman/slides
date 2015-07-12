@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Linux Basics &mdash; slides</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2015.07.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    
+    <link rel="top" title="slides" href="index.html" />
+    <link rel="next" title="Intoduction to the Standard Model: what it is and why it&#39;s awesome" href="standard-model.html" />
+    <link rel="prev" title="Sass: What it is, how it&#39;s used, and why it&#39;s so Syntactically Awesome" href="sass.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="linux-basics">
+
+<h1>Linux Basics</h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="today-s-agenda">
+
+<h2>Today's Agenda</h2>
+
+<ul>
+<li><dl class="first docutils">
+<dt>The Terminal &amp; Shell</dt>
+<dd><ul class="first last simple">
+<li>Scripts, file paths, special characters</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="figure align-right">
+<img alt="_images/Tux.png" src="_images/Tux.png" />
+</div>
+<ul>
+<li><dl class="first docutils">
+<dt>Productivity tricks</dt>
+<dd><ul class="first last simple">
+<li>Getting help</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>What are files?</dt>
+<dd><ul class="first last simple">
+<li>File permissions</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>What are user accounts?</dt>
+<dd><ul class="first last simple">
+<li>User and group management</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>What are packages?</dt>
+<dd><ul class="first last simple">
+<li>How to use package managers</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="operating-systems">
+
+<h2>Operating Systems</h2>
+
+<div class="figure align-right">
+<img alt="_images/os.gif" src="_images/os.gif" />
+</div>
+<ul class="simple">
+<li>What is an OS</li>
+<li>GNU/Linux, BSD, Windows, OS X, Plan 9</li>
+<li>Different use cases - desktop, server, phone</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="the-terminal">
+
+<h2>The Terminal</h2>
+
+<div class="figure align-right">
+<a class="reference internal image-reference" href="_images/crashcart.jpg"><img alt="_images/crashcart.jpg" src="_images/crashcart.jpg" style="height: 100px;" /></a>
+</div>
+<ul>
+<li><dl class="first docutils">
+<dt>Used to mean the keyboard+monitor</dt>
+<dd><ul class="first last simple">
+<li>Now that's a crash cart</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Terminal emulator</p>
+</li>
+<li><dl class="first docutils">
+<dt>Shell: Use bash; others include csh, zsh, tsch</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal"><span class="pre">~/.bashrc</span></code></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="_images/televideo_terminal.jpg"><img alt="_images/televideo_terminal.jpg" src="_images/televideo_terminal.jpg" style="height: 40pc;" /></a>
+</div>
+<div class="figure align-left">
+<img alt="_images/teletype_terminal.jpg" src="_images/teletype_terminal.jpg" />
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="basic-shell-commands">
+
+<h2>Basic Shell Commands</h2>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Explain architecture:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">built in commands vs. external binaries</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Demo commands:</th><td class="field-body">Directory movement and file manipulation: Cd, pwd, ls, rm, mv, touch</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">User info:</th><td class="field-body">id, whoami, w</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Pipes:</th><td class="field-body">redirection (pipe.txt, redirect.txt)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Special variables:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">$?, $$ (pid.sh), !!, !*, !$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="_images/bash.png"><img alt="_images/bash.png" src="_images/bash.png" style="height: 75pc;" /></a>
+</div>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">ls</span></code>, <code class="docutils literal"><span class="pre">cd</span></code>, <code class="docutils literal"><span class="pre">cat</span></code>, <code class="docutils literal"><span class="pre">echo</span></code></li>
+<li>invoke/call an installed program</li>
+<li>get help: <code class="docutils literal"><span class="pre">man</span> <span class="pre">&lt;program&gt;</span></code></li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>test@x230 ~ $ tree
+.
+├── Documents
+│   ├── Code
+│   │   └── scripts
+│   │       └── test.sh
+│   ├── School
+│   └── Work
+└── Pictures
+    ├── manatee.gif
+    └── turtle.png
+
+6 directories, 5 files
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="invoking-a-script">
+
+<h2>Invoking a script</h2>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Permissions discussed later.</p>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ls -l
+<span class="nv">$ </span>chmod +x <span class="nv">$filename</span>
+<span class="nv">$ </span>./<span class="nv">$filename</span>
+</pre></div>
+</div>
+<p><strong>Arguments</strong> (or flags) are extra information that you pass to a script or
+program when you call it. They tell it in more detail what you want to do.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ls -a -l
+<span class="nv">$ </span>ls -al
+<span class="nv">$ </span>ls -si
+<span class="nv">$ </span>ls --si
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="file-paths">
+
+<h2>File Paths</h2>
+
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">.</span></code> means current directory</li>
+<li><code class="docutils literal"><span class="pre">..</span></code> means parent directory</li>
+<li>Tilde (<code class="docutils literal"><span class="pre">~</span></code>) means your homedir (<code class="docutils literal"><span class="pre">/home/$username</span></code>)</li>
+<li><code class="docutils literal"><span class="pre">/</span></code> separates directories (not <code class="docutils literal"><span class="pre">\</span></code>)</li>
+<li><code class="docutils literal"><span class="pre">/</span></code> is root directory, so <code class="docutils literal"><span class="pre">~</span></code> expands to <code class="docutils literal"><span class="pre">/home/$username/</span></code></li>
+<li>current path appears in your prompt: I'm logged in as the user test on the
+machine named x230</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">test</span>@x230 ~ <span class="nv">$ </span>ls
+Documents  Pictures
+<span class="nb">test</span>@x230 ~ <span class="nv">$ </span><span class="nb">cd </span>Documents/
+<span class="nb">test</span>@x230 ~/Documents <span class="nv">$ </span>ls
+Code  School  Work
+<span class="nb">test</span>@x230 ~/Documents <span class="nv">$ </span><span class="nb">pwd</span>
+/home/test/Documents
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">root directory is not to be confused with a home directory for the root
+account</p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="special-characters">
+
+<h2>Special Characters</h2>
+
+<ul class="simple">
+<li>escape with <code class="docutils literal"><span class="pre">\</span></code> to use them literally</li>
+<li># means a comment</li>
+<li>; allows multiple commands per line</li>
+<li>!, ?, *, &amp;&amp;, &amp;</li>
+<li>Regular expressions - for matching patterns of text</li>
+</ul>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/xkcd_regex.png"><img alt="_images/xkcd_regex.png" src="_images/xkcd_regex.png" style="height: 50pc;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="type-less">
+
+<h2>Type less</h2>
+
+<ul>
+<li><dl class="first docutils">
+<dt>Reverse-i-search</dt>
+<dd><ul class="first last simple">
+<li>ctrl+r then type command</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>aliases</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal"><span class="pre">~/.bashrc</span></code></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Tab completion</p>
+</li>
+</ul>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/space_cadet_keyboard.gif"><img alt="_images/space_cadet_keyboard.gif" src="_images/space_cadet_keyboard.gif" style="height: 75pc;" /></a>
+</div>
+<p>Automation &gt; Typing &gt; Mouse</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="help-get-me-out-of-here">
+
+<h2>Help, get me out of here!</h2>
+
+<div class="figure align-center">
+<img alt="_images/exit.jpg" src="_images/exit.jpg" />
+</div>
+<ul>
+<li><p class="first">ctrl+c kills or quits process</p>
+</li>
+<li><dl class="first docutils">
+<dt>ctrl+d sends EOF (end-of-file), closes terminal</dt>
+<dd><ul class="first last simple">
+<li>also means logout</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">read what's on your screen; it'll help you</p>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="knowledge-check">
+
+<h2>Knowledge Check</h2>
+
+<div class="highlight-python"><div class="highlight"><pre>test@x230 ~ $ tree
+.
+├── Documents
+│   ├── Code
+│   │   └── scripts
+│   │       └── test.sh
+│   ├── School
+│   └── Work
+└── Pictures
+    ├── manatee.gif
+    └── turtle.png
+6 directories, 5 files
+</pre></div>
+</div>
+<ul class="simple">
+<li>What user am I logged in as?</li>
+<li>What command did I just run?</li>
+<li>What is my current directory when I run that command?</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="more-about-man-pages">
+
+<h2>More about Man Pages</h2>
+
+<ul>
+<li><p class="first">the manual (rtfm):</p>
+<div class="highlight-python"><div class="highlight"><pre>$ man &lt;program&gt;
+$ man man
+</pre></div>
+</div>
+</li>
+<li><p class="first">use <code class="docutils literal"><span class="pre">/phrase</span></code> to search for <code class="docutils literal"><span class="pre">phrase</span></code> in the document; <code class="docutils literal"><span class="pre">n</span></code> for next match
+and <code class="docutils literal"><span class="pre">N</span></code> for previous match</p>
+</li>
+<li><p class="first">else:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ &lt;program&gt; --help
+</pre></div>
+</div>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="documentation">
+
+<h2>Documentation</h2>
+
+<p>Man pages, blogs you find by Googling, StackOverflow</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/google.gif"><img alt="_images/google.gif" src="_images/google.gif" style="height: 50pc;" /></a>
+</div>
+<ul>
+<li><dl class="first docutils">
+<dt>Contribute to community</dt>
+<dd><ul class="first last simple">
+<li>Correct it if it's wrong</li>
+<li>Remind them what newbies don't know</li>
+<li>Write your own</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">For your future self as well</p>
+</li>
+<li><p class="first">Start now</p>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="asking-for-help">
+
+<h2>Asking for help</h2>
+
+<p>It's okay to ask.</p>
+<ol class="arabic simple">
+<li>What should be happening?</li>
+<li>What's actually happening?</li>
+<li>Google it</li>
+<li>Skim the manuals of each component</li>
+<li>Identify a friend, mentor, or IRC channel who could help</li>
+<li>When they're not busy, give them a quick synopsis of points 1 and 2,
+mentioning what possibilities you've ruled out by searching.</li>
+</ol>
+<p><strong>Contributions = expertise + time</strong></p>
+<p>Don't waste experts' time, but do build your expertise.</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="review">
+
+<h2>Review</h2>
+
+<ul>
+<li><p class="first">What's Linux?</p>
+</li>
+<li><dl class="first docutils">
+<dt>How do you open a terminal emulator?</dt>
+<dd><ul class="first last simple">
+<li>this varies between window managers</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">I have the script <code class="docutils literal"><span class="pre">test.py</span></code>. How do I run it?</p>
+</li>
+<li><p class="first">How do you list all the files in the current directory?</p>
+</li>
+<li><p class="first">Give 2 ways to change directory to your home directory.</p>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="what-are-users">
+
+<h2>What are users?</h2>
+
+<ul class="simple">
+<li>You, right now</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>whoami    <span class="c"># your username</span>
+<span class="nv">$ </span>who       <span class="c"># who is logged in?</span>
+<span class="nv">$ </span>w         <span class="c"># who is here and what are they doing?</span>
+<span class="nv">$ </span>id        <span class="c"># user ID, group ID, and groups you&#39;re in</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Not just people: Apache, Mailman, ntp</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="users-have">
+
+<h2>Users have</h2>
+
+<ul class="simple">
+<li>Username</li>
+<li>UID</li>
+<li>Group</li>
+<li>Shell</li>
+<li>Usually (but not always) password</li>
+<li>Usually (but not always) home directory</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="managing-users">
+
+<h2>Managing users</h2>
+
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>cat /etc/passwd
+<span class="c"># username:x:UID:GID:GECOS:homedir:shell</span>
+<span class="nv">$ </span>useradd <span class="nv">$USER</span> <span class="c"># vs adduser, the friendly Ubuntu version</span>
+<span class="nv">$ </span>userdel <span class="nv">$USER</span>
+<span class="nv">$ </span>passwd
+</pre></div>
+</div>
+<div class="figure align-center">
+<img alt="_images/xkcd215.png" src="_images/xkcd215.png" />
+</div>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># GECOS: full name, office number and building, office phone extension,</span>
+<span class="c"># home phone number (General Electric Comprehensive Operating System)</span>
+<span class="nv">$ </span>chfn <span class="c"># change GECOS information; only works sometimes</span>
+<span class="nv">$ </span>finger <span class="c"># tells you someone&#39;s GECOS info</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="passwords">
+
+<h2>Passwords</h2>
+
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">/etc/shadow</span></code>, not <code class="docutils literal"><span class="pre">/etc/passwd</span></code></li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">test</span>@x230 ~ <span class="nv">$ </span>ls -l /etc/ <span class="p">|</span> grep shadow
+-rw-r-----  <span class="m">1</span> root shadow   <span class="m">1503</span> Nov <span class="m">12</span> 17:37 shadow
+
+<span class="nv">$ </span>sudo su -
+<span class="nv">$ </span>cat /etc/shadow
+daemon:*:15630:0:99999:7:::
+bin:*:15630:0:99999:7:::
+sys:*:15630:0:99999:7:::
+mail:*:15630:0:99999:7:::
+
+<span class="c"># name:hash:time last changed: min days between changes: max days</span>
+<span class="c">#    between changes:days to wait before expiry or disabling:day of</span>
+<span class="c">#    account expiry</span>
+
+<span class="nv">$ </span>chage <span class="c"># change when a user&#39;s password expires</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="root-superuser">
+
+<h2>Root/Superuser</h2>
+
+<ul class="simple">
+<li>UID 0</li>
+<li><code class="docutils literal"><span class="pre">sudo</span></code></li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/xkcd149.png" src="_images/xkcd149.png" />
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="acting-as-another-user">
+
+<h2>Acting as another user</h2>
+
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>su <span class="nv">$USER</span>          <span class="c"># become user, with THEIR password</span>
+<span class="nv">$ </span>su                <span class="c"># become root, with root&#39;s password</span>
+<span class="nv">$ </span>sudo su -         <span class="c"># use user password instead of root&#39;s</span>
+<span class="nv">$ </span>sudo su <span class="nv">$USER</span>     <span class="c"># become $USER with your password</span>
+</pre></div>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/xkcd_838.png"><img alt="_images/xkcd_838.png" src="_images/xkcd_838.png" style="height: 80pc;" /></a>
+</div>
+<dl class="docutils">
+<dt>If someone has permissions errors:</dt>
+<dd><ul class="first last simple">
+<li>Check that they or their group owns the files</li>
+<li>Check that they have the flag +x to execute</li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+</article>
+<article class="slide level-2" id="what-are-groups">
+
+<h2>What are groups?</h2>
+
+<ul class="simple">
+<li>Manage permissions for groups of users</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>groupadd
+<span class="nv">$ </span>usermod
+<span class="nv">$ </span>groupmod
+<span class="nv">$ </span>cat /etc/group
+    root:x:0:
+    daemon:x:1:
+    bin:x:2:
+    sys:x:3:
+    adm:x:4:
+    tty:x:5:
+<span class="c"># group name:password or placeholder:GID:member,member,member</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="hands-on-users-and-groups">
+
+<h2>Hands-On: Users and Groups</h2>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>To give yourself sudo powers do the following:</p>
+<ol class="arabic">
+<li><p class="first">Add your user to the <code class="docutils literal"><span class="pre">wheel</span></code> group using <code class="docutils literal"><span class="pre">gpasswd</span></code>.</p>
+</li>
+<li><p class="first">As the root user, use <code class="docutils literal"><span class="pre">visudo</span></code> and uncomment this line:</p>
+<div class="highlight-python"><div class="highlight"><pre>pcwheel  ALL=(ALL)   ALL
+</pre></div>
+</div>
+</li>
+<li><p class="first">Save the file and now you should have sudo!</p>
+</li>
+</ol>
+<p class="last"><em>We'll cover sudo in more depth at a later time.</em></p>
+</div>
+<ul class="simple">
+<li>Create a user on your system for yourself, with your preferred username</li>
+<li>Give your user sudo powers</li>
+<li>Use su to get into your user account</li>
+<li>Change your password</li>
+<li>Create a directory called bootcamp in your home directory</li>
+<li>Create a group called devops</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="what-are-files">
+
+<h2>What are files?</h2>
+
+<ul>
+<li><p class="first">Nearly everything</p>
+</li>
+<li><dl class="first docutils">
+<dt>Files have:</dt>
+<dd><ul class="first last simple">
+<li>Owner</li>
+<li>Permissions</li>
+<li>inode</li>
+<li>Size</li>
+<li>Filename</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">test</span>@x230 ~ <span class="nv">$ </span>ls -il
+total 8
+<span class="m">2884381</span> drwxrwxr-x <span class="m">5</span> <span class="nb">test test </span><span class="m">4096</span> Nov  <span class="m">6</span> 11:46 Documents
+<span class="m">2629156</span> -rw-rw-r-- <span class="m">1</span> <span class="nb">test test    </span><span class="m">0</span> Nov <span class="m">13</span> 14:09 file.txt
+<span class="m">2884382</span> drwxrwxr-x <span class="m">2</span> <span class="nb">test test </span><span class="m">4096</span> Nov  <span class="m">6</span> 13:22 Pictures
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="file-extensions">
+
+<h2>File extensions</h2>
+
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">.jpg</span></code>, <code class="docutils literal"><span class="pre">.txt</span></code>, <code class="docutils literal"><span class="pre">.doc</span></code></p>
+</li>
+<li><dl class="first docutils">
+<dt>Really more of a recommendation</dt>
+<dd><ul class="first last simple">
+<li>File contains information about its encoding</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>file <span class="nv">$FILENAME</span> <span class="c"># tells you about the filetype</span>
+
+<span class="nb">test</span>@x230 ~ <span class="nv">$ </span>file file.txt
+file.txt: ASCII text
+
+<span class="nb">test</span>@x230 ~ <span class="nv">$ </span>file squirrel.jpg
+squirrel.jpg: JPEG image data, JFIF standard 1.01
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="ls-l">
+
+<h2>ls -l</h2>
+
+<ul class="simple">
+<li>First bit: type</li>
+<li>Next 3: user</li>
+<li>Next 3: group</li>
+<li>Next 3: world</li>
+<li>user &amp; group</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ls -l
+drwxrwxr-x <span class="m">5</span> <span class="nb">test test </span><span class="m">4096</span> Nov  <span class="m">6</span> 11:46 Documents
+-rw-rw-r-- <span class="m">1</span> <span class="nb">test test    </span><span class="m">0</span> Nov <span class="m">13</span> 14:09 file.txt
+drwxrwxr-x <span class="m">2</span> <span class="nb">test test </span><span class="m">4096</span> Nov  <span class="m">6</span> 13:22 Pictures
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="chmod-and-octal-permissions">
+
+<h2>chmod and octal permissions</h2>
+
+<div class="highlight-bash"><div class="highlight"><pre>+-----+--------+-------+
+<span class="p">|</span> rwx <span class="p">|</span> Binary <span class="p">|</span> Octal <span class="p">|</span>
++-----+--------+-------+
+<span class="p">|</span> --- <span class="p">|</span> <span class="m">000</span>    <span class="p">|</span> <span class="m">0</span>     <span class="p">|</span>
+<span class="p">|</span> --x <span class="p">|</span> <span class="m">001</span>    <span class="p">|</span> <span class="m">1</span>     <span class="p">|</span>
+<span class="p">|</span> -w- <span class="p">|</span> <span class="m">010</span>    <span class="p">|</span> <span class="m">2</span>     <span class="p">|</span>
+<span class="p">|</span> -wx <span class="p">|</span> <span class="m">011</span>    <span class="p">|</span> <span class="m">3</span>     <span class="p">|</span>
+<span class="p">|</span> r-- <span class="p">|</span> <span class="m">100</span>    <span class="p">|</span> <span class="m">4</span>     <span class="p">|</span>
+<span class="p">|</span> r-x <span class="p">|</span> <span class="m">101</span>    <span class="p">|</span> <span class="m">5</span>     <span class="p">|</span>
+<span class="p">|</span> rw- <span class="p">|</span> <span class="m">110</span>    <span class="p">|</span> <span class="m">6</span>     <span class="p">|</span>
+<span class="p">|</span> rwx <span class="p">|</span> <span class="m">111</span>    <span class="p">|</span> <span class="m">7</span>     <span class="p">|</span>
++-----+--------+-------+
+</pre></div>
+</div>
+<ul class="simple">
+<li>u, g, o for user, group, other</li>
+<li>-, +, = for remove, add, set</li>
+<li>r, w, x for read, write, execute</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="chown-chgrp">
+
+<h2>chown, chgrp</h2>
+
+<p>user &amp; group</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># Change the owner of myfile to &quot;root&quot;.</span>
+<span class="nv">$ </span>chown root myfile
+
+<span class="c"># Likewise, but also change its group to &quot;staff&quot;.</span>
+<span class="nv">$ </span>chown root:staff myfile
+
+<span class="c"># Change the owner of /mydir and subfiles to &quot;root&quot;.</span>
+<span class="nv">$ </span>chown -hR root /mydir
+
+<span class="c"># Make the group devops own the bootcamp dir</span>
+<span class="nv">$ </span>chgrp -R devops /home/<span class="nv">$yourusername</span>/bootcamp
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="types-of-files">
+
+<h2>Types of files</h2>
+
+<div class="highlight-bash"><div class="highlight"><pre>drwxrwxr-x      <span class="m">5</span> <span class="nb">test    test      </span><span class="m">4096</span>    Nov  <span class="m">6</span> 11:46 Documents
+-rw-rw-r--      <span class="m">1</span> <span class="nb">test    test         </span><span class="m">0</span>    Nov <span class="m">13</span> 14:09 file.txt
+drwxrwxr-x      <span class="m">2</span> <span class="nb">test    test      </span><span class="m">4096</span>    Nov  <span class="m">6</span> 13:22 Pictures
+----------     -------  -------  -------- ------------ -------------
+    <span class="p">|</span>             <span class="p">|</span>        <span class="p">|</span>         <span class="p">|</span>         <span class="p">|</span>             <span class="p">|</span>
+    <span class="p">|</span>             <span class="p">|</span>        <span class="p">|</span>         <span class="p">|</span>         <span class="p">|</span>         File Name
+    <span class="p">|</span>             <span class="p">|</span>        <span class="p">|</span>         <span class="p">|</span>         +---  Modification Time
+    <span class="p">|</span>             <span class="p">|</span>        <span class="p">|</span>         +-------------   Size <span class="o">(</span>in bytes<span class="o">)</span>
+    <span class="p">|</span>             <span class="p">|</span>        +-----------------------        Group
+    <span class="p">|</span>             +--------------------------------        Owner
+    +----------------------------------------------   File Permissions
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">-</span></code> is a normal file</p>
+<p><code class="docutils literal"><span class="pre">d</span></code> is a directory</p>
+<p><code class="docutils literal"><span class="pre">b</span></code> is a block device</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="hands-on-files-and-permissions">
+
+<h2>Hands-On: Files and Permissions</h2>
+
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>touch foo <span class="c"># create empty file called foo</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>As root, create a file in /home/$yourusername/bootcamp</li>
+<li>Who can do what to the file?</li>
+<li>Make the devops group own the file</li>
+<li>Make a file called allperms and give user, group, and world +rwx</li>
+<li>Make more files and practice changing their permissions</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="package-management">
+
+<h2>Package Management</h2>
+
+<p><em>Take care of installation and removal of software</em></p>
+<p><strong>Core Functionality:</strong>
+* Install, Upgrade &amp; uninstall packages easily
+* Resolve package dependencies
+* Install packages from a central repository
+* Search for information on installed packages and files
+* Pre-built binaries (usually)
+* Find out which package provides a required library or file</p>
+<p><strong>Popular Linux Package Managers</strong>
+* .deb / APT + dpkg (used by Debian, Ubuntu, Linux Mint)
+* .rpm / YUM + rpm (used by RedHat, CentOS, Fedora)</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="language-specific-package-managers">
+
+<h2>Language-specific Package Managers</h2>
+
+<ul>
+<li><p class="first">Languages sometimes have their own package management suite</p>
+</li>
+<li><p class="first">Can be useful for using newer versions of packages</p>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Examples</strong></dt>
+<dd><ul class="first last simple">
+<li>pip (Python)</li>
+<li>rubygems (Ruby)</li>
+<li>CPAN (Perl)</li>
+<li>cabal (Haskell)</li>
+<li>npm (NodeJS)</li>
+<li><em>... and so on forever ...</em></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="other-package-managers">
+
+<h2>Other Package Managers</h2>
+
+<p>They each fill a specific niche and have their own pros and cons.</p>
+<ul class="simple">
+<li>Portage (Gentoo) -- Source based package installer</li>
+<li>pacman (Arch Linux)</li>
+<li>ZYpp / Zypper (SUSE) -- Yet another RPM package manager</li>
+<li>Nix -- Fancy functional/ transactional</li>
+<li>brew (OS X)</li>
+<li>chocolatey (Windows)</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="installing-from-source">
+
+<h2>Installing from source</h2>
+
+<ul class="simple">
+<li>Download source tarball, run build scripts and install in a local directory.</li>
+<li>RPM/DEB packages do this for you</li>
+<li>Not for the faint of heart ... <strong>Not recommended!</strong></li>
+<li>Using <code class="docutils literal"><span class="pre">grep</span></code> as an example</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>wget http://mirrors.kernel.org/gnu/grep/grep-2.15.tar.xz
+<span class="nv">$ </span>tar -Jxvf grep-2.15.tar.xz
+<span class="nv">$ </span><span class="nb">cd </span>grep-2.15
+<span class="nv">$ </span>./configure --prefix<span class="o">=</span><span class="nv">$HOME</span>/programs/
+<span class="nv">$ </span>make
+<span class="nv">$ </span>make install
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="hands-on-package-management">
+
+<h2>Hands-on: Package Management</h2>
+
+<ul class="simple">
+<li>Install the <code class="docutils literal"><span class="pre">git</span></code> package</li>
+<li>Query the RPM/APT database for installed packages</li>
+<li>List the files in an installed package</li>
+<li>Remove the <code class="docutils literal"><span class="pre">git</span></code> package</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id1">
+
+<h2>Review</h2>
+
+<ul>
+<li><p class="first">read example output of ls -al</p>
+</li>
+<li><p class="first">read output of yum or aptitude search</p>
+</li>
+<li><dl class="first docutils">
+<dt>install a package on their VM/partition (Vim, Git)</dt>
+<dd><ul class="first last simple">
+<li>explain what dependencies it also installed</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="irc">
+
+<h2>IRC</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/multiple_networks.gif"><img alt="_images/multiple_networks.gif" src="_images/multiple_networks.gif" style="height: 40pc;" /></a>
+</div>
+<ul class="simple">
+<li>Internet Relay Chat</li>
+<li>Very old (RFC 1459 May 1993)</li>
+<li>Works on everything (no GUI needed)</li>
+<li>The people you want to listen to are there</li>
+<li>Oregon State ran one of the first servers ever!</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="a-client">
+
+<h2>A Client</h2>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Switch to a terminal and show example</p>
+</div>
+<p>Use irssi or weechat in screen</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># This step is optional, but persistent IRC is cool</span>
+<span class="nv">$ </span>ssh &lt;username&gt;@&lt;preferred shell host&gt;
+
+<span class="c"># start screen with the name &#39;irc&#39;</span>
+<span class="nv">$ </span>screen -S irc
+
+<span class="c"># start your client in the 0th window of the screen session</span>
+<span class="nv">$ </span>irssi
+<span class="c"># or</span>
+<span class="nv">$ </span>weechat-curses
+
+<span class="c"># exit irc screen with CTRL+a, CTRL+d</span>
+<span class="c"># exit ssh session with CTRL+d or &#39;exit&#39;</span>
+<span class="c"># to get back to irc:</span>
+<span class="nv">$ </span>ssh &lt;username&gt;@&lt;preferred shell host&gt;
+<span class="nv">$ </span>screen -dr IRC
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="networks">
+
+<h2>Networks</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/multiple_networks.gif"><img alt="_images/multiple_networks.gif" src="_images/multiple_networks.gif" style="height: 30pc;" /></a>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>/connect irc.freenode.net
+
+/nick &lt;myawesomenickname&gt;
+/msg nickserv register &lt;password&gt; &lt;email&gt;
+
+/nick &lt;myawesomenickname&gt;
+/msg nickserv identify &lt;password&gt;
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="channels">
+
+<h2>Channels</h2>
+
+<div class="highlight-python"><div class="highlight"><pre>/join #osu-lug
+/join #devopsbootcamp
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name"><code class="docutils literal"><span class="pre">/list</span></code>:</th><td class="field-body"><ul class="first simple">
+<li>tells all channels on network</li>
+<li>Don't do this on Freenode!</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name"><code class="docutils literal"><span class="pre">/topic</span></code>:</th><td class="field-body"><p class="first">tells you the current channel's topic</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name"><code class="docutils literal"><span class="pre">/names</span></code>:</th><td class="field-body"><p class="first last">tells you who's here</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+</article>
+<article class="slide level-2" id="commands">
+
+<h2>Commands</h2>
+
+<ul class="simple">
+<li>take action with <code class="docutils literal"><span class="pre">/me</span> <span class="pre">does</span> <span class="pre">thing`</span></code></li>
+<li>everything else starting with / is a command</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>/say $thing
+/join, /part, /whois &lt;nick&gt;, /msg, /help &lt;command&gt;
+</pre></div>
+</div>
+<p>Note that nothing shows up in the channel when you run a <code class="docutils literal"><span class="pre">/whois</span></code> command; it
+shows up either in your status buffer or your conversation with the person.</p>
+<div class="codeblock-sm highlight-python"><div class="highlight"><pre>12:04 -!- _test_ [~test@c-50-137-46-63.hsd1.or.comcast.net]
+12:04 -!-  ircname  : Example User
+12:04 -!-  channels : #ExampleChannel
+12:04 -!-  server   : moorcock.freenode.net [TX, USA]
+12:04 -!-  hostname : c-50-137-46-63.hsd1.or.comcast.net 50.137.46.63
+12:04 -!-  idle     : 0 days 0 hours 2 mins 38 secs [signon: Wed Nov  6
+12:00:30
+                      2013]
+12:04 -!- End of WHOIS
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="useful-tricks">
+
+<h2>Useful tricks</h2>
+
+<ul>
+<li><p class="first">Tab-complete works on nicknames. use it.</p>
+</li>
+<li><p class="first">Highlight when people say your name</p>
+</li>
+<li><p class="first">Symbols are <em>not</em> part of names; they mark status in channel (such as &#64;)</p>
+</li>
+<li><p class="first">Logging (expect it); `/set autolog on`</p>
+</li>
+<li><dl class="first docutils">
+<dt>chanserv and nickserv are good bots to know</dt>
+<dd><ul class="first last simple">
+<li>hamper is also a bot</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="screen-irssi-hints">
+
+<h2>Screen &amp; Irssi Hints</h2>
+
+<ul>
+<li><dl class="first docutils">
+<dt>Paste with ctrl+shift+v</dt>
+<dd><ul class="first last simple">
+<li>PuTTY defaults to right-click to paste</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">to get back, <code class="docutils literal"><span class="pre">screen</span> <span class="pre">-dr</span> <span class="pre">IRC</span></code></p>
+</li>
+<li><p class="first">Can you use <code class="docutils literal"><span class="pre">man</span> <span class="pre">screen</span></code> to find out what the d and r flags mean?</p>
+</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>SCREEN(1)                                                               SCREEN(1)
+
+NAME
+       screen - screen manager with VT100/ANSI terminal emulation
+
+SYNOPSIS
+       screen [ -options ] [ cmd [ args ] ]
+       screen -r [[pid.]tty[.host]]
+       screen -r sessionowner/[[pid.]tty[.host]]
+Manual page screen(1) line 1 (press h for help or q to quit)
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="etiquette">
+
+<h2>Etiquette</h2>
+
+<ul>
+<li><p class="first">Lurk more</p>
+</li>
+<li><dl class="first docutils">
+<dt>Don't ask to ask</dt>
+<dd><ul class="first last simple">
+<li>Lure help out of hiding with tasty details of problem</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Show that you're worth helping</p>
+</li>
+<li><dl class="first docutils">
+<dt>Read the topic</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal"><span class="pre">/topic</span></code></li>
+<li>Output only shows up in your channel, not to everyone else</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Pastebin code</p>
+</li>
+<li><p class="first">Choose your nick carefully</p>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="terminology">
+
+<h2>Terminology</h2>
+
+<ul class="simple">
+<li>ping/pong</li>
+<li>flapping</li>
+</ul>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="_images/jargon.jpg"><img alt="_images/jargon.jpg" src="_images/jargon.jpg" style="height: 50pc;" /></a>
+</div>
+<ul>
+<li><p class="first">tail</p>
+</li>
+<li><p class="first">hat</p>
+</li>
+<li><p class="first">nick</p>
+</li>
+<li><p class="first">netsplit</p>
+</li>
+<li><p class="first">kick/ban/k-line</p>
+</li>
+<li><dl class="first docutils">
+<dt>common emotes</dt>
+<dd><ul class="first last simple">
+<li><code class="docutils literal"><span class="pre">o/</span></code> AND  <code class="docutils literal"><span class="pre">\o</span></code> high fives</li>
+<li><code class="docutils literal"><span class="pre">/me</span> <span class="pre">&amp;</span></code> means afk</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id2">
+
+<h2>Review</h2>
+
+<ul>
+<li><dl class="first docutils">
+<dt>How do you start an irc client?</dt>
+<dd><ul class="first last simple">
+<li>How often should you need to start your IRC client?</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">How do you reconnect to a screen session?</p>
+</li>
+<li><p class="first">Give an example of something which you should not do in IRC</p>
+</li>
+</ul>
+
+
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>
