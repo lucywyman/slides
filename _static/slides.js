@@ -95,6 +95,7 @@ function updateSlides() {
   var container = document.getElementById('slide_container');
   var boxes = document.getElementsByClassName('slide');
   var newcolor = newColor();
+  console.log(newcolor);
   container.style.backgroundColor = newcolor;
   for (i=0; i<boxes.length; i++){
     boxes[i].style.backgroundColor = newcolor;
@@ -104,8 +105,8 @@ function updateSlides() {
 };
 
 function newColor() {
-  colors = ['#0173BC', '#C82515', '#FDCB2C', '#FDCB2C'];
-  return colors[Math.floor(Math.random()*(colors.length))];
+  colors = ['#0173BC', '#C82515', '#FDCB2C', '#2CAF34'];
+  return colors[Math.floor(Math.random()*(colors.length+1))];
 }
 
 function buildNextItem() {
