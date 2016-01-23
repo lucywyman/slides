@@ -25,6 +25,18 @@ h2{
     display: none;
 }
 
+code {
+	background-color: #f7f7f7;
+	border-radius: 3px;
+	font-family: 'Consolas', monospace;
+	color: #333;
+	padding: 4px;
+}
+
+ul li a{
+	color: #fff !important;
+}
+
 /* Index page styles */
 
 img{
