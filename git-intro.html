@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Git and Github &mdash; slides</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2015.07.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    
+    <link rel="top" title="slides" href="index.html" />
+    <link rel="next" title="Dr. Jekyll and Mr. Pelican" href="jekyll-pelican.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="index.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="git-and-github">
+
+<h1>Git and Github</h1>
+
+<p>An Introduction</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="what-we-ll-cover">
+
+<h2>What We'll Cover</h2>
+
+<ul class="simple">
+<li>What's Git</li>
+<li>Using <code class="docutils literal"><span class="pre">git</span></code></li>
+<li>More resources</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="first-things-first">
+
+<h2>First Things First</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/join">Make an account on github</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="why-bother">
+
+<h2>Why Bother?</h2>
+
+<div class="figure align-right">
+<a class="reference internal image-reference" href="_images/phd_final.gif"><img alt="_images/phd_final.gif" src="_images/phd_final.gif" style="height: 500px;" /></a>
+</div>
+<p>Image from
+<a class="reference external" href="http://www.phdcomics.com/comics/archive.php?comicid=1531">PhD Comics</a></p>
+
+
+
+
+</article>
+<article class="slide level-2" id="better-options-version-control">
+
+<h2>Better Options: Version Control</h2>
+
+<ul>
+<li><p class="first">Commit = Snapshot of part of your project's state</p>
+</li>
+<li><p class="first">Centralized (SVN, CVS) vs. Decentralized (Git, hg)</p>
+</li>
+<li><dl class="first docutils">
+<dt>We'll look at Git today</dt>
+<dd><ul class="first last simple">
+<li>Easier to learn other VCS from Git</li>
+<li>Widely used in the open source world</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="git">
+
+<h2>Git</h2>
+
+<div class="figure align-left">
+<a class="reference internal image-reference" href="_images/Linus_Torvalds.jpeg"><img alt="_images/Linus_Torvalds.jpeg" src="_images/Linus_Torvalds.jpeg" style="height: 400px;" /></a>
+</div>
+<p>git, noun. Brit.informal.
+1. an unpleasant or contemptible person.</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="setting-up-git">
+
+<h2>Setting up Git</h2>
+
+<ul class="simple">
+<li>Linux:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo <span class="o">[</span>yum <span class="p">|</span> apt <span class="o">]</span>  install git
+</pre></div>
+</div>
+<ul class="simple">
+<li>Windows &amp; Mac: <a class="reference external" href="https://desktop.github.com/">https://desktop.github.com/</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="configs">
+
+<h2>Configs</h2>
+
+<dl class="docutils">
+<dt>[user]</dt>
+<dd>email = <a class="reference external" href="mailto:wyman&#46;lucy&#37;&#52;&#48;gmail&#46;com">wyman<span>&#46;</span>lucy<span>&#64;</span>gmail<span>&#46;</span>com</a>
+name = Lucy Wyman</dd>
+<dt>[core]</dt>
+<dd>editor = vim</dd>
+<dt>[credential]</dt>
+<dd>username = lucywyman</dd>
+</dl>
+
+
+
+
+</article>
+<article class="slide level-2" id="using-git-locally">
+
+<h2>Using Git Locally</h2>
+
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git init
+<span class="c"># Make your changes</span>
+<span class="nv">$ </span>git status <span class="c"># or git diff</span>
+<span class="nv">$ </span>git add &lt;filename&gt;
+<span class="nv">$ </span>git commit
+<span class="nv">$ </span>git push origin &lt;branchname&gt;
+</pre></div>
+</div>
+<ul class="simple">
+<li>Undo things?
+the <a class="reference external" href="http://git-scm.com/book/en/Git-Basics-Undoing-Things">git book</a> explains
+well</li>
+<li>What commits have I made lately?</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre>$ git log
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="what-not-to-do">
+
+<h2>What Not To Do</h2>
+
+<ul>
+<li><p class="first"><strong>Don't delete the .git files</strong></p>
+</li>
+<li><p class="first">Avoid redundant copies of the same work in one revision</p>
+</li>
+<li><dl class="first docutils">
+<dt>Don't make &quot;oops, undoing that&quot; commits.</dt>
+<dd><ul class="first last simple">
+<li>Use git commit --amend or git revert</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Don't wait too long between commits</dt>
+<dd><ul class="first last simple">
+<li>You can squash them all together later</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Don't commit secrets, and if you do <strong>change them</strong>. Git never forgets.</p>
+</li>
+</ul>
+<p><a class="reference external" href="http://arstechnica.com/security/2013/01/psa-dont-upload-your-important-passwords-to-github/">http://arstechnica.com/security/2013/01/psa-dont-upload-your-important-passwords-to-github/</a></p>
+
+
+
+
+</article>
+<article class="slide level-2" id="git-exercise">
+
+<h2>Git Exercise</h2>
+
+<p>First create a git repository!</p>
+<div class="highlight-none"><div class="highlight"><pre>$ mkdir my_python_app
+$ cd my_python_app
+$ git init
+</pre></div>
+</div>
+<p>Git will do a one-time prompt for some basic information and then you have a
+Git Repository! All code in this code can be tracked by git as a single
+project.</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="adding-code">
+
+<h2>Adding Code</h2>
+
+<p>Create and open a new file <code class="docutils literal"><span class="pre">script.py</span></code> with the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="n">x</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span>  <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Save this file and leave the text editor and tell git to track this code.</p>
+<div class="highlight-none"><div class="highlight"><pre>$ git status
+$ git add script.py
+$ git commit -m &quot;My first git commit!&quot;
+$ git status
+$ git push origin master
+$ git log
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="cloning-a-repository">
+
+<h2>Cloning a Repository</h2>
+
+<p>Git also allows you to <code class="docutils literal"><span class="pre">clone</span></code> a remote repository to work on another
+person's code. It's like downloading the entire project and it's git history.</p>
+<div class="highlight-none"><div class="highlight"><pre>$ cd ~
+$ git clone git@github.com:DevOpsBootcamp/tinsy-flask-app.git
+$ cd tinsy-flask-app
+$ ls
+</pre></div>
+</div>
+<p>You have successfully clone a remote repository and can start modifying the
+other person's code. Changes you make on your local version of this project
+will not affect the original version you modified (although you can push
+changes if you are allowed to do so by the original owner!)</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="branches">
+
+<h2>Branches</h2>
+
+<p>Github allows you to 'branch' your codebase. This allows you to make changes
+on a separate track without modifying the original codebse in the same
+repository. Branches are preserved when you clone a remote repository.</p>
+<div class="highlight-none"><div class="highlight"><pre>$ git checkout broken
+$ python myapp.py
+</pre></div>
+</div>
+<p>Now you can see your webapp doesn't work correctly when you try to access it in
+the browser!</p>
+<p>We can manually go in and fix it, or run a command to see what changed between
+this version and the version in the 'master' branch.</p>
+<div class="highlight-none"><div class="highlight"><pre>$ git diff master
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="daily-workflow">
+
+<h2>Daily workflow</h2>
+
+<div class="figure align-right">
+<a class="reference internal image-reference" href="_images/gitflow.png"><img alt="_images/gitflow.png" src="_images/gitflow.png" style="height: 400px;" /></a>
+</div>
+<p>Pull -&gt; Work -&gt; Add changes -&gt; Commit -&gt; Push</p>
+<p>Larger projects have more complex workflows</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="github">
+
+<h2>GitHub!</h2>
+
+<div class="figure">
+<img alt="_images/octocat.jpg" src="_images/octocat.jpg" />
+</div>
+<ul class="simple">
+<li>Free online code storage</li>
+<li>Easily share and collaborate on code</li>
+<li>Great Git documentation</li>
+<li>Easily findable source-code</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="other-resources">
+
+<h2>Other Resources</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="https://help.github.com">Github Documentation</a></li>
+<li><a class="reference external" href="http://www.wei-wang.com/ExplainGitWithD3/#">Git Visualizations</a></li>
+<li><a class="reference external" href="https://github.com/DevOpsBootcamp/tinsy-flask-app#now-what">Further tiny-flask-app exercises</a></li>
+</ul>
+
+
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>

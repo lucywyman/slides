@@ -1,8 +1,9 @@
-.codeblock-sm {
-    font-size: 0.8em;
+.pre {
+	background-color: #f7f7f7;
+	border-radius: 3px;
+	font-family: 'Consolas', monospace;
+	color: #333;
+	padding: 2px;
 }
 
-ul,pre {
-    margin-top: 15px;
-}
-
+/*# sourceMappingURL=custom.css.map */

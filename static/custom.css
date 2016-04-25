@@ -12,7 +12,7 @@ ul,pre {
 }
 
 h1, h2, h3, h4, p, li, a, .reference{
-    color: #333;
+    color: #444;
 }
 
 h2{
@@ -29,8 +29,4 @@ code {
 	font-family: 'Consolas', monospace;
 	color: #333;
 	padding: 4px;
-}
-
-ul li a{
-	color: #333;
 }
