@@ -1,361 +1,55 @@
 <!DOCTYPE html>
-
-
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>&lt;no title&gt; &mdash; slides</title>
-    
-    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
-    <link rel="stylesheet" href="_static/single.css" type="text/css" />
-    
-    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '2015.07.01',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/common.js"></script>
-    
-    <script type="text/javascript" src="_static/slides.js"></script>
-    <script type="text/javascript" src="_static/sync.js"></script>
-    <script type="text/javascript" src="_static/controller.js"></script>
-    <script type="text/javascript" src="_static/init.js"></script>
-    
-    
-    <link rel="top" title="slides" href="#" />
-    <link rel="next" title="Git and Github" href="git-intro.html" /> 
-  </head>
-  <body>
-
-<section
-   id="slide_container"
-   class='slides layout-regular'>
-
-
-  <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="git-intro.html">Git and Github</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#what-we-ll-cover">What We'll Cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#first-things-first">First Things First</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#why-bother">Why Bother?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#better-options-version-control">Better Options: Version Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#git">Git</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#setting-up-git">Setting up Git</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#configs">Configs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#using-git-locally">Using Git Locally</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#what-not-to-do">What Not To Do</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#git-exercise">Git Exercise</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#adding-code">Adding Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#cloning-a-repository">Cloning a Repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#branches">Branches</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#daily-workflow">Daily workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#github">GitHub!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-intro.html#other-resources">Other Resources</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="jekyll-pelican.html">Dr. Jekyll and Mr. Pelican</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican.html#what-even-is-a-static-site-generator">What even <em>is</em> a static site generator?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican.html#ok-so-what-makes-a-good-ssg">Ok, so what makes a good SSG?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican.html#what-do-other-people-think">What do other people think?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican.html#things-that-jekyll-does-well">Things that Jekyll does well:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican.html#the-cons">The Cons:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican.html#things-that-pelican-does-well">Things that Pelican does well:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican.html#id1">The Cons:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican.html#things-that-both-do-well">Things that both do well:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican.html#things-that-neither-do-well">Things that neither do well:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican.html#id2">Things that neither do well:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican.html#the-conclusion">The Conclusion:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican.html#other-ssgs">Other SSGs:</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="jekyll-pelican.html#thank-you">Thank you!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="jekyll-pelican-text.html">Dr. Jekyll and Mr. Pelican</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican-text.html#what-even-is-a-static-site-generator">What even <em>is</em> a static site generator?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican-text.html#ok-so-what-makes-a-good-ssg">Ok, so what makes a good SSG?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican-text.html#what-do-other-people-think">What do other people think?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican-text.html#things-that-jekyll-does-well">Things that Jekyll does well:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican-text.html#the-cons">The Cons:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican-text.html#things-that-pelican-does-well">Things that Pelican does well:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican-text.html#id1">The Cons:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican-text.html#things-that-both-do-well">Things that both do well:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican-text.html#things-that-neither-do-well">Things that neither do well:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican-text.html#id2">Things that neither do well:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican-text.html#the-conclusion">The Conclusion:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jekyll-pelican-text.html#other-ssgs">Other SSGs:</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="jekyll-pelican-text.html#thank-you">Thank you!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linux-jargon.html">Linux Jargon</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#hacker">Hacker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#conversational-acronyms">Conversational Acronyms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#technical-acronyms">Technical Acronyms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#id1">Technical Acronyms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#security-acronyms">Security Acronyms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#utilities-must-haves">Utilities: Must haves</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#utilities-you-probably-already-know">Utilities: You probably already know</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#utilities-out-there">Utilities: Out there</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#words">Words</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#id2">Words</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#id3">Words</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#silly-words">Silly words</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#books">Books</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#punctuation">Punctuation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#stuff-to-know">Stuff to know</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#id4">Stuff to know</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#id5">Stuff to know</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux-jargon.html#resources">Resources</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="math-music.html">Math and Music</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modifying-the-kernel.html">Modifying the Kernel</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#this-talk-will-not">This talk will not:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#this-talk-will">This talk will:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#your-environment">Your Environment:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#yocto">Yocto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#quick-emulator">Quick EMUlator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#building-the-kernel">Building the Kernel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#to-install">// To Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#todo">// TODO</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="modifying-the-kernel.html#demo-time">Demo Time</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#making-your-changes">Making your changes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#id1">// TODO</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="modifying-the-kernel.html#do-that-demo">Do that Demo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#testing">Testing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="modifying-the-kernel.html#damn-dat-demo">Damn, dat Demo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#creating-a-patch">Creating a patch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#resources">Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modifying-the-kernel.html#questions">Questions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="modifying-the-kernel.html#thank-you">Thank you!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html">Sass: What it is, how it's used, and why it's so Syntactically Awesome</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#what-is-sass">What is Sass?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#impudent-back-talk">Impudent back talk?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#to-sauce-or-be-saucy-to">To sauce or be saucy to?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#stewed-fruit">Stewed Fruit?</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#s-a-s-s">S.A.S.S</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#the-language">The Language</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#the-css-preprocessor">The CSS Preprocessor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#the-ruby-gem">The Ruby Gem</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#is-it-turing-complete">Is it Turing-Complete?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#why-should-i-use-it">Why should I use it?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#variables">Variables</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#boo">Boo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#yay">Yay</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#nesting">Nesting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#raisins">Raisins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#hugs">Hugs</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#inheritance">Inheritance</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#toad-s-feet">Toad's feet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#puppies">Puppies</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#mixins">Mixins</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#ie6">IE6</a></li>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#firefox">Firefox</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#operators">Operators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#pirranhas">Pirranhas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#doctor-who">Doctor Who</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#conditionals">Conditionals</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#blink-tags">Blink tags</a></li>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#beyonce">Beyonce</a></li>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#functions">Functions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="oscon-sass.html#thank-you">Thank you!</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="oscon-sass.html#page">page</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="polynomials.html">Your Roots Are Showing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#polynomials">Polynomials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#ok-so-what-s-a-root">Ok, so what's a root?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#why-are-these-a-big-deal">Why are these a big deal?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#multiplicities">Multiplicities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#bounds-on-roots">Bounds on Roots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#easy-roots">Easy Roots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#id1">Easy Roots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#id2">Easy Roots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#the-problem">The problem:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#other-possibilities">Other Possibilities:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#newton-s-method">Newton's Method</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#fixed-point-iteration">Fixed Point Iteration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#secant">Secant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#bisection">Bisection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#root-density-plot">Root Density Plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#mandelbrot-set">Mandelbrot Set</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#problem-conditioning">Problem Conditioning</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#wilkinson-s-polynomial">Wilkinson's Polynomial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polynomials.html#why-is-this-hard">Why is this hard?</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="polynomials.html#questions">Questions?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sass.html">Sass: What it is, how it's used, and why it's so Syntactically Awesome</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sass.html#what-is-sass">What is Sass?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sass.html#but-wait-how-does-it-work">But wait, how does it work?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sass.html#ok-so-what-s-the-big-deal">Ok, so what's the big deal?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sass.html#variables">Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sass.html#nesting">Nesting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sass.html#inheritance">Inheritance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sass.html#mixins">Mixins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sass.html#operators">Operators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sass.html#conditional-logic">Conditional Logic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sass.html#other-cool-features">Other cool features:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sass.html#the-future">The Future</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="single-system-fundamentals.html">Linux System Fundamentals</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#today-s-agenda">Today's Agenda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#operating-systems">Operating Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#the-terminal">The Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#basic-shell-commands">Basic Shell Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#invoking-a-script">Invoking a script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#file-paths">File Paths</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#special-characters">Special Characters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#type-less">Type less</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#help-get-me-out-of-here">Help, get me out of here!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#knowledge-check">Knowledge Check</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#more-about-man-pages">More about Man Pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#documentation">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#asking-for-help">Asking for help</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#review">Review</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#what-are-users">What are users?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#users-have">Users have</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#managing-users">Managing users</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#passwords">Passwords</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#root-superuser">Root/Superuser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#acting-as-another-user">Acting as another user</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#what-are-groups">What are groups?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#hands-on-users-and-groups">Hands-On: Users and Groups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#what-are-files">What are files?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#file-extensions">File extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#ls-l">ls -l</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#chmod-and-octal-permissions">chmod and octal permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#chown-chgrp">chown, chgrp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#types-of-files">Types of files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#hands-on-files-and-permissions">Hands-On: Files and Permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#package-management">Package Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#language-specific-package-managers">Language-specific Package Managers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#other-package-managers">Other Package Managers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#installing-from-source">Installing from source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#hands-on-package-management">Hands-on: Package Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#id1">Review</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#irc">IRC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#a-client">A Client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#networks">Networks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#channels">Channels</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#commands">Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#useful-tricks">Useful tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#screen-irssi-hints">Screen &amp; Irssi Hints</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#etiquette">Etiquette</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#terminology">Terminology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="single-system-fundamentals.html#id2">Review</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="sp.html">Winter Progress Report</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sp.html#django">Django</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sp.html#the-sitemap">The Sitemap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sp.html#talking-to-the-database">Talking to the Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sp.html#up-next">Up next</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="standard-model.html">Intoduction to the Standard Model</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#so-what-exactly-is-this-thing">So what exactly is this thing?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#basically">Basically...</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#the-jargon">The Jargon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#quarks">Quarks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#quarks-cont-d">Quarks cont'd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#properties-of-quarks">Properties of Quarks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#more-properties">More properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#antiquarks">Antiquarks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#what-do-quarks-do">What do Quarks do?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#but-what-about-electrons">But what about electrons??</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#leptons-cont-d">Leptons cont'd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#properties-of-leptons">Properties of Leptons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#what-are-these-leprechauns-good-for">What are these leprechauns good for?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#gauge-bosons">Gauge Bosons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#id1">Gauge Bosons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#boson-properties">Boson Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#how-do-these-all-come-together">How do these all come together?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#whoa-that-s-a-lot-of-things">Whoa, that's a lot of things</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#how-does-this-all-relate-to-the-standard-model-though">How does this all relate to the Standard Model though?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="standard-model.html#what-about-the-higgs-boson-wasn-t-that-a-big-deal">What about the Higgs boson?  Wasn't that a big deal?</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tmux-screen.html">Tmux + Screen</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tmux-screen.html#first-history">First, History</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tmux-screen.html#the-problems">The Problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tmux-screen.html#the-solution">The Solution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tmux-screen.html#tmux-and-screen">Tmux and Screen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tmux-screen.html#tmux">Tmux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tmux-screen.html#screen">Screen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tmux-screen.html#demo-time">Demo Time!</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="web-intro.html">From the Ground Up:</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#what-is-html">What is HTML?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#what-is-css">What is CSS?</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="web-intro.html#now-for-the-fun-part">Now for the fun part!</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#boiler-plate">Boiler Plate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#doctype">Doctype</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#html-tag">HTML tag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#head-tag">Head tag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#body-tag">Body tag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#some-other-common-tags">Some Other common tags</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#is-there-a-tag-for-x">Is there a tag for x?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#so-what-about-the-styles-css">So what about the &quot;styles.css&quot;?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#stylesheets">Stylesheets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#ids">Ids</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#elements">Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#on-the-subject-of-colors">On the subject of colors</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="web-intro.html#let-s-add-some-css-to-our-page">Let's add some CSS to our page!</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="web-intro.html#html-and-css-resources">HTML and CSS resources</a></li>
-</ul>
-</li>
-</ul>
-</div>
-
-
-</section>
-
-<section id="slide_notes">
-
-</section>
-
-  </body>
+<html lang='en'>
+<head>
+    <title>Slides</title>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='static/custom.css' type='text/css'>
+    <link rel='stylesheet' href='static/index.css' type='text/css'>
+    <meta name='viewport' content='width=device-width'>
+</head>
+<body id='index'>
+    <div class='black'>
+        <ul>
+            <li>8.22.2016</li>
+			<li>1.23.2016</li>
+            <li>7.22.2015</li>
+            <li>4.18.2015</li>
+            <li>4.14.2015</li>
+            <li>2.9.2015</li>
+            <!--<li>12.8.2015</li>-->
+			<!--<li>12.8.2015</li>-->
+        </ul>
+    </div>
+    <div class='white'>
+        <ul>
+            <li>
+                <a href='http://slides.lucywyman.me/tmux-and-screen.html'>Tmux + Screen<br>
+                    <span class='tiny'>Multiplexing and You</span>
+                </a>
+            </li>
+			<li>
+                <a href='http://slides.lucywyman.me/modifying-the-kernel.html'>Modifying the Kernel<br>
+                    <span class='tiny'>A How-to</span>
+                </a>
+            </li>
+            <li>
+                <a href='http://slides.lucywyman.me/sass.html'>Sass<br>
+                    <span class='tiny'>What It Is, How It's Used, and Why It's So Syntactically Awesome</span>
+                </a>
+            </li>
+            <li>
+                <a href='http://slides.lucywyman.me/polynomials.html'>Your Roots Are Showing<br>
+                <span class='tiny'>An Exploration of Polynomial Roots and Pretty Fractals</span>
+                </a>
+            </li>
+            <li>
+                <a href='http://slides.lucywyman.me/gifs.html'>Gifs<br>
+                <span class='tiny'>An Analysis</span>
+                </a>
+            </li>
+            <li><a href='http://slides.lucywyman.me/jekyll-pelican.html'>Dr.Jekyll and Mr.Pelican<br><span class='tiny'>A Comparison of Static Site Generators</span></a></li>
+            <!--<li><a href='http://slides.lucywyman.me/web-intro.html'>HTML and CSS<br><span class='tiny'>From the Ground Up</span></a></li>-->
+			<!--<li><a href='http://slides.lucywyman.me/standard-model.html'>The Standard Model</a></li>-->
+    </div>
+</body>
 </html>
