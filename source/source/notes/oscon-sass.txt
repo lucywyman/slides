@@ -1,0 +1,28 @@
+1: First things first: what is sass?
+    - Back talk? Well, yes, but no.
+    - To sauce...? Close.
+    - Stewed fruit? What?  Thanks Google. I didn't have enough trust issues.
+2: Sass is:
+    - A scripting language. It has a syntax and semantics that eventually end up as
+        1's and 0's running through your computer. 
+    - A CSS preprocessor. The CSS processor is your browser, which is what
+        applies styles to the page. Sass happens before that: it interprets
+        the sass language into CSS before you send a response to the http client.
+    - A ruby gem. Sass needs to be interpreted into CSS, and that's done
+        by a sass interpreter, which is a ruby package (gem).  It lives on 
+        github, and needs to be installed if you want to use sass.
+3: Because sass is a scripting language, the sass interpreter reads your sass 
+    in order line by line and renders each line to CSS. It then spits out 
+    a .map and a css file which you can send to the browser.
+4: Yes. All this means is that it could run on a turing machine. Basically,
+    you can input and output, store information, and __
+5: This is really the question of the entire talk.  Why should you take
+    the time to learn this new tool?  The short answer is:
+    - Organization
+    - Time
+    - Legacy
+6: Ok, now let's get down to nitty gritty. This is just a taste test
+    of some of the features of sass.
+
+Variables: 
+
