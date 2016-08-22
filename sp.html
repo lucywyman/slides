@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Winter Progress Report &mdash; slides</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2015.07.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    
+    <link rel="top" title="slides" href="index.html" />
+    <link rel="next" title="Intoduction to the Standard Model" href="standard-model.html" />
+    <link rel="prev" title="Linux System Fundamentals" href="single-system-fundamentals.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="winter-progress-report">
+
+<h1>Winter Progress Report</h1>
+
+<p>Senior Project 2016</p>
+<p>Polymatheia</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="django">
+
+<h2>Django</h2>
+
+<ul class="simple">
+<li>Two modules: Polymatheia and Components</li>
+<li>Create forms based on the database schema</li>
+<li>Three main components:
+- <code class="docutils literal"><span class="pre">views/</span></code>
+- <code class="docutils literal"><span class="pre">urls.py</span></code>
+- <code class="docutils literal"><span class="pre">templates/</span></code></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="the-sitemap">
+
+<h2>The Sitemap</h2>
+
+<p>Designing the sitemap has probably been the hardest part. Here are the
+highlights:</p>
+<ul class="simple">
+<li>Index page displaying courses and related assignments</li>
+<li>Course list page with list of assignments for each course
+- Teachers have option to add a new course or update a course here</li>
+<li>Individual course page, w/ list of assignments
+- Teachers can update the course or add an assignment from here</li>
+<li>Individual assignment page, where students can upload/test submissions
+- Teachers can add a test or update the assignment from this page.</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="talking-to-the-database">
+
+<h2>Talking to the Database</h2>
+
+<p>Right now, only view works, but overall it's pretty simple:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">api_ip</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">API_IP</span>
+<span class="n">user_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;student&#39;</span><span class="p">:[</span><span class="s1">&#39;hennign&#39;</span><span class="p">]}</span>
+<span class="n">userobj</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">api_ip</span><span class="o">+</span><span class="s1">&#39;student/view&#39;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">user_data</span><span class="p">)</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">userobj</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="up-next">
+
+<h2>Up next</h2>
+
+<p>Next we'll talk about the Command Line Interface to the system</p>
+
+
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>

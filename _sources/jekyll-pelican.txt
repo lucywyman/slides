@@ -7,7 +7,7 @@ What even *is* a static site generator?
 ---------------------------------------
 
 .. figure:: static/jekyll.png
-    :width: 50pc
+    :height: 200px
     :align: center
 
 .. raw:: html
@@ -15,7 +15,7 @@ What even *is* a static site generator?
     <br>
     
 .. figure:: static/whatevenis.jpeg
-    :width: 50pc 
+    :height: 200px
     :align: center
 
 .. note::
@@ -39,11 +39,11 @@ Ok, so what makes a good SSG?
 
 .. figure:: static/class-act.png
     :align: left
-    :width: 30pc
+    :width: 30%
     
 .. figure:: static/theme.jpg
-    :align: center
-    :width: 30pc
+    :align: right
+    :width: 30%
 
 .. note::
     
@@ -66,12 +66,12 @@ What do other people think?
 
 .. figure:: static/high-five.png
     :align: left
-    :width: 50pc
+    :width: 50%
 
 
 .. figure:: static/windows-dinosaur.jpg
     :align: right
-    :width: 50pc
+    :width: 50%
 
 .. note:: 
 
@@ -162,7 +162,7 @@ Things that neither do well:
 .. nextslide::
 
 .. figure:: static/tech_support.png
-    :width: 60pc
+    :width: 60%
     :align: center
 
 The Conclusion:

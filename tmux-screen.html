@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tmux + Screen &mdash; slides</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2015.07.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    
+    <link rel="top" title="slides" href="index.html" />
+    <link rel="next" title="From the Ground Up:" href="web-intro.html" />
+    <link rel="prev" title="Intoduction to the Standard Model" href="standard-model.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="tmux-screen">
+
+<h1>Tmux + Screen</h1>
+
+<p>Multiplexing and You</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="first-history">
+
+<h2>First, History</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/televideo_terminal.jpg"><img alt="_images/televideo_terminal.jpg" src="_images/televideo_terminal.jpg" style="width: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="the-problems">
+
+<h2>The Problems</h2>
+
+<ul class="simple">
+<li>Limited to one window (multiple connections for multiple windows)</li>
+<li>Foreground processes stop when ssh connection terminates</li>
+<li>Only one machine can &quot;partake&quot; in a session</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="the-solution">
+
+<h2>The Solution</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/multiplex.jpg"><img alt="_images/multiplex.jpg" src="_images/multiplex.jpg" style="width: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="tmux-and-screen">
+
+<h2>Tmux and Screen</h2>
+
+<ul class="simple">
+<li>Both are widely used, well documented, and actively maintained</li>
+<li>Both allow you to open multiple &quot;windows&quot; in a single ssh session, and multiple tiled &quot;panes&quot; within those windows</li>
+<li>Both allow you to detach and reattach sessions</li>
+<li>Both allow more than one user to connect to a particular session at a time</li>
+<li>Both are generally not installed by default but available in most distribution repositories</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="tmux">
+
+<h2>Tmux</h2>
+
+<p>The Shiny New.</p>
+<ul class="simple">
+<li>Better tiling + window management</li>
+<li>Unicode support</li>
+<li>Easy status bar configuration</li>
+<li>Scriptable with <code class="code docutils literal"><span class="pre">tmux</span> <span class="pre">command</span> <span class="pre">[args]</span></code></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="screen">
+
+<h2>Screen</h2>
+
+<p>Keeping it simple since 1987.</p>
+<ul class="simple">
+<li>Logging output if screen is detached</li>
+<li>Can't split windows into panes vertically</li>
+<li>Can't maintain screen split through detach</li>
+<li>Better line wrapping</li>
+<li>Can connect to serial devices</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="demo-time">
+
+<h2>Demo Time!</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/demo-day.gif"><img alt="_images/demo-day.gif" src="_images/demo-day.gif" style="width: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>

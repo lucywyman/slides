@@ -7,13 +7,13 @@
     
     <title>Your Roots Are Showing &mdash; slides</title>
     
-    <link rel="stylesheet" href="static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="static/styles.css" type="text/css" />
-    <link rel="stylesheet" href="static/single.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
     
-    <link rel="stylesheet" href="static/custom.css" type="text/css" />
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     
-    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     
     
@@ -26,15 +26,15 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="static/jquery.js"></script>
-    <script type="text/javascript" src="static/underscore.js"></script>
-    <script type="text/javascript" src="static/doctools.js"></script>
-    <script type="text/javascript" src="static/common.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
     
-    <script type="text/javascript" src="static/slides.js"></script>
-    <script type="text/javascript" src="static/sync.js"></script>
-    <script type="text/javascript" src="static/controller.js"></script>
-    <script type="text/javascript" src="static/init.js"></script>
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
     
     
     <link rel="top" title="slides" href="index.html" />
@@ -64,10 +64,10 @@
 <h2>Polynomials</h2>
 
 <p>Polynomials are a function of the form
-<img class="math" src="static/math/a82cbcc6d210baa6f22862c7b0a6d6047147ee49.png" alt="a_0 + a_1x + a_2x^2 + ... + a_nx^n, a_n \neq 0"/></p>
-<p>e.g. <img class="math" src="static/math/9acd466a6dda847cfb99a9f44e95fa44fad2eceb.png" alt="x+5 = y"/></p>
+<span class="math">a_0 + a_1x + a_2x^2 + ... + a_nx^n, a_n \neq 0</span></p>
+<p>e.g. <span class="math">x+5 = y</span></p>
 <div class="build figure align-center">
-<a class="reference internal image-reference" href="static/heart.jpg"><img alt="static/heart.jpg" src="static/heart.jpg" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/heart.jpg"><img alt="_images/heart.jpg" src="_images/heart.jpg" style="height: 300px;" /></a>
 </div>
 
 
@@ -78,12 +78,12 @@
 
 <h2>Ok, so what's a root?</h2>
 
-<p>The root of a polynomial <img class="math" src="static/math/3eca8557203e86160952e1c0f735f7417f3285b1.png" alt="p"/> is a value <img class="math" src="static/math/7dd2a5ea01fbd72ad2a58dd1f3d6ecbfde6208a1.png" alt="a"/>
-such that <img class="math" src="static/math/ecd5257ac185ca6d193a70507a1c87a3779241ee.png" alt="p(a) = 0"/>.</p>
-<p>e.g. The root of <img class="math" src="static/math/b33a65ac8e57434cf6fc65c70b5ab8924dd0d652.png" alt="x+5 = 0"/> is -5, because the expression
+<p>The root of a polynomial <span class="math">p</span> is a value <span class="math">a</span>
+such that <span class="math">p(a) = 0</span>.</p>
+<p>e.g. The root of <span class="math">x+5 = 0</span> is -5, because the expression
 is only true if we set x equal to -5.</p>
 <div class="build figure align-center">
-<a class="reference internal image-reference" href="static/carrot.jpg"><img alt="static/carrot.jpg" src="static/carrot.jpg" style="height: 200px;" /></a>
+<a class="reference internal image-reference" href="_images/carrot.jpg"><img alt="_images/carrot.jpg" src="_images/carrot.jpg" style="height: 200px;" /></a>
 </div>
 
 
@@ -111,7 +111,7 @@ widely use cryptographic scheme.</p>
 <h2>Multiplicities</h2>
 
 <p>The number of times a polynomial has a root at a given point.</p>
-<p>e.g. <img class="math" src="static/math/d4dd28863c85ec3de7d4000f1f7721081961bee0.png" alt="(x+1)(x+1)(x+1) = x^3 + 3x^2 + 3x + 1"/> has multiplicity
+<p>e.g. <span class="math">(x+1)(x+1)(x+1) = x^3 + 3x^2 + 3x + 1</span> has multiplicity
 3 at x = -1.</p>
 
 
@@ -122,7 +122,7 @@ widely use cryptographic scheme.</p>
 
 <h2>Bounds on Roots</h2>
 
-<p>The one I understand best: <img class="math" src="static/math/bf2d01aa1de8ee211adee0731e3092de8df02478.png" alt="x &lt; max(a_i)"/> (Cauchy)</p>
+<p>The one I understand best: <span class="math">x &lt; max(a_i)</span> (Cauchy)</p>
 <p><a class="reference external" href="http://en.wikipedia.org/wiki/Properties_of_polynomial_roots#Bounds_on_.28complex.29_polynomial_roots">Wikipedia's answer</a></p>
 
 
@@ -134,8 +134,8 @@ widely use cryptographic scheme.</p>
 <h2>Easy Roots</h2>
 
 <ul class="simple">
-<li>Linear: For <img class="math" src="static/math/716421b967fe9d5d66b882d034224a9951dc2010.png" alt="a_1x + a_0 = 0"/> <img class="math" src="static/math/1d2b30dcc08fb2a8d77f4431c4a87ef10b7dbead.png" alt="x = \frac{-a_0}{a_1}"/></li>
-<li>Quadratic: <img class="math" src="static/math/89fd1175b102d9e8d0829125fff220af8d05bd01.png" alt="x = \frac{-a_2 \pm \sqrt{a_2 - 4*a_1*a_3}}{2*a_1}"/></li>
+<li>Linear: For <span class="math">a_1x + a_0 = 0</span> <span class="math">x = \frac{-a_0}{a_1}</span></li>
+<li>Quadratic: <span class="math">x = \frac{-a_2 \pm \sqrt{a_2 - 4*a_1*a_3}}{2*a_1}</span></li>
 </ul>
 
 
@@ -147,7 +147,7 @@ widely use cryptographic scheme.</p>
 <h2>Easy Roots</h2>
 
 <div class="figure align-center">
-<img alt="static/cubic.gif" src="static/cubic.gif" />
+<img alt="_images/cubic.gif" src="_images/cubic.gif" />
 </div>
 
 
@@ -159,7 +159,7 @@ widely use cryptographic scheme.</p>
 <h2>Easy Roots</h2>
 
 <div class="figure align-center">
-<img alt="static/quartic-formula.png" src="static/quartic-formula.png" />
+<img alt="_images/quartic-formula.png" src="_images/quartic-formula.png" />
 </div>
 
 
@@ -197,9 +197,9 @@ algebraically find the roots of polynomial of degree greater than 5.</p>
 
 <h2>Newton's Method</h2>
 
-<p>The basic idea: <img class="math" src="static/math/93e45a269af5115219f3cc61319c8b8b1f98f559.png" alt="x_{n+1} = x_n + \frac{f(x_n)}{f'(x_n)}"/></p>
+<p>The basic idea: <span class="math">x_{n+1} = x_n + \frac{f(x_n)}{f'(x_n)}</span></p>
 <div class="build figure align-center">
-<a class="reference internal image-reference" href="static/NewtonRGB.jpg"><img alt="static/NewtonRGB.jpg" src="static/NewtonRGB.jpg" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="_images/NewtonRGB.jpg"><img alt="_images/NewtonRGB.jpg" src="_images/NewtonRGB.jpg" style="height: 500px;" /></a>
 </div>
 
 
@@ -210,9 +210,9 @@ algebraically find the roots of polynomial of degree greater than 5.</p>
 
 <h2>Fixed Point Iteration</h2>
 
-<p><img class="math" src="static/math/effa8d61a6b753b55799ebb535590e0b2458d738.png" alt="x_{n+1} = g(x_n)"/> where <img class="math" src="static/math/3a4eb1f226baf3cbf0714beabfd36aa7bb0b91ee.png" alt="g(x_n) = x_n - \frac{f(x_n)}{f'(x_n)}"/></p>
+<p><span class="math">x_{n+1} = g(x_n)</span> where <span class="math">g(x_n) = x_n - \frac{f(x_n)}{f'(x_n)}</span></p>
 <div class="build figure align-center">
-<img alt="static/cobweb.gif" src="static/cobweb.gif" />
+<img alt="_images/cobweb.gif" src="_images/cobweb.gif" />
 </div>
 
 
@@ -223,7 +223,7 @@ algebraically find the roots of polynomial of degree greater than 5.</p>
 
 <h2>Secant</h2>
 
-<p>Draw a secant line between <img class="math" src="static/math/3fd73ff44217075160a1ae00063f236c58816410.png" alt="a, b | a&lt; \alpha, b&gt; \alpha"/>
+<p>Draw a secant line between <span class="math">a, b | a&lt; \alpha, b&gt; \alpha</span>
 , and set x-axis intercept as new a.</p>
 
 
@@ -234,9 +234,9 @@ algebraically find the roots of polynomial of degree greater than 5.</p>
 
 <h2>Bisection</h2>
 
-<p>Choose values <img class="math" src="static/math/e7288b5545ba9252868e1a7c21f9c203b60be44f.png" alt="a, b | a &lt; \alpha, b&gt; \alpha"/>, determine whether
-root is above or below <img class="math" src="static/math/a2eb646fb5511cbd7169a9fa1d19b2f38241d8d3.png" alt="\frac{a-b}{2}"/>, and then set
-<img class="math" src="static/math/a2eb646fb5511cbd7169a9fa1d19b2f38241d8d3.png" alt="\frac{a-b}{2}"/> to be the new a or b.</p>
+<p>Choose values <span class="math">a, b | a &lt; \alpha, b&gt; \alpha</span>, determine whether
+root is above or below <span class="math">\frac{a-b}{2}</span>, and then set
+<span class="math">\frac{a-b}{2}</span> to be the new a or b.</p>
 
 
 
@@ -247,7 +247,7 @@ root is above or below <img class="math" src="static/math/a2eb646fb5511cbd7169a9
 <h2>Root Density Plot</h2>
 
 <div class="figure align-center">
-<img alt="static/deg5.png" src="static/deg5.png" />
+<img alt="_images/deg5.png" src="_images/deg5.png" />
 </div>
 
 
@@ -258,10 +258,10 @@ root is above or below <img class="math" src="static/math/a2eb646fb5511cbd7169a9
 
 <h2>Mandelbrot Set</h2>
 
-<p>The set of complex numbers c such that <img class="math" src="static/math/eda8045f2c2877d7bda8f3457bd588f2cc733297.png" alt="z_{n+1} = {z_n}^2 + c"/>
+<p>The set of complex numbers c such that <span class="math">z_{n+1} = {z_n}^2 + c</span>
 remains bounded (doesn't diverge under iteration)(I think)</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="static/mandelbrot.jpg"><img alt="static/mandelbrot.jpg" src="static/mandelbrot.jpg" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/mandelbrot.jpg"><img alt="_images/mandelbrot.jpg" src="_images/mandelbrot.jpg" style="height: 300px;" /></a>
 </div>
 
 
@@ -284,13 +284,13 @@ This means that small errors can dramatically affect results.</p>
 <h2>Wilkinson's Polynomial</h2>
 
 <div class="figure align-center">
-<img alt="static/wilkinson.png" src="static/wilkinson.png" />
+<img alt="_images/wilkinson.png" src="_images/wilkinson.png" />
 </div>
 <p class="build">In plain english: by creating a polynomial
-<img class="math" src="static/math/a6e9e03318591d8aa75f19441724ff07ec99b0a7.png" alt="(x-1)(x-2)(x-3) ... (x-n)"/>, we know that it has roots
+<span class="math">(x-1)(x-2)(x-3) ... (x-n)</span>, we know that it has roots
 at the integers up to n.</p>
 <div class="build figure align-center">
-<a class="reference internal image-reference" href="static/wilkinson-expanded.png"><img alt="static/wilkinson-expanded.png" src="static/wilkinson-expanded.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="_images/wilkinson-expanded.png"><img alt="_images/wilkinson-expanded.png" src="_images/wilkinson-expanded.png" style="height: 300px;" /></a>
 </div>
 
 

@@ -7,13 +7,13 @@
     
     <title>Linux System Fundamentals &mdash; slides</title>
     
-    <link rel="stylesheet" href="static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="static/styles.css" type="text/css" />
-    <link rel="stylesheet" href="static/single.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
     
-    <link rel="stylesheet" href="static/custom.css" type="text/css" />
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     
-    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     
     
@@ -26,19 +26,19 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="static/jquery.js"></script>
-    <script type="text/javascript" src="static/underscore.js"></script>
-    <script type="text/javascript" src="static/doctools.js"></script>
-    <script type="text/javascript" src="static/common.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
     
-    <script type="text/javascript" src="static/slides.js"></script>
-    <script type="text/javascript" src="static/sync.js"></script>
-    <script type="text/javascript" src="static/controller.js"></script>
-    <script type="text/javascript" src="static/init.js"></script>
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
     
     
     <link rel="top" title="slides" href="index.html" />
-    <link rel="next" title="Intoduction to the Standard Model" href="standard-model.html" />
+    <link rel="next" title="Winter Progress Report" href="sp.html" />
     <link rel="prev" title="Sass: What it is, how it&#39;s used, and why it&#39;s so Syntactically Awesome" href="sass.html" /> 
   </head>
   <body>
@@ -73,7 +73,7 @@
 </li>
 </ul>
 <div class="figure align-right">
-<img alt="static/Tux.png" src="static/Tux.png" />
+<img alt="_images/Tux.png" src="_images/Tux.png" />
 </div>
 <ul>
 <li><dl class="first docutils">
@@ -133,7 +133,7 @@
 <h2>The Terminal</h2>
 
 <div class="figure align-right">
-<a class="reference internal image-reference" href="static/crashcart.jpg"><img alt="static/crashcart.jpg" src="static/crashcart.jpg" style="height: 100px;" /></a>
+<a class="reference internal image-reference" href="_images/crashcart.jpg"><img alt="_images/crashcart.jpg" src="_images/crashcart.jpg" style="height: 100px;" /></a>
 </div>
 <ul>
 <li><dl class="first docutils">
@@ -156,10 +156,10 @@
 </li>
 </ul>
 <div class="figure align-right">
-<a class="reference internal image-reference" href="static/televideo_terminal.jpg"><img alt="static/televideo_terminal.jpg" src="static/televideo_terminal.jpg" style="height: 100px;" /></a>
+<a class="reference internal image-reference" href="_images/televideo_terminal.jpg"><img alt="_images/televideo_terminal.jpg" src="_images/televideo_terminal.jpg" style="height: 100px;" /></a>
 </div>
 <div class="figure align-left">
-<img alt="static/teletype_terminal.jpg" src="static/teletype_terminal.jpg" />
+<img alt="_images/teletype_terminal.jpg" src="_images/teletype_terminal.jpg" />
 </div>
 
 
@@ -192,14 +192,14 @@
 </table>
 </div>
 <div class="figure align-right">
-<a class="reference internal image-reference" href="static/bash.png"><img alt="static/bash.png" src="static/bash.png" style="height: 75pc;" /></a>
+<a class="reference internal image-reference" href="_images/bash.png"><img alt="_images/bash.png" src="_images/bash.png" style="height: 75pc;" /></a>
 </div>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">ls</span></code>, <code class="docutils literal"><span class="pre">cd</span></code>, <code class="docutils literal"><span class="pre">cat</span></code>, <code class="docutils literal"><span class="pre">echo</span></code></li>
 <li>invoke/call an installed program</li>
 <li>get help: <code class="docutils literal"><span class="pre">man</span> <span class="pre">&lt;program&gt;</span></code></li>
 </ul>
-<div class="highlight-python"><div class="highlight"><pre>test@x230 ~ $ tree
+<div class="highlight-default"><div class="highlight"><pre><span></span>test@x230 ~ $ tree
 .
 ├── Documents
 │   ├── Code
@@ -227,17 +227,17 @@
 <p class="first admonition-title">Note</p>
 <p class="last">Permissions discussed later.</p>
 </div>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ls -l
-<span class="nv">$ </span>chmod +x <span class="nv">$filename</span>
-<span class="nv">$ </span>./<span class="nv">$filename</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ ls -l
+$ chmod +x <span class="nv">$filename</span>
+$ ./<span class="nv">$filename</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong> (or flags) are extra information that you pass to a script or
 program when you call it. They tell it in more detail what you want to do.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ls -a -l
-<span class="nv">$ </span>ls -al
-<span class="nv">$ </span>ls -si
-<span class="nv">$ </span>ls --si
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ ls -a -l
+$ ls -al
+$ ls -si
+$ ls --si
 </pre></div>
 </div>
 
@@ -258,12 +258,12 @@ program when you call it. They tell it in more detail what you want to do.</p>
 <li>current path appears in your prompt: I'm logged in as the user test on the
 machine named x230</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nb">test</span>@x230 ~ <span class="nv">$ </span>ls
+<div class="highlight-bash"><div class="highlight"><pre><span></span>test@x230 ~ $ ls
 Documents  Pictures
-<span class="nb">test</span>@x230 ~ <span class="nv">$ </span><span class="nb">cd </span>Documents/
-<span class="nb">test</span>@x230 ~/Documents <span class="nv">$ </span>ls
+test@x230 ~ $ <span class="nb">cd</span> Documents/
+test@x230 ~/Documents $ ls
 Code  School  Work
-<span class="nb">test</span>@x230 ~/Documents <span class="nv">$ </span><span class="nb">pwd</span>
+test@x230 ~/Documents $ <span class="nb">pwd</span>
 /home/test/Documents
 </pre></div>
 </div>
@@ -289,7 +289,7 @@ account</p>
 <li>Regular expressions - for matching patterns of text</li>
 </ul>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="static/xkcd_regex.png"><img alt="static/xkcd_regex.png" src="static/xkcd_regex.png" style="height: 50pc;" /></a>
+<a class="reference internal image-reference" href="_images/xkcd_regex.png"><img alt="_images/xkcd_regex.png" src="_images/xkcd_regex.png" style="height: 50pc;" /></a>
 </div>
 
 
@@ -321,7 +321,7 @@ account</p>
 </li>
 </ul>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="static/space_cadet_keyboard.gif"><img alt="static/space_cadet_keyboard.gif" src="static/space_cadet_keyboard.gif" style="height: 75pc;" /></a>
+<a class="reference internal image-reference" href="_images/space_cadet_keyboard.gif"><img alt="_images/space_cadet_keyboard.gif" src="_images/space_cadet_keyboard.gif" style="height: 75pc;" /></a>
 </div>
 <p>Automation &gt; Typing &gt; Mouse</p>
 
@@ -334,7 +334,7 @@ account</p>
 <h2>Help, get me out of here!</h2>
 
 <div class="figure align-center">
-<img alt="static/exit.jpg" src="static/exit.jpg" />
+<img alt="_images/exit.jpg" src="_images/exit.jpg" />
 </div>
 <ul>
 <li><p class="first">ctrl+c kills or quits process</p>
@@ -359,7 +359,7 @@ account</p>
 
 <h2>Knowledge Check</h2>
 
-<div class="highlight-python"><div class="highlight"><pre>test@x230 ~ $ tree
+<div class="highlight-default"><div class="highlight"><pre><span></span>test@x230 ~ $ tree
 .
 ├── Documents
 │   ├── Code
@@ -389,7 +389,7 @@ account</p>
 
 <ul>
 <li><p class="first">the manual (rtfm):</p>
-<div class="highlight-python"><div class="highlight"><pre>$ man &lt;program&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ man &lt;program&gt;
 $ man man
 </pre></div>
 </div>
@@ -398,7 +398,7 @@ $ man man
 and <code class="docutils literal"><span class="pre">N</span></code> for previous match</p>
 </li>
 <li><p class="first">else:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ &lt;program&gt; --help
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ &lt;program&gt; --help
 </pre></div>
 </div>
 </li>
@@ -414,7 +414,7 @@ and <code class="docutils literal"><span class="pre">N</span></code> for previou
 
 <p>Man pages, blogs you find by Googling, StackOverflow</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="static/google.gif"><img alt="static/google.gif" src="static/google.gif" style="height: 50pc;" /></a>
+<a class="reference internal image-reference" href="_images/google.gif"><img alt="_images/google.gif" src="_images/google.gif" style="height: 50pc;" /></a>
 </div>
 <ul>
 <li><dl class="first docutils">
@@ -492,10 +492,10 @@ mentioning what possibilities you've ruled out by searching.</li>
 <ul class="simple">
 <li>You, right now</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>whoami    <span class="c"># your username</span>
-<span class="nv">$ </span>who       <span class="c"># who is logged in?</span>
-<span class="nv">$ </span>w         <span class="c"># who is here and what are they doing?</span>
-<span class="nv">$ </span>id        <span class="c"># user ID, group ID, and groups you&#39;re in</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ whoami    <span class="c1"># your username</span>
+$ who       <span class="c1"># who is logged in?</span>
+$ w         <span class="c1"># who is here and what are they doing?</span>
+$ id        <span class="c1"># user ID, group ID, and groups you&#39;re in</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -527,20 +527,20 @@ mentioning what possibilities you've ruled out by searching.</li>
 
 <h2>Managing users</h2>
 
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>cat /etc/passwd
-<span class="c"># username:x:UID:GID:GECOS:homedir:shell</span>
-<span class="nv">$ </span>useradd <span class="nv">$USER</span> <span class="c"># vs adduser, the friendly Ubuntu version</span>
-<span class="nv">$ </span>userdel <span class="nv">$USER</span>
-<span class="nv">$ </span>passwd
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ cat /etc/passwd
+<span class="c1"># username:x:UID:GID:GECOS:homedir:shell</span>
+$ useradd <span class="nv">$USER</span> <span class="c1"># vs adduser, the friendly Ubuntu version</span>
+$ userdel <span class="nv">$USER</span>
+$ passwd
 </pre></div>
 </div>
 <div class="figure align-center">
-<img alt="static/xkcd215.png" src="static/xkcd215.png" />
+<img alt="_images/xkcd215.png" src="_images/xkcd215.png" />
 </div>
-<div class="highlight-bash"><div class="highlight"><pre><span class="c"># GECOS: full name, office number and building, office phone extension,</span>
-<span class="c"># home phone number (General Electric Comprehensive Operating System)</span>
-<span class="nv">$ </span>chfn <span class="c"># change GECOS information; only works sometimes</span>
-<span class="nv">$ </span>finger <span class="c"># tells you someone&#39;s GECOS info</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># GECOS: full name, office number and building, office phone extension,</span>
+<span class="c1"># home phone number (General Electric Comprehensive Operating System)</span>
+$ chfn <span class="c1"># change GECOS information; only works sometimes</span>
+$ finger <span class="c1"># tells you someone&#39;s GECOS info</span>
 </pre></div>
 </div>
 
@@ -555,21 +555,21 @@ mentioning what possibilities you've ruled out by searching.</li>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">/etc/shadow</span></code>, not <code class="docutils literal"><span class="pre">/etc/passwd</span></code></li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nb">test</span>@x230 ~ <span class="nv">$ </span>ls -l /etc/ <span class="p">|</span> grep shadow
+<div class="highlight-bash"><div class="highlight"><pre><span></span>test@x230 ~ $ ls -l /etc/ <span class="p">|</span> grep shadow
 -rw-r-----  <span class="m">1</span> root shadow   <span class="m">1503</span> Nov <span class="m">12</span> 17:37 shadow
 
-<span class="nv">$ </span>sudo su -
-<span class="nv">$ </span>cat /etc/shadow
+$ sudo su -
+$ cat /etc/shadow
 daemon:*:15630:0:99999:7:::
 bin:*:15630:0:99999:7:::
 sys:*:15630:0:99999:7:::
 mail:*:15630:0:99999:7:::
 
-<span class="c"># name:hash:time last changed: min days between changes: max days</span>
-<span class="c">#    between changes:days to wait before expiry or disabling:day of</span>
-<span class="c">#    account expiry</span>
+<span class="c1"># name:hash:time last changed: min days between changes: max days</span>
+<span class="c1">#    between changes:days to wait before expiry or disabling:day of</span>
+<span class="c1">#    account expiry</span>
 
-<span class="nv">$ </span>chage <span class="c"># change when a user&#39;s password expires</span>
+$ chage <span class="c1"># change when a user&#39;s password expires</span>
 </pre></div>
 </div>
 
@@ -586,7 +586,7 @@ mail:*:15630:0:99999:7:::
 <li><code class="docutils literal"><span class="pre">sudo</span></code></li>
 </ul>
 <div class="figure align-center">
-<img alt="static/xkcd149.png" src="static/xkcd149.png" />
+<img alt="_images/xkcd149.png" src="_images/xkcd149.png" />
 </div>
 
 
@@ -597,14 +597,14 @@ mail:*:15630:0:99999:7:::
 
 <h2>Acting as another user</h2>
 
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>su <span class="nv">$USER</span>          <span class="c"># become user, with THEIR password</span>
-<span class="nv">$ </span>su                <span class="c"># become root, with root&#39;s password</span>
-<span class="nv">$ </span>sudo su -         <span class="c"># use user password instead of root&#39;s</span>
-<span class="nv">$ </span>sudo su <span class="nv">$USER</span>     <span class="c"># become $USER with your password</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ su <span class="nv">$USER</span>          <span class="c1"># become user, with THEIR password</span>
+$ su                <span class="c1"># become root, with root&#39;s password</span>
+$ sudo su -         <span class="c1"># use user password instead of root&#39;s</span>
+$ sudo su <span class="nv">$USER</span>     <span class="c1"># become $USER with your password</span>
 </pre></div>
 </div>
 <div class="figure">
-<a class="reference internal image-reference" href="static/xkcd_838.png"><img alt="static/xkcd_838.png" src="static/xkcd_838.png" style="height: 80pc;" /></a>
+<a class="reference internal image-reference" href="_images/xkcd_838.png"><img alt="_images/xkcd_838.png" src="_images/xkcd_838.png" style="height: 80pc;" /></a>
 </div>
 <dl class="docutils">
 <dt>If someone has permissions errors:</dt>
@@ -626,17 +626,17 @@ mail:*:15630:0:99999:7:::
 <ul class="simple">
 <li>Manage permissions for groups of users</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>groupadd
-<span class="nv">$ </span>usermod
-<span class="nv">$ </span>groupmod
-<span class="nv">$ </span>cat /etc/group
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ groupadd
+$ usermod
+$ groupmod
+$ cat /etc/group
     root:x:0:
     daemon:x:1:
     bin:x:2:
     sys:x:3:
     adm:x:4:
     tty:x:5:
-<span class="c"># group name:password or placeholder:GID:member,member,member</span>
+<span class="c1"># group name:password or placeholder:GID:member,member,member</span>
 </pre></div>
 </div>
 
@@ -655,7 +655,7 @@ mail:*:15630:0:99999:7:::
 <li><p class="first">Add your user to the <code class="docutils literal"><span class="pre">wheel</span></code> group using <code class="docutils literal"><span class="pre">gpasswd</span></code>.</p>
 </li>
 <li><p class="first">As the root user, use <code class="docutils literal"><span class="pre">visudo</span></code> and uncomment this line:</p>
-<div class="highlight-python"><div class="highlight"><pre>pcwheel  ALL=(ALL)   ALL
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pcwheel</span>  <span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span>   <span class="n">ALL</span>
 </pre></div>
 </div>
 </li>
@@ -697,11 +697,11 @@ mail:*:15630:0:99999:7:::
 </dl>
 </li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nb">test</span>@x230 ~ <span class="nv">$ </span>ls -il
+<div class="highlight-bash"><div class="highlight"><pre><span></span>test@x230 ~ $ ls -il
 total 8
-<span class="m">2884381</span> drwxrwxr-x <span class="m">5</span> <span class="nb">test test </span><span class="m">4096</span> Nov  <span class="m">6</span> 11:46 Documents
-<span class="m">2629156</span> -rw-rw-r-- <span class="m">1</span> <span class="nb">test test    </span><span class="m">0</span> Nov <span class="m">13</span> 14:09 file.txt
-<span class="m">2884382</span> drwxrwxr-x <span class="m">2</span> <span class="nb">test test </span><span class="m">4096</span> Nov  <span class="m">6</span> 13:22 Pictures
+<span class="m">2884381</span> drwxrwxr-x <span class="m">5</span> <span class="nb">test</span> <span class="nb">test</span> <span class="m">4096</span> Nov  <span class="m">6</span> 11:46 Documents
+<span class="m">2629156</span> -rw-rw-r-- <span class="m">1</span> <span class="nb">test</span> <span class="nb">test</span>    <span class="m">0</span> Nov <span class="m">13</span> 14:09 file.txt
+<span class="m">2884382</span> drwxrwxr-x <span class="m">2</span> <span class="nb">test</span> <span class="nb">test</span> <span class="m">4096</span> Nov  <span class="m">6</span> 13:22 Pictures
 </pre></div>
 </div>
 
@@ -725,12 +725,12 @@ total 8
 </dl>
 </li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>file <span class="nv">$FILENAME</span> <span class="c"># tells you about the filetype</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ file <span class="nv">$FILENAME</span> <span class="c1"># tells you about the filetype</span>
 
-<span class="nb">test</span>@x230 ~ <span class="nv">$ </span>file file.txt
+test@x230 ~ $ file file.txt
 file.txt: ASCII text
 
-<span class="nb">test</span>@x230 ~ <span class="nv">$ </span>file squirrel.jpg
+test@x230 ~ $ file squirrel.jpg
 squirrel.jpg: JPEG image data, JFIF standard 1.01
 </pre></div>
 </div>
@@ -750,10 +750,10 @@ squirrel.jpg: JPEG image data, JFIF standard 1.01
 <li>Next 3: world</li>
 <li>user &amp; group</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ls -l
-drwxrwxr-x <span class="m">5</span> <span class="nb">test test </span><span class="m">4096</span> Nov  <span class="m">6</span> 11:46 Documents
--rw-rw-r-- <span class="m">1</span> <span class="nb">test test    </span><span class="m">0</span> Nov <span class="m">13</span> 14:09 file.txt
-drwxrwxr-x <span class="m">2</span> <span class="nb">test test </span><span class="m">4096</span> Nov  <span class="m">6</span> 13:22 Pictures
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ ls -l
+drwxrwxr-x <span class="m">5</span> <span class="nb">test</span> <span class="nb">test</span> <span class="m">4096</span> Nov  <span class="m">6</span> 11:46 Documents
+-rw-rw-r-- <span class="m">1</span> <span class="nb">test</span> <span class="nb">test</span>    <span class="m">0</span> Nov <span class="m">13</span> 14:09 file.txt
+drwxrwxr-x <span class="m">2</span> <span class="nb">test</span> <span class="nb">test</span> <span class="m">4096</span> Nov  <span class="m">6</span> 13:22 Pictures
 </pre></div>
 </div>
 
@@ -765,7 +765,7 @@ drwxrwxr-x <span class="m">2</span> <span class="nb">test test </span><span clas
 
 <h2>chmod and octal permissions</h2>
 
-<div class="highlight-bash"><div class="highlight"><pre>+-----+--------+-------+
+<div class="highlight-bash"><div class="highlight"><pre><span></span>+-----+--------+-------+
 <span class="p">|</span> rwx <span class="p">|</span> Binary <span class="p">|</span> Octal <span class="p">|</span>
 +-----+--------+-------+
 <span class="p">|</span> --- <span class="p">|</span> <span class="m">000</span>    <span class="p">|</span> <span class="m">0</span>     <span class="p">|</span>
@@ -794,17 +794,17 @@ drwxrwxr-x <span class="m">2</span> <span class="nb">test test </span><span clas
 <h2>chown, chgrp</h2>
 
 <p>user &amp; group</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="c"># Change the owner of myfile to &quot;root&quot;.</span>
-<span class="nv">$ </span>chown root myfile
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Change the owner of myfile to &quot;root&quot;.</span>
+$ chown root myfile
 
-<span class="c"># Likewise, but also change its group to &quot;staff&quot;.</span>
-<span class="nv">$ </span>chown root:staff myfile
+<span class="c1"># Likewise, but also change its group to &quot;staff&quot;.</span>
+$ chown root:staff myfile
 
-<span class="c"># Change the owner of /mydir and subfiles to &quot;root&quot;.</span>
-<span class="nv">$ </span>chown -hR root /mydir
+<span class="c1"># Change the owner of /mydir and subfiles to &quot;root&quot;.</span>
+$ chown -hR root /mydir
 
-<span class="c"># Make the group devops own the bootcamp dir</span>
-<span class="nv">$ </span>chgrp -R devops /home/<span class="nv">$yourusername</span>/bootcamp
+<span class="c1"># Make the group devops own the bootcamp dir</span>
+$ chgrp -R devops /home/<span class="nv">$yourusername</span>/bootcamp
 </pre></div>
 </div>
 
@@ -816,9 +816,9 @@ drwxrwxr-x <span class="m">2</span> <span class="nb">test test </span><span clas
 
 <h2>Types of files</h2>
 
-<div class="highlight-bash"><div class="highlight"><pre>drwxrwxr-x      <span class="m">5</span> <span class="nb">test    test      </span><span class="m">4096</span>    Nov  <span class="m">6</span> 11:46 Documents
--rw-rw-r--      <span class="m">1</span> <span class="nb">test    test         </span><span class="m">0</span>    Nov <span class="m">13</span> 14:09 file.txt
-drwxrwxr-x      <span class="m">2</span> <span class="nb">test    test      </span><span class="m">4096</span>    Nov  <span class="m">6</span> 13:22 Pictures
+<div class="highlight-bash"><div class="highlight"><pre><span></span>drwxrwxr-x      <span class="m">5</span> <span class="nb">test</span>    <span class="nb">test</span>      <span class="m">4096</span>    Nov  <span class="m">6</span> 11:46 Documents
+-rw-rw-r--      <span class="m">1</span> <span class="nb">test</span>    <span class="nb">test</span>         <span class="m">0</span>    Nov <span class="m">13</span> 14:09 file.txt
+drwxrwxr-x      <span class="m">2</span> <span class="nb">test</span>    <span class="nb">test</span>      <span class="m">4096</span>    Nov  <span class="m">6</span> 13:22 Pictures
 ----------     -------  -------  -------- ------------ -------------
     <span class="p">|</span>             <span class="p">|</span>        <span class="p">|</span>         <span class="p">|</span>         <span class="p">|</span>             <span class="p">|</span>
     <span class="p">|</span>             <span class="p">|</span>        <span class="p">|</span>         <span class="p">|</span>         <span class="p">|</span>         File Name
@@ -841,7 +841,7 @@ drwxrwxr-x      <span class="m">2</span> <span class="nb">test    test      </sp
 
 <h2>Hands-On: Files and Permissions</h2>
 
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>touch foo <span class="c"># create empty file called foo</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ touch foo <span class="c1"># create empty file called foo</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -932,12 +932,12 @@ drwxrwxr-x      <span class="m">2</span> <span class="nb">test    test      </sp
 <li>Not for the faint of heart ... <strong>Not recommended!</strong></li>
 <li>Using <code class="docutils literal"><span class="pre">grep</span></code> as an example</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>wget http://mirrors.kernel.org/gnu/grep/grep-2.15.tar.xz
-<span class="nv">$ </span>tar -Jxvf grep-2.15.tar.xz
-<span class="nv">$ </span><span class="nb">cd </span>grep-2.15
-<span class="nv">$ </span>./configure --prefix<span class="o">=</span><span class="nv">$HOME</span>/programs/
-<span class="nv">$ </span>make
-<span class="nv">$ </span>make install
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ wget http://mirrors.kernel.org/gnu/grep/grep-2.15.tar.xz
+$ tar -Jxvf grep-2.15.tar.xz
+$ <span class="nb">cd</span> grep-2.15
+$ ./configure --prefix<span class="o">=</span><span class="nv">$HOME</span>/programs/
+$ make
+$ make install
 </pre></div>
 </div>
 
@@ -988,7 +988,7 @@ drwxrwxr-x      <span class="m">2</span> <span class="nb">test    test      </sp
 <h2>IRC</h2>
 
 <div class="figure align-center">
-<a class="reference internal image-reference" href="static/multiple_networks.gif"><img alt="static/multiple_networks.gif" src="static/multiple_networks.gif" style="height: 40pc;" /></a>
+<a class="reference internal image-reference" href="_images/multiple_networks.gif"><img alt="_images/multiple_networks.gif" src="_images/multiple_networks.gif" style="height: 40pc;" /></a>
 </div>
 <ul class="simple">
 <li>Internet Relay Chat</li>
@@ -1011,22 +1011,22 @@ drwxrwxr-x      <span class="m">2</span> <span class="nb">test    test      </sp
 <p class="last">Switch to a terminal and show example</p>
 </div>
 <p>Use irssi or weechat in screen</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="c"># This step is optional, but persistent IRC is cool</span>
-<span class="nv">$ </span>ssh &lt;username&gt;@&lt;preferred shell host&gt;
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># This step is optional, but persistent IRC is cool</span>
+$ ssh &lt;username&gt;@&lt;preferred shell host&gt;
 
-<span class="c"># start screen with the name &#39;irc&#39;</span>
-<span class="nv">$ </span>screen -S irc
+<span class="c1"># start screen with the name &#39;irc&#39;</span>
+$ screen -S irc
 
-<span class="c"># start your client in the 0th window of the screen session</span>
-<span class="nv">$ </span>irssi
-<span class="c"># or</span>
-<span class="nv">$ </span>weechat-curses
+<span class="c1"># start your client in the 0th window of the screen session</span>
+$ irssi
+<span class="c1"># or</span>
+$ weechat-curses
 
-<span class="c"># exit irc screen with CTRL+a, CTRL+d</span>
-<span class="c"># exit ssh session with CTRL+d or &#39;exit&#39;</span>
-<span class="c"># to get back to irc:</span>
-<span class="nv">$ </span>ssh &lt;username&gt;@&lt;preferred shell host&gt;
-<span class="nv">$ </span>screen -dr IRC
+<span class="c1"># exit irc screen with CTRL+a, CTRL+d</span>
+<span class="c1"># exit ssh session with CTRL+d or &#39;exit&#39;</span>
+<span class="c1"># to get back to irc:</span>
+$ ssh &lt;username&gt;@&lt;preferred shell host&gt;
+$ screen -dr IRC
 </pre></div>
 </div>
 
@@ -1039,15 +1039,15 @@ drwxrwxr-x      <span class="m">2</span> <span class="nb">test    test      </sp
 <h2>Networks</h2>
 
 <div class="figure align-center">
-<a class="reference internal image-reference" href="static/multiple_networks.gif"><img alt="static/multiple_networks.gif" src="static/multiple_networks.gif" style="height: 30pc;" /></a>
+<a class="reference internal image-reference" href="_images/multiple_networks.gif"><img alt="_images/multiple_networks.gif" src="_images/multiple_networks.gif" style="height: 30pc;" /></a>
 </div>
-<div class="highlight-python"><div class="highlight"><pre>/connect irc.freenode.net
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">connect</span> <span class="n">irc</span><span class="o">.</span><span class="n">freenode</span><span class="o">.</span><span class="n">net</span>
 
-/nick &lt;myawesomenickname&gt;
-/msg nickserv register &lt;password&gt; &lt;email&gt;
+<span class="o">/</span><span class="n">nick</span> <span class="o">&lt;</span><span class="n">myawesomenickname</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">msg</span> <span class="n">nickserv</span> <span class="n">register</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">email</span><span class="o">&gt;</span>
 
-/nick &lt;myawesomenickname&gt;
-/msg nickserv identify &lt;password&gt;
+<span class="o">/</span><span class="n">nick</span> <span class="o">&lt;</span><span class="n">myawesomenickname</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">msg</span> <span class="n">nickserv</span> <span class="n">identify</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 
@@ -1059,8 +1059,8 @@ drwxrwxr-x      <span class="m">2</span> <span class="nb">test    test      </sp
 
 <h2>Channels</h2>
 
-<div class="highlight-python"><div class="highlight"><pre>/join #osu-lug
-/join #devopsbootcamp
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">join</span> <span class="c1">#osu-lug</span>
+<span class="o">/</span><span class="n">join</span> <span class="c1">#devopsbootcamp</span>
 </pre></div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1094,13 +1094,13 @@ drwxrwxr-x      <span class="m">2</span> <span class="nb">test    test      </sp
 <li>take action with <code class="docutils literal"><span class="pre">/me</span> <span class="pre">does</span> <span class="pre">thing`</span></code></li>
 <li>everything else starting with / is a command</li>
 </ul>
-<div class="highlight-python"><div class="highlight"><pre>/say $thing
+<div class="highlight-default"><div class="highlight"><pre><span></span>/say $thing
 /join, /part, /whois &lt;nick&gt;, /msg, /help &lt;command&gt;
 </pre></div>
 </div>
 <p>Note that nothing shows up in the channel when you run a <code class="docutils literal"><span class="pre">/whois</span></code> command; it
 shows up either in your status buffer or your conversation with the person.</p>
-<div class="codeblock-sm highlight-python"><div class="highlight"><pre>12:04 -!- _test_ [~test@c-50-137-46-63.hsd1.or.comcast.net]
+<div class="codeblock-sm highlight-default"><div class="highlight"><pre><span></span>12:04 -!- _test_ [~test@c-50-137-46-63.hsd1.or.comcast.net]
 12:04 -!-  ircname  : Example User
 12:04 -!-  channels : #ExampleChannel
 12:04 -!-  server   : moorcock.freenode.net [TX, USA]
@@ -1161,16 +1161,16 @@ shows up either in your status buffer or your conversation with the person.</p>
 <li><p class="first">Can you use <code class="docutils literal"><span class="pre">man</span> <span class="pre">screen</span></code> to find out what the d and r flags mean?</p>
 </li>
 </ul>
-<div class="highlight-python"><div class="highlight"><pre>SCREEN(1)                                                               SCREEN(1)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>                                                               <span class="n">SCREEN</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-NAME
-       screen - screen manager with VT100/ANSI terminal emulation
+<span class="n">NAME</span>
+       <span class="n">screen</span> <span class="o">-</span> <span class="n">screen</span> <span class="n">manager</span> <span class="k">with</span> <span class="n">VT100</span><span class="o">/</span><span class="n">ANSI</span> <span class="n">terminal</span> <span class="n">emulation</span>
 
-SYNOPSIS
-       screen [ -options ] [ cmd [ args ] ]
-       screen -r [[pid.]tty[.host]]
-       screen -r sessionowner/[[pid.]tty[.host]]
-Manual page screen(1) line 1 (press h for help or q to quit)
+<span class="n">SYNOPSIS</span>
+       <span class="n">screen</span> <span class="p">[</span> <span class="o">-</span><span class="n">options</span> <span class="p">]</span> <span class="p">[</span> <span class="n">cmd</span> <span class="p">[</span> <span class="n">args</span> <span class="p">]</span> <span class="p">]</span>
+       <span class="n">screen</span> <span class="o">-</span><span class="n">r</span> <span class="p">[[</span><span class="n">pid</span><span class="o">.</span><span class="p">]</span><span class="n">tty</span><span class="p">[</span><span class="o">.</span><span class="n">host</span><span class="p">]]</span>
+       <span class="n">screen</span> <span class="o">-</span><span class="n">r</span> <span class="n">sessionowner</span><span class="o">/</span><span class="p">[[</span><span class="n">pid</span><span class="o">.</span><span class="p">]</span><span class="n">tty</span><span class="p">[</span><span class="o">.</span><span class="n">host</span><span class="p">]]</span>
+<span class="n">Manual</span> <span class="n">page</span> <span class="n">screen</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">line</span> <span class="mi">1</span> <span class="p">(</span><span class="n">press</span> <span class="n">h</span> <span class="k">for</span> <span class="n">help</span> <span class="ow">or</span> <span class="n">q</span> <span class="n">to</span> <span class="n">quit</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -1223,7 +1223,7 @@ Manual page screen(1) line 1 (press h for help or q to quit)
 <li>flapping</li>
 </ul>
 <div class="figure align-right">
-<a class="reference internal image-reference" href="static/jargon.jpg"><img alt="static/jargon.jpg" src="static/jargon.jpg" style="height: 50pc;" /></a>
+<a class="reference internal image-reference" href="_images/jargon.jpg"><img alt="_images/jargon.jpg" src="_images/jargon.jpg" style="height: 50pc;" /></a>
 </div>
 <ul>
 <li><p class="first">tail</p>

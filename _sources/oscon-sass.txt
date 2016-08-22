@@ -13,13 +13,21 @@ To sauce or be saucy to?
 Stewed Fruit?
 =============
 
-page
-----
+S.A.S.S
+-------
 
 .. figure:: static/sass.jpg
     :align: center
     :scale: 25%
 
+The Language
+============
+
+The CSS Preprocessor
+====================
+
+The Ruby Gem
+============
 
 Is it Turing-Complete?
 ======================
@@ -101,7 +109,7 @@ Raisins
 Hugs
 ----
 
-.. code-block:: sass
+.. code-block:: css
 
         #thing1 {
             ...
