@@ -33,16 +33,6 @@ Tmux and Screen
 * Both allow more than one user to connect to a particular session at a time
 * Both are generally not installed by default but available in most distribution repositories
 
-Tmux
-----
-
-The Shiny New.
-
-* Better tiling + window management
-* Unicode support
-* Easy status bar configuration
-* Scriptable with :code:`tmux command [args]`
-
 Screen
 ------
 
@@ -54,10 +44,21 @@ Keeping it simple since 1987.
 * Better line wrapping
 * Can connect to serial devices
 
+Tmux
+----
+
+The Shiny New.
+
+* Better tiling + window management
+* Unicode support
+* Easy status bar configuration
+* Scriptable with :code:`tmux command [args]`
+* Pre-installed on BSD distros
+
 Demo Time!
 ----------
 
 .. figure:: static/demo-day.gif
     :align: center
-    :width: 400px
+    :width: 800px
 
