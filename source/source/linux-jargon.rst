@@ -20,6 +20,8 @@ spirit of playfulness and exploration" ~ `Wikipedia`_
 Conversational Acronyms
 -----------------------
 
+.. rst-class:: build
+
 * **AFAIK** - as far as I know
 * **AFK** - away from keyboard
 * **BDFL** - `Benevolent Dictator for Life`_
@@ -32,6 +34,8 @@ Conversational Acronyms
 
 Technical Acronyms
 ------------------
+
+.. rst-class:: build
 
 * **BNF** - Backus Naur Form - A language for defining grammars
 * **BSD** - Berkley Software Distribution
@@ -54,6 +58,8 @@ Technical Acronyms
 Security Acronyms
 -----------------
 
+.. rst-class:: build
+
 * **PGP** - Pretty Good Privacy. Data encryption program
 * **GPG** - Gnu Priacy Guard. Gnu implementation of PGP
 * **RSA** - 3 really smart dudes names. Public key cryptosystem.
@@ -62,6 +68,8 @@ Security Acronyms
 
 Utilities: Must haves
 ---------------------
+
+.. rst-class:: build
 
 * ls
 * cd
@@ -84,6 +92,8 @@ grep			find
 Utilities: Out there
 --------------------
 
+.. rst-class:: build
+
 * tig
 * rtorrent
 * tr
@@ -94,6 +104,8 @@ Utilities: Out there
 
 Words
 -----
+
+.. rst-class:: build
 
 * **Astroturfing** - "The use of paid shills to create the impression of a
   popular movement"
@@ -132,6 +144,8 @@ Words
 Silly words
 -----------
 
+.. rst-class:: build
+
 * **ambimouseterous** - The ability to use a mouse with either hand
 * **ANSI standard pizza** - Pepperoni and mushroom pizza
 * **balloonian variable** - mispronunciation of boolean
@@ -143,6 +157,8 @@ Silly words
 
 Books
 -----
+
+.. rst-class:: build
 
 * `Hackers clip`_
 * **The Dragon Book** - Compilers: Principles, Techniques, and Tools by Alfred
@@ -158,6 +174,8 @@ Books
 Punctuation
 -----------
 
+.. rst-class:: build
+
 * Bang - !
 * Hat - ^
 * Splat/star - *
@@ -165,8 +183,11 @@ Punctuation
 Stuff to know
 -------------
 
+.. rst-class:: build
+
 * `All your base are belong to us`_ - A poor Japanese to English translation in the opening scenes of Zero Wing
 * `The magic switch`_ - 
+* `hunter2`_
 * `Hackers (1995)`_ - "Should have been titled Crackers, because cracking is
   what the movie was about. It's understandable that they didn't however;
   titles redolent of snack food are probably a tough sell in Hollywood."
@@ -179,6 +200,7 @@ Stuff to know
 * `RFC 1149`_
 * Konami code
 * `The Evolution of the Haskell Programmer`_ 
+* And of course, `XKCD`_
 
 .. nextslide::
 
@@ -213,8 +235,10 @@ Resources
 .. _Hackers (1995): 
 .. _This StackOverflow post: http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags
 .. _Obfuscated C Contest: http://www.ioccc.org/
+.. _hunter2: http://bash.org/?244321
 .. _RFC 1149: https://tools.ietf.org/html/rfc1149
 .. _The Evolution of the Haskell Programmer: http://www.willamette.edu/~fruehr/haskell/evolution.html
 .. _The Jargon File: http://catb.org/jargon/html/index.html
 .. _This page: http://catb.org/jargon/html/S/SEX.html
 .. _Linux Dictionary: http://www.tldp.org/LDP/Linux-Dictionary/html/
+.. _XKCD: https://xkcd.com
