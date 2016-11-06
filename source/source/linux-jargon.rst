@@ -14,38 +14,46 @@ Hacker
 	:align: center
 	:width: 400px
 
-"A human who engages in activities (such as programming or other media[2]) in a
-spirit of playfulness and exploration" ~ `Wikipedia`_
+"A human who engages in activities (such as programming or other
+media) in a spirit of playfulness and exploration" ~ `Wikipedia`_
 
 Conversational Acronyms
 -----------------------
 
+.. rst-class:: build
+
 * **AFAIK** - as far as I know
 * **AFK** - away from keyboard
 * **BDFL** - `Benevolent Dictator for Life`_
-* **BOFH** - Bastard Operator from Hell
+* **BOFH** - `Bastard Operator from Hell`_
 * **HTH** - Hope this Helps
 * **IIRC** - If I recall correctly
 * **IMHO** - In my humble opinion
 * **TLA** - three letter acronym
 * **YMMV** - your mileage may vary
 
+.. _Bastard Operator from Hell: http://bofh.bjash.com/
+
 Technical Acronyms
 ------------------
+
+.. rst-class:: build
 
 * **BNF** - Backus Naur Form - A language for defining grammars
 * **BSD** - Berkley Software Distribution
 * **[D]DOS** - [Distributed] Denial of Service
 * **EMACS** - Editing MACroS - inferior text editor
-* **EO[f | l | d]** - End of [file | line | day]
+* **EO[f | l | d | m]** - End of [file | line | day | message]
 * **FIFO** - First In First Out
 * **FIXME/TODO** - (Highlighted) note to fix something
+* **GNU** - Gnu Not Unix. 
 * **INTERCAL** - Compiler Language With No Pronounceable Acronym
  
 .. nextslide::
 
 * **ISP** - Internet Service Provider
 * **[K | M ]IPS** - Instructions Per Second
+* **MOTD** - Message of the Day
 * `RTFM`_ - Read the cussing manual
 * **TTY** - Teletype terminal
 * **WYSIWYG** - What you see is what you get
@@ -54,14 +62,24 @@ Technical Acronyms
 Security Acronyms
 -----------------
 
-* **PGP** - Pretty Good Privacy. Data encryption program
-* **GPG** - Gnu Priacy Guard. Gnu implementation of PGP
-* **RSA** - 3 really smart dudes names. Public key cryptosystem.
-* **SHA** - Secure Hash Algorithm. For hashing things. Like browns. Hash browns.
-* **DH** - Diffie-Hellman. Secure key exchange
+.. rst-class:: build
+
+* **PGP** - `Pretty Good Privacy`_. Data encryption program
+* **GPG** - `Gnu Privacy Guard`_. Gnu implementation of PGP
+* **RSA** - 3 really smart dudes names. `Public key cryptosystem`_.
+* **SHA** - `Secure Hash Algorithm`_. For hashing things. Like browns. Hash browns.
+* **DH** - `Diffie-Hellman`_. Secure key exchange
+
+.. _Pretty Good Privacy:
+.. _Gnu Privacy Guard:
+.. _Public key cryptosystem:
+.. _Secure Hash Algorithm:
+.. _Diffie-Hellman:
 
 Utilities: Must haves
 ---------------------
+
+.. rst-class:: build
 
 * ls
 * cd
@@ -84,9 +102,9 @@ grep			find
 Utilities: Out there
 --------------------
 
-* tig
+.. rst-class:: build
+
 * rtorrent
-* tr
 * gparted
 * mdadm
 * lshw
@@ -94,6 +112,8 @@ Utilities: Out there
 
 Words
 -----
+
+.. rst-class:: build
 
 * **Astroturfing** - "The use of paid shills to create the impression of a
   popular movement"
@@ -132,6 +152,8 @@ Words
 Silly words
 -----------
 
+.. rst-class:: build
+
 * **ambimouseterous** - The ability to use a mouse with either hand
 * **ANSI standard pizza** - Pepperoni and mushroom pizza
 * **balloonian variable** - mispronunciation of boolean
@@ -143,6 +165,8 @@ Silly words
 
 Books
 -----
+
+.. rst-class:: build
 
 * `Hackers clip`_
 * **The Dragon Book** - Compilers: Principles, Techniques, and Tools by Alfred
@@ -158,6 +182,8 @@ Books
 Punctuation
 -----------
 
+.. rst-class:: build
+
 * Bang - !
 * Hat - ^
 * Splat/star - *
@@ -165,8 +191,11 @@ Punctuation
 Stuff to know
 -------------
 
+.. rst-class:: build
+
 * `All your base are belong to us`_ - A poor Japanese to English translation in the opening scenes of Zero Wing
 * `The magic switch`_ - 
+* `hunter2`_
 * `Hackers (1995)`_ - "Should have been titled Crackers, because cracking is
   what the movie was about. It's understandable that they didn't however;
   titles redolent of snack food are probably a tough sell in Hollywood."
@@ -179,6 +208,7 @@ Stuff to know
 * `RFC 1149`_
 * Konami code
 * `The Evolution of the Haskell Programmer`_ 
+* And of course, `XKCD`_
 
 .. nextslide::
 
@@ -213,8 +243,10 @@ Resources
 .. _Hackers (1995): 
 .. _This StackOverflow post: http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags
 .. _Obfuscated C Contest: http://www.ioccc.org/
+.. _hunter2: http://bash.org/?244321
 .. _RFC 1149: https://tools.ietf.org/html/rfc1149
 .. _The Evolution of the Haskell Programmer: http://www.willamette.edu/~fruehr/haskell/evolution.html
 .. _The Jargon File: http://catb.org/jargon/html/index.html
 .. _This page: http://catb.org/jargon/html/S/SEX.html
 .. _Linux Dictionary: http://www.tldp.org/LDP/Linux-Dictionary/html/
+.. _XKCD: https://xkcd.com
