@@ -14,8 +14,8 @@ Hacker
 	:align: center
 	:width: 400px
 
-"A human who engages in activities (such as programming or other media[2]) in a
-spirit of playfulness and exploration" ~ `Wikipedia`_
+"A human who engages in activities (such as programming or other
+media) in a spirit of playfulness and exploration" ~ `Wikipedia`_
 
 Conversational Acronyms
 -----------------------
@@ -25,12 +25,14 @@ Conversational Acronyms
 * **AFAIK** - as far as I know
 * **AFK** - away from keyboard
 * **BDFL** - `Benevolent Dictator for Life`_
-* **BOFH** - Bastard Operator from Hell
+* **BOFH** - `Bastard Operator from Hell`_
 * **HTH** - Hope this Helps
 * **IIRC** - If I recall correctly
 * **IMHO** - In my humble opinion
 * **TLA** - three letter acronym
 * **YMMV** - your mileage may vary
+
+.. _Bastard Operator from Hell: http://bofh.bjash.com/
 
 Technical Acronyms
 ------------------
@@ -41,15 +43,17 @@ Technical Acronyms
 * **BSD** - Berkley Software Distribution
 * **[D]DOS** - [Distributed] Denial of Service
 * **EMACS** - Editing MACroS - inferior text editor
-* **EO[f | l | d]** - End of [file | line | day]
+* **EO[f | l | d | m]** - End of [file | line | day | message]
 * **FIFO** - First In First Out
 * **FIXME/TODO** - (Highlighted) note to fix something
+* **GNU** - Gnu Not Unix. 
 * **INTERCAL** - Compiler Language With No Pronounceable Acronym
  
 .. nextslide::
 
 * **ISP** - Internet Service Provider
 * **[K | M ]IPS** - Instructions Per Second
+* **MOTD** - Message of the Day
 * `RTFM`_ - Read the cussing manual
 * **TTY** - Teletype terminal
 * **WYSIWYG** - What you see is what you get
@@ -60,11 +64,17 @@ Security Acronyms
 
 .. rst-class:: build
 
-* **PGP** - Pretty Good Privacy. Data encryption program
-* **GPG** - Gnu Priacy Guard. Gnu implementation of PGP
-* **RSA** - 3 really smart dudes names. Public key cryptosystem.
-* **SHA** - Secure Hash Algorithm. For hashing things. Like browns. Hash browns.
-* **DH** - Diffie-Hellman. Secure key exchange
+* **PGP** - `Pretty Good Privacy`_. Data encryption program
+* **GPG** - `Gnu Privacy Guard`_. Gnu implementation of PGP
+* **RSA** - 3 really smart dudes names. `Public key cryptosystem`_.
+* **SHA** - `Secure Hash Algorithm`_. For hashing things. Like browns. Hash browns.
+* **DH** - `Diffie-Hellman`_. Secure key exchange
+
+.. _Pretty Good Privacy:
+.. _Gnu Privacy Guard:
+.. _Public key cryptosystem:
+.. _Secure Hash Algorithm:
+.. _Diffie-Hellman:
 
 Utilities: Must haves
 ---------------------
@@ -94,9 +104,7 @@ Utilities: Out there
 
 .. rst-class:: build
 
-* tig
 * rtorrent
-* tr
 * gparted
 * mdadm
 * lshw
