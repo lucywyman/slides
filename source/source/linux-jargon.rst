@@ -26,9 +26,9 @@ Conversational Acronyms
 * **AFK** - away from keyboard
 * **BDFL** - `Benevolent Dictator for Life`_
 * **BOFH** - `Bastard Operator from Hell`_
-* **HTH** - Hope this Helps
-* **IIRC** - If I recall correctly
-* **IMHO** - In my humble opinion
+* **IIRC** - if I recall correctly
+* **IMHO** - in my humble opinion
+* **IRC** - internet relay chat
 * **TLA** - three letter acronym
 * **YMMV** - your mileage may vary
 
@@ -39,65 +39,80 @@ Technical Acronyms
 
 .. rst-class:: build
 
-* **BNF** - Backus Naur Form - A language for defining grammars
+* **API** - Application Programming Interface
 * **BSD** - Berkley Software Distribution
+* **CLI** - Command Line Interface
 * **[D]DOS** - [Distributed] Denial of Service
+* **DHCP** - Dynamic Host Control Protocol
+* **DNS** - Domain Name System
 * **EMACS** - Editing MACroS - inferior text editor
 * **EO[f | l | d | m]** - End of [file | line | day | message]
 * **FIFO** - First In First Out
 * **FIXME/TODO** - (Highlighted) note to fix something
-* **GNU** - Gnu Not Unix. 
-* **INTERCAL** - Compiler Language With No Pronounceable Acronym
+* **GCC** - Gnu Compiler Collection
  
 .. nextslide::
 
+.. rst-class:: build
+
+* **GNU** - Gnu's Not Unix
+* **GUI** - Graphical User Interface
+* **INTERCAL** - Compiler Language With No Pronounceable Acronym
 * **ISP** - Internet Service Provider
-* **[K | M ]IPS** - Instructions Per Second
+* **[K | M ]IPS** - [Kilo | Mega]Instructions Per Second
 * **MOTD** - Message of the Day
 * `RTFM`_ - Read the cussing manual
 * **TTY** - Teletype terminal
+* **Vim** - Vi iMproved, superior text editor
 * **WYSIWYG** - What you see is what you get
-* **YACC** - Yet another compiler compiler (LALR parser generator)
+* **yaourt** - Yet AnOther User Repository Tool. CLI for pacman,
+  arch linux package manager
 
 Security Acronyms
 -----------------
 
 .. rst-class:: build
 
-* **PGP** - `Pretty Good Privacy`_. Data encryption program
-* **GPG** - `Gnu Privacy Guard`_. Gnu implementation of PGP
-* **RSA** - 3 really smart dudes names. `Public key cryptosystem`_.
+* **PGP** - `Pretty Good Privacy`_. Data encryption program + standard
+* **GPG** - `Gnu Privacy Guard`_. Open source implementation of PGP
+* **RSA** - 3 really smart dudes names. `Public key cryptosystem`_
 * **SHA** - `Secure Hash Algorithm`_. For hashing things. Like browns. Hash browns.
 * **DH** - `Diffie-Hellman`_. Secure key exchange
 
-.. _Pretty Good Privacy:
-.. _Gnu Privacy Guard:
-.. _Public key cryptosystem:
-.. _Secure Hash Algorithm:
-.. _Diffie-Hellman:
+.. _Pretty Good Privacy: https://en.wikipedia.org/wiki/Pretty_Good_Privacy
+.. _Gnu Privacy Guard: https://en.wikipedia.org/wiki/GNU_Privacy_Guard
+.. _Public key cryptosystem: https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+.. _Secure Hash Algorithm: https://en.wikipedia.org/wiki/Secure_Hash_Algorithm
+.. _Diffie-Hellman: https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange
 
 Utilities: Must haves
 ---------------------
 
 .. rst-class:: build
 
+* man
 * ls
 * cd
 * less
 * cat
-* diff
+* grep
+* find
+* cowsay
 
 Utilities: You probably already know
 ------------------------------------
 
-=============	=============
-alsamixer		wc
-tree			cal
-history			cowsay
-htop			tmux
-curl/wget		xargs
-grep			find
-=============	=============
+.. rst-class:: build
+
+* alsamixer
+* tree
+* htop
+* curl/wget
+* wc
+* cal
+* tmux
+* xargs
+* rsync/scp
 
 Utilities: Out there
 --------------------
@@ -109,59 +124,86 @@ Utilities: Out there
 * mdadm
 * lshw
 * indent
+* apropos
 
-Words
------
+Directories
+-----------
+
+* **/bin** - User binaries (things you run)
+* **/dev** - Device files (terminal, usb, ram, etc.)
+* **/etc** - Configurations for installed programs
+* **/home** - Where your personal files are stored
+* **/lib** - Library files to support installed binaries
+* **/opt** - Additional applications
+* **/proc** - Information about system processes
+* **/root** - Root user's home directory
+* **/sbin** - System binaries (things your system runs)
+* **/tmp** - Temporary files
+* **/usr** - Binaries, libraries, docs, and source code for programs
+  you install
+* **/var** - Files that are expected to grow (logs, backups, cache,
+  etc.)
+
+Technical Words
+---------------
 
 .. rst-class:: build
 
-* **Astroturfing** - "The use of paid shills to create the impression of a
-  popular movement"
-* **Backdoor** - A hole or "way in" to a secure system deliberately put there
-  by designers.
-* **[Big | little]-endian** - 
-* **Bikeshedding** - "Technical disputes over minor, marginal issues conducted
-  while more serious ones are being overlooked"
-* **Code monkey**
-* **Copyleft - GPL**
+* **Backdoor** - A hole or "way in" to a secure system deliberately
+  placed, usually by developers
+* **[Big | Little]-endian** - Whether the most significant bit is at
+  the lowest (Big-endian) or highest (little-endian) address.
+* **Daemon** - A long-running process which...does stuff
+* **Fork bomb** - A program which creates two versions of itself upon
+  startup, growing exponentially until you run out of memory
+* **Partition** - " the creation of one or more regions on a hard disk
+  or other secondary storage, so that an operating system can manage
+  information in each region separately."
+* **POSIX** - 
+* **Quine** - A program which outputs itself (and only itself)
+* **Raid configuration** - combines multiple physical disk drives into
+  a single logical unit
+* **Rot13** - Cipher which rotates the alphabet 13 places
+* **Sudo** - Superuser do
+* **Unix** - A family of computer operating systems derived from AT&T
+  Unix
+* **X11** - A windowing system for bitmap displays, common on Unix
+  systems
+
+Work Culture Words
+------------------
+
+.. rst-class:: build
+
+* **Astroturfing** - "The use of paid shills to create the impression
+  of a popular movement"
+* **Bikeshedding** - "Technical disputes over minor, marginal issues
+  conducted while more serious ones are being overlooked"
+* **Capture the Flag (CTF)** - A contest in which participants try to
+  hack into a system to retrieve a "flag" (on purpose)
+* **Code monkey** - Passionless code producer
+* **Copyleft - GPL** - The GNU General Public License
+* **Dogfooding** - Using software internally for testing
+* **Foo/bar/baz** - Placeholder words
+* **Grok** - To understand something all the way through, or very well
+* **Halt and Catch Fire** - Machine code instruction that causes
+  meaningful operation to stop 
 
 .. nextslide::
 
-* **daemon** - A long-running process which...does stuff
-* **DEADBEEF** - hexadecimal, "word-fill pattern"
-* **dogfooding** - using software internally for testing
-* **Foo/bar/baz** - words used as place holders
-* **Halt and Catch Fire** - Machine code instruction that causes meaningful
-  operation to stop 
+.. rst-class:: build
+
 * **Heisenbug** - A bug that only appears sometimes, intended to drive 
   developers insane
 * **Idempotent** - An element that acts the same if used once as when used
   multiple times
-
-.. nextslide::
-
 * **Lorem ipsum** - Paragraph text used as a placeholder
-* **nibble** - 4 bits
-* **quine** - A program which outputs itself (and only itself)
-* **rot13** - Cipher which rotates the alphabet 13 places
-* **script kiddie** 
-* **syntactic sugar** - features added to a language to make it more human
+* **Nibble** - 4 bits
+* **Script kiddie** 
+* **Syntactic sugar** - Features added to a language to make it more human
   readable
-* `XKCD mouse`_
-
-Silly words
------------
-
-.. rst-class:: build
-
-* **ambimouseterous** - The ability to use a mouse with either hand
-* **ANSI standard pizza** - Pepperoni and mushroom pizza
-* **balloonian variable** - mispronunciation of boolean
-* `Knights of the Lambda Calculus`_
-* **mu** - According to various Discordians and Douglas Hofstadter the correct
-  answer is usually “mu”, a Japanese word alleged to mean “Your question
-  cannot be answered because it depends on incorrect assumptions”
-* **troglodyte**
+* `XKCD mouse`_ 
+* **Zero day** - An undisclosed vulnerability that can be exploited
 
 Books
 -----
@@ -169,15 +211,15 @@ Books
 .. rst-class:: build
 
 * `Hackers clip`_
-* **The Dragon Book** - Compilers: Principles, Techniques, and Tools by Alfred
-  V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman.
+* **The Dragon Book** - Compilers: Principles, Techniques, and Tools
+  by Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman.
 * **Pink Shirt Book** - Programmers Guide to the IBM PC by "The Peter Norton"
 * **GEB** - Godel, Escher, Bach by Douglas Hofstadter
-* **The Devil Book (aka Unix Bible)** -  The Design and Implementation of the
-  4.3BSD Unix Operating System by Samuel J. Leffler, Marshall Kirk McKusick,
-  Michael J. Karels and John S. Quarterman.
-* **Ugly Red Book** -  Trusted Network Interpretation of the Trusted Computer
-  System Evaluation Criteria
+* **The Devil Book (aka Unix Bible)** -  The Design and Implementation
+  of the 4.3BSD Unix Operating System by Samuel J. Leffler, Marshall Kirk
+  McKusick, Michael J. Karels and John S. Quarterman.
+* **Ugly Red Book** -  Trusted Network Interpretation of the Trusted
+  Computer System Evaluation Criteria
 
 Punctuation
 -----------
@@ -186,7 +228,8 @@ Punctuation
 
 * Bang - !
 * Hat - ^
-* Splat/star - *
+* Splat or star - *
+* Hash or octothorp - #
 
 Stuff to know
 -------------
@@ -194,7 +237,7 @@ Stuff to know
 .. rst-class:: build
 
 * `All your base are belong to us`_ - A poor Japanese to English translation in the opening scenes of Zero Wing
-* `The magic switch`_ - 
+* `The magic switch`_ 
 * `hunter2`_
 * `Hackers (1995)`_ - "Should have been titled Crackers, because cracking is
   what the movie was about. It's understandable that they didn't however;
@@ -204,26 +247,12 @@ Stuff to know
 
 .. nextslide::
 
+.. rst-class:: build
+
 * `Obfuscated C Contest`_
 * `RFC 1149`_
 * Konami code
-* `The Evolution of the Haskell Programmer`_ 
 * And of course, `XKCD`_
-
-.. nextslide::
-
-::
-
-	He died at the console
-	Of hunger and thirst
-	Next day he was buried
-	Face down, 9-edge first
-
-* Lubarsky's Law of Cybernetic Entomology: “There is always one more bug.”
-
-* ISO standard cup of tea: A cup of tea with milk and one teaspoon of sugar,
-  where the milk is poured into the cup before the tea. Variations are ISO 0,
-  with no sugar; ISO 2, with two spoons of sugar; and so on.
 
 Resources
 ---------
@@ -236,7 +265,7 @@ Resources
 .. _RTFM: http://rlv.zcache.com/mao_rtfm_front_t_shirts-ra90bd4e0d5984c1c9b741c4812232282_jgogh_1024.jpg?rlvnet=1
 .. _XKCD mouse: https://xkcd.com/243/
 .. _Knights of the Lambda Calculus: https://en.wikipedia.org/wiki/Knights_of_the_Lambda_Calculus
-.. _Hackers clip: https://youtu.be/5YC5aK__pL8?t=1160
+.. _Hackers clip: https://www.youtube.com/watch?v=4U9MI0u2VIE
 .. _RFC 3514: https://tools.ietf.org/html/rfc3514
 .. _All your base are belong to us: http://catb.org/jargon/html/A/all-your-base-are-belong-to-us.html
 .. _The magic switch: http://catb.org/jargon/html/magic-story.html

@@ -29,7 +29,7 @@ h1, h2{
     padding: 0px;
     width: 49%;
     display: inline-block;
-    height: 100vh;
+    height: 100%;
 }
 
 .black ul{
@@ -79,7 +79,7 @@ h1, h2{
     color: #000;
     font-family: 'Open sans', sans-serif;
     font-weight: 600;
-    font-size: 160%;
+    font-size: 2.7em;
     line-height: .9em;
     vertical-align: bottom;
 } 
