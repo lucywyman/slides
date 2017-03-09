@@ -108,8 +108,6 @@ Cumulonimbus (Cb)
     ragged clouds ether merged with it or not, and precipitation sometimes in
     the form of virga.
 
-
-
 Shooting Clouds
 ---------------
 

@@ -1,0 +1,35 @@
+Title
+-----
+The Existential Tester: How to Assess Risk and Prioritize Tests
+
+Short Description
+-----------------
+To test, or not to test?  That is the question.  With limited time and
+resources there are only so many tests we can write and run. How do you
+determine what features of a new project to test? How do you know when a test
+is obsolete, or needs to be updated? What gets run per-commit, nightly, or
+weekly? What should you test manually?  This talk will give you a framework for
+thinking about how to assess risk on a project and prioritize your
+
+Long Description
+----------------
+To test, or not to test?  That is the question.  With limited time and
+resources there are only so many tests we can write and run. How do
+you determine what features of a new project to test? How do you know
+when a test is obsolete, or needs to be updated? What gets run
+per-commit, nightly, or weekly? What should you test manually? 
+This talk will give you a framework
+for thinking about how to assess risk on a project and prioritize your
+tests accordingly.  We'll discuss:
+* What you need to consider when determining how risky a new project or feature is 
+* Potential pitfalls of this approach and how to avoid them
+* Examples, including why a particular feature was assigned a risk level
+* And tools you can use for determining how effective your tests are
+
+This talk is ideal for developers looking to make their test suites
+more efficient or learn more about quality assurance and testing in
+general. [put this much closer to the top] If your tests are taking hours, are difficult to run, or you
+have no tests to speak of, this talk is for you! After this talk
+you'll know where to start [writing automated tests?],
+where to trim the fat, and how to know you're doing it right. I hope
+to see you there!

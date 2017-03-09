@@ -1,0 +1,40 @@
+Title
+-----
+How Can I Contribute: A Guide to Making Your First Open Source Contribution
+
+Short Description
+-----------------
+This talk is for you, the documentarian, developer, student, or community
+member wondering what you can contribute to open source and how to get started.
+Lucy Wyman discusses several ways open source projects need your help, what to
+look for in a project you're contributing to, and some first steps to making
+your first pull request.
+
+Long Description
+----------------
+Contributing to open source is a great way to give back to a project you care
+about, grow a community around software, and help make a project more useful.
+But often those who want to contribute have a few assumptions or misconceptions
+that prevent them from making that first pull request, including:
+
+* I’m not a good enough programmer to contribute to open source
+* I don’t know the repo well enough to contribute
+* I don’t write code, so I have nothing to contribute
+* I’m just a student / community member / manager / llama, I don’t have anything to contribute
+* Contributing to open source is hard
+* Contributing to open source doesn’t benefit me at all
+
+If those sound familiar, this talk is for you. Lucy Wyman discusses several
+ways open source projects need your help, what to look for in a project you’re
+contributing to, and some first steps to making your first pull request. The
+truth is that everyone who uses a technology can help that technology, whether
+by submitting a bug report, correcting a spelling error in documentation,
+submitting a patch to fix a bug, adding unit tests, updating dependencies. .
+.the list goes on.
+
+Topics include:
+* Common things a repository may need help with (legal, documentation, bug reporting, updates, etc.)
+* Skills you have, and how to use them to help a project
+* Determining what a repository needs
+* What to look for in a repository when you’re thinking of contributing
+* How to submit your first contribution
