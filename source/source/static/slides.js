@@ -92,14 +92,14 @@ function updateSlides() {
     speakAndSyncToNode(slideEls[curSlide]);
   }
 
-  var container = document.getElementById('slide_container');
+/*  var container = document.getElementById('slide_container');
   var boxes = document.getElementsByClassName('slide');
   var newcolor = newColor();
   console.log(newcolor);
   container.style.backgroundColor = newcolor;
   for (i=0; i<boxes.length; i++){
     boxes[i].style.backgroundColor = newcolor;
-  }
+  }*/
 
   updateHash();
 };
