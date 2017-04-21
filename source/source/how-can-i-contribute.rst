@@ -6,17 +6,28 @@ A Guide to Making Your First Open Source Contribution
 Who Am I?
 ---------
 
-Lucy Wyman 
+.. rst-class:: build
 
-Software Developer in Test 
+    .. figure:: static/hacking.gif
+        :align: center
+        :height: 300px
+
+Lucy Wyman
+
+Software Developer in Test
 
 The Company Formerly Known As Puppet Labs
 
 What is Open Source?
 --------------------
 
+.. rst-class:: build
+
+* Code is publicly available
+* Can be contributed to
+* Actively maintained and open to contribution
+* Free software?
 * `What Free Software Means to Me`_ by Matthew Garrett
-* More complicated than you might think
 
 .. _What Free Software Means to Me: http://mjg59.dreamwidth.org/30420.html
 
@@ -51,60 +62,60 @@ There are more ways to contribute than you might expect!
 File Bugs
 ---------
 
+.. figure:: static/bugs-bunny.jpg
+    :align: center
+    :height: 250px
+
 .. rst-class:: build
 
 * Bug tracker?
 * Github issue?
 * Email to customer service?
 
-.. note::
-
-    The most powerful way all of us can contribute to better software
-    is by filing bugs! Whether you can't submit a 'Review' form on
-    Nordstrom's website, or can't (insert super technical thing here),
-    giving feedback to organizations about how their software could be
-    better is invaluable. The only reason we make software is for
-    people to use!
-
 Write Documentation
 -------------------
 
-* Contribute to official documentation
+.. rst-class:: build
+
 * Add a README
+* Add comments to code
 * Write a blog post
-
-.. note::
-
-    This could be documentation for the Git repo or project website,
-    or it could even be a blog post about getting started doing
-    something and resources you found helpful. There are *so many
-    times* I spend hours digging around the internet for a solution,
-    and if I wrote the blog post for the solution I find I save
-    someone else that time.
+* Contribute to official documentation
 
 Translate
 ---------
 
-* Documentation! Slides! Or even just the README
+.. rst-class:: build
+
+* Documentation
+* Slides
 
 Answer Questions
 ----------------
 
-* In github issues
-* On IRC
+.. rst-class:: build
+
+* In `Github`_ issues
+* On `IRC`_
 * On `StackOverflow`_
 
+.. _Github: https://github.com
+.. _IRC: 
 .. _StackOverflow: https://stackoverflow.com
 
 Educate
 -------
 
+.. rst-class:: build
+
 * Give a talk!
-  * This can also be at a User Group meeting, bar camp, or other event
+    * This can also be at a User Group meeting, bar camp, or other event
 * Represent an open source project at an event
 
 Design
 ------
+
+.. rst-class:: build
 
 * A logo
 * A helpful diagram
@@ -112,6 +123,8 @@ Design
 
 Finding a Project
 -----------------
+
+In order of perceived helpfulness:
 
 * `Explore Github`_
 * `What Can I Do For Mozilla`_
@@ -130,21 +143,32 @@ First Steps
 -----------
 
 * Make an account on `Github`_
-* Read the README and/or CONTRIBUTING docs. If these don't exist, make an issue!
+* Read the README and/or CONTRIBUTING docs. 
+    * If these don't exist, make an issue!
 
 .. _Github: https://github.com
 
 Installing a Client
 -------------------
 
-* On Windows
-* On OSX
-* On Linux
+* `Official Git Docs`_ (cover all platforms)
+* `On Windows`_
+* `On OSX`_
+* `On Linux`_
+
+.. _Official Git Docs: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+.. _On Windows: https://git-for-windows.github.io/
+.. _On OSX: https://git-scm.com/download/mac
+.. _On Linux: https://git-scm.com/download/linux
 
 Clone a Repo
 ------------
 
 * Downloading from Github
+
+.. figure:: static/cloning.png
+    :align: center
+    :height: 300px
 
 .. code-block:: default
 
@@ -177,6 +201,10 @@ Push
 Make a Pull Request
 -------------------
 
+.. figure:: static/pull-request.png
+    :align: center
+    :height: 400px
+
 All Together
 ------------
 
@@ -187,6 +215,11 @@ All Together
     git add truth.txt
     git commit
     git push origin master
+
+Git Resources and Tutorials
+---------------------------
+
+* 
 
 Resources
 ---------
