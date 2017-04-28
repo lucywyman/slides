@@ -1,23 +1,8 @@
-- The Existential Tester: How to prioritize your tests and assess risk (Submitted to Linux Fest NW)
 - Firefox plugins I use and why
 - Basic Puppet -- writing your first module
 - SSL -- how it works under the hood
 - Setting up your own CA with openssh
 - Using Openstack with Beaker
-
-3 cute proofs:
---------------
-What makes it perfect:
-- It's mathematical (or "smart")
-- Everyone can understand
-- It's not trying to be too "real"
-- It's got the word 'cute' in it
-- It was funny
-- Giving information, not instructing
-
-What it wasn't:
-- Applicable to everyday life or tech
-- Super memorable
 
 Possible Lightning talks:
 - 5 ways to protect your privacy

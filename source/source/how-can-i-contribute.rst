@@ -8,9 +8,13 @@ Who Am I?
 
 .. rst-class:: build
 
+    .. figure:: static/koalaty-assurance.jpg
+        :align: left
+        :height: 250px
+
     .. figure:: static/hacking.gif
         :align: center
-        :height: 300px
+        :height: 250px
 
 Lucy Wyman
 
@@ -39,7 +43,6 @@ Why Should You Contribute?
 * Don't reinvent the wheel!
 * Give back to a project you use + love
 * Encourage collaboration, innovation, and **diversity**
-* Increase the quality and standards of software
 * Improve a skill
 
 But...
@@ -82,14 +85,6 @@ Write Documentation
 * Write a blog post
 * Contribute to official documentation
 
-Translate
----------
-
-.. rst-class:: build
-
-* Documentation
-* Slides
-
 Answer Questions
 ----------------
 
@@ -114,6 +109,10 @@ Educate
 
 Design
 ------
+
+.. figure:: static/docker_logo.png
+    :align: center
+    :height: 300px
 
 .. rst-class:: build
 
