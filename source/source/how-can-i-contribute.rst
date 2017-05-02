@@ -3,6 +3,14 @@ How Can I Contribute?
 
 A Guide to Making Your First Open Source Contribution
 
+Roadmap
+-------
+
+* Why should you contribute?
+* What are different ways of contributing?
+* How to find a project
+* Lightening fast introduction to Git and Github
+
 Who Am I?
 ---------
 
@@ -42,7 +50,7 @@ Why Should You Contribute?
 
 * Don't reinvent the wheel!
 * Give back to a project you use + love
-* Encourage collaboration, innovation, and **diversity**
+* Encourage collaboration and innovation
 * Improve a skill
 
 But...
@@ -101,6 +109,7 @@ Answer Questions
 Educate
 -------
 
+.. figure:: static/
 .. rst-class:: build
 
 * Give a talk!
@@ -117,8 +126,10 @@ Design
 .. rst-class:: build
 
 * A logo
-* A helpful diagram
+* A `helpful diagram`_
 * A new feature
+  
+.. _helpful diagram: 
 
 Finding a Project
 -----------------
@@ -127,10 +138,12 @@ In order of perceived helpfulness:
 
 * `Explore Github`_
 * `What Can I Do For Mozilla`_
+* `24 Pull Requests`_
 * `Openhatch`_
 
-.. _Explore Github: 
+.. _Explore Github: https://github.com/explore
 .. _What Can I Do For Mozilla: https://whatcanidoformozilla.org/
+.. _24 Pull Requests: https://24pullrequests.com/
 .. _Openhatch: https://openhatch.org/
 
 Getting Started Contributing
@@ -160,10 +173,19 @@ Installing a Client
 .. _On OSX: https://git-scm.com/download/mac
 .. _On Linux: https://git-scm.com/download/linux
 
+Fork a Repo
+-----------
+
+Creating your own copy
+
+.. figure:: static/forking.png
+    :align: center
+    :height: 300px
+
 Clone a Repo
 ------------
 
-* Downloading from Github
+Downloading from Github
 
 .. figure:: static/cloning.png
     :align: center
@@ -204,21 +226,19 @@ Make a Pull Request
     :align: center
     :height: 400px
 
-All Together
-------------
-
-.. code-block:: default
-
-    git clone ssh@github.com:lucywyman/i-love-tacos.git
-    echo 'I love tacos' > truth.txt
-    git add truth.txt
-    git commit
-    git push origin master
-
 Git Resources and Tutorials
 ---------------------------
 
-* 
+* `try.github.io`_ for an easy, hands-on tutorial
+* `TutorialsPoint Git Tutorial`_ for a better understanding of what
+  git can do
+* `Vogella Git Tutorial`_ for a *really* deep dive into git
+* `Codecademy Git Tutorial`_ for a more lesson-based approach
+
+.. _try.github.io: https://try.github.io/levels/1/challenges/1
+.. _TutorialsPoint Git Tutorial: https://www.tutorialspoint.com/git/git_review_changes.htm
+.. _Vogella Git Tutorial: http://www.vogella.com/tutorials/Git/article.html
+.. _Codecademy Git Tutorial: https://www.codecademy.com/learn/learn-git
 
 Resources
 ---------
