@@ -103,13 +103,16 @@ Answer Questions
 * On `StackOverflow`_
 
 .. _Github: https://github.com
-.. _IRC: 
+.. _IRC: https://kiwiirc.com/
 .. _StackOverflow: https://stackoverflow.com
 
 Educate
 -------
 
 .. figure:: static/
+    :align: center
+    :height: 300px
+
 .. rst-class:: build
 
 * Give a talk!
@@ -129,7 +132,7 @@ Design
 * A `helpful diagram`_
 * A new feature
   
-.. _helpful diagram: 
+.. _helpful diagram: https://deis.com/images/blog-images/kubernetes-overview-1-0.png 
 
 Finding a Project
 -----------------
