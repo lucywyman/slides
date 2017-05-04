@@ -36,7 +36,7 @@ What is Open Source?
 .. rst-class:: build
 
 * Code is publicly available
-* Can be contributed to
+* Can be contributed to by the public
 * Actively maintained and open to contribution
 * Free software?
 * `What Free Software Means to Me`_ by Matthew Garrett
@@ -101,15 +101,17 @@ Answer Questions
 * In `Github`_ issues
 * On `IRC`_
 * On `StackOverflow`_
+* On `Reddit`_
 
 .. _Github: https://github.com
 .. _IRC: https://kiwiirc.com/
 .. _StackOverflow: https://stackoverflow.com
+.. _Reddit: https://www.reddit.com/r/linuxquestions/
 
 Educate
 -------
 
-.. figure:: static/
+.. figure:: static/educate-yourself.jpg
     :align: center
     :height: 300px
 
