@@ -13,6 +13,7 @@ Where We Are
 ============
 
 https://github.com/puppetlabs/pe-console-ui/pull/2136
+https://github.com/puppetlabs/pe-console-ui/pull/2148
 
 The Future
 -----------
