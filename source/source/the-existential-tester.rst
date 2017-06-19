@@ -1,7 +1,7 @@
 The Existential Tester
 ======================
 
-How to prioritize tests and assess risk
+How to Assess Risk and Prioritize Tests
 
 Roadmap
 -------
@@ -12,7 +12,7 @@ Roadmap
 - Intro to risk-based testing
 - Pitfalls of risk-based testing
 - How to avoid the pitfalls
-- Examples!
+- An example!
 
 `$ whoami`
 ----------
@@ -38,11 +38,14 @@ What *is* Testing?
 
 .. rst-class:: build
 
-* "Making sure software works the way we expect it to"
-* Not at all ambiguous
+    "Making sure software works the way we expect it to. When the user does X, Y happens."
 
-What Should I Test?
--------------------
+    .. figure:: static/testing.gif
+        :align: center
+        :height: 300px
+
+How Do I Prioritize?
+--------------------
 
 .. rst-class:: build
 
@@ -91,13 +94,36 @@ Dodging the Balls
 
 .. rst-class:: build
 
+* Err on the side you're most comfortable defending
 * Ask questions to understand methodology at your org
 * Give yourself grace
-* Err on the side you're most comfortable defending
 * Talk through it with your mentor / manager
 
 Example
 -------
+
+**Scenario**: Writing Hello World in Python
+**Expectation**: When I run the program, it will print 'Hello World' to stdout
+
+Risks
+-----
+
+.. rst-class:: build
+
+- **Note**: In the course of doing this, there will be assessments you probably disagree with! That's the point ;)
+- It doesn't print anything
+  - High severity
+  - High probability
+- It doesn't print 'Hello World'
+  - Medium severity
+  - Medium probability
+- It prints to stderr instead of stdout
+  - Medium severity
+  - Low probability
+- It prints 'Hello World\n'
+  - Low severity
+  - Low probability
+- **Note**: This focuses on *results* of errors, not *causes* of errors
 
 Resources
 ---------
