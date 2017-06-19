@@ -149,7 +149,7 @@ htmlstatic_path = ['static']
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
-#html_extra_path = []
+html_extra_path = ['static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -189,7 +189,7 @@ htmlstatic_path = ['static']
 # base URL from which the finished HTML is served.
 #html_use_opensearch = ''
 
-html_style = 'styles.css'
+#html_style = 'styles.css'
 
 # This is the file name suffix for HTML files (e.g. ".xhtml").
 #html_file_suffix = None
@@ -230,10 +230,10 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-  (master_doc, 'slides.tex', u'slides Documentation',
-   u'l', 'manual'),
-]
+#latex_documents = [
+#  (master_doc, 'slides.tex', u'slides Documentation',
+#   u'l', 'manual'),
+#]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -260,10 +260,10 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'slides', u'slides Documentation',
-     [author], 1)
-]
+#man_pages = [
+#    (master_doc, 'slides', u'slides Documentation',
+#     [author], 1)
+#]
 
 # If true, show URL addresses after external links.
 #man_show_urls = False
@@ -274,11 +274,11 @@ man_pages = [
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
-  (master_doc, 'slides', u'slides Documentation',
-   author, 'slides', 'One line description of project.',
-   'Miscellaneous'),
-]
+#texinfo_documents = [
+#  (master_doc, 'slides', u'slides Documentation',
+#   author, 'slides', 'One line description of project.',
+#   'Miscellaneous'),
+#]
 
 # Documents to append as an appendix to all manuals.
 #texinfo_appendices = []

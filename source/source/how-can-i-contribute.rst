@@ -52,6 +52,7 @@ Why Should You Contribute?
 * Give back to a project you use + love
 * Encourage collaboration and innovation
 * Improve a skill
+* Fix or add a feature
 
 But...
 ------
@@ -88,10 +89,11 @@ Write Documentation
 
 .. rst-class:: build
 
-* Add a README
+* Contribute to official documentation
+* Fix typos and grammar
+* Add or edit a README
 * Add comments to code
 * Write a blog post
-* Contribute to official documentation
 
 Answer Questions
 ----------------
@@ -205,7 +207,7 @@ Make Changes
 
 .. code-block:: default
 
-    echo 'I love tacos' > truth.txt
+    echo 'I love tacos' > tacos.txt
 
 Stage and Commit
 ----------------
@@ -222,7 +224,7 @@ Push
 
 .. code-block:: default
 
-    git push origin master
+    git push
 
 Make a Pull Request
 -------------------

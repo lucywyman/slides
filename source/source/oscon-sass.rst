@@ -236,7 +236,7 @@ Conditionals
 Blink tags
 ----------
 
-.. code-block:: jquery
+.. code-block:: javascript
 
     if($('.thing1').parent()){
         $('.thing1').css('color', 'red');
