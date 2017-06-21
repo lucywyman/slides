@@ -52,7 +52,6 @@ Why Should You Contribute?
 * Give back to a project you use + love
 * Encourage collaboration and innovation
 * Improve a skill
-* Fix or add a feature
 
 But...
 ------
@@ -80,9 +79,13 @@ File Bugs
 
 .. rst-class:: build
 
-* Bug tracker?
-* Github issue?
-* Email to customer service?
+Include:
+
+- Steps for reproduction - how did you get into this state?
+- What you expected to happen
+- What actually happened
+
+Github issues | Bug tracker | Direct contact (email, twitter, etc.)
 
 Write Documentation
 -------------------
@@ -121,6 +124,7 @@ Educate
 
 * Give a talk!
     * This can also be at a User Group meeting, bar camp, or other event
+* Volunteer for a workshop
 * Represent an open source project at an event
 
 Design
