@@ -11,8 +11,8 @@ Roadmap
 * How to find a project
 * Lightening fast introduction to Git and Github
 
-Who Am I?
----------
+`$ whoami`
+----------
 
 .. rst-class:: build
 
