@@ -3,6 +3,8 @@ The Existential Tester
 
 How to Assess Risk and Prioritize Tests
 
+http://slides.lucywyman.me/the-existential-tester.html
+
 Roadmap
 -------
 
@@ -44,6 +46,19 @@ What *is* Testing?
         :align: center
         :height: 300px
 
+Ask Ourselves Some Questions
+----------------------------
+
+.. rst-class:: build
+
+    - How do I know when I'm done testing?
+    - How do I know what to test and what not to test?
+    - What's the meaning of life?
+
+    .. figure:: static/42.jpg
+        :align: center
+        :height: 300px
+
 How Do I Prioritize?
 --------------------
 
@@ -52,6 +67,13 @@ How Do I Prioritize?
     .. figure:: static/risk.jpg
         :align: center
         :height: 450px
+
+Why Risk?
+---------
+
+.. rst-class:: build
+
+Ultimately, my job is decrease the risk of a project or feature as much as possible
 
 
 What *is* Risk?
@@ -103,6 +125,7 @@ Example
 -------
 
 **Scenario**: Writing Hello World in Python
+
 **Expectation**: When I run the program, it will print 'Hello World' to stdout
 
 Risks
@@ -127,6 +150,12 @@ Risks
 
 Resources
 ---------
+
+- `Risk-based Testing – An effective measure to deal with Risks in Software Testing`_ - Short but effective overview
+- `Wikipedia`_
+
+.. _Risk-based Testing – An effective measure to deal with Risks in Software Testing: http://www.360logica.com/blog/risk-based-testing-effective-measure-deal-risks-software-testing/
+.. _Wikipedia: https://en.wikipedia.org/wiki/Risk-based_testing
 
 Questions?
 ==========
