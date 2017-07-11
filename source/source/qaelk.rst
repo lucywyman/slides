@@ -41,16 +41,16 @@ Down the Rabbit Hole
 * Why is grafana so terrible?
 
 So...We had a lot of questions
-------------------------------
+==============================
 
 And we decided to make a tool that could answer them
-
-TODO talk about project requirements / goals here?
 
 QAELK phase 1
 -------------
 
 "QA ElasticSearch Logstash Kibana/Grafana"
+
+.. rst-class:: build
 
 * A metrics project
 * Aggregated acceptance testing results
@@ -59,23 +59,36 @@ QAELK phase 1
 
 QAELK phase 2
 -------------
-"QAELK2"
 
 Replace the stack
+
+.. rst-class:: build
+
 * Google BigQuery (replaces ElasticSearch)
 * Custom Application Dr. Teeth (replaces Logstash)
 * Looker (replaces Kibana/Grafana)
 * Maybe we should call it "QABqDrThL" ¯\_(ツ)_/¯
 
+.. nextslide::
+
 Decoupling ourselves from specific testing tools
+
+.. rst-class:: build
+
 * Only dependency is tool produces JUNIT.xml
 * Other data relevant to test runs accepted by Dr. Teeth REST endpoint
 
+.. nextslide::
+
 Benefits of the new stack
+
+.. rst-class:: build
+
 * Custom dashboards built in Looker
 * Specific 'Looks' shipped to confluence
 * Specific 'Looks' shipped to teams via email
 * Querying with SQL is a fallback for those on the bleeding edge
+
 Demo
 ====
 
@@ -92,36 +105,3 @@ Questions?
 
 Thank you!
 ==========
-
-
-Notes: 
-- 30 minute talk
-
-Outline:
-- Roadmap
-- What is QAELK?
-- Why did we build it?
-  - What questions does it answer?
-  - What makes a test "valuable"?
-    - Which tests tell us our code is broken?
-    - Perception vs reality -- tests are perceived as more or less valuable than they are
-    - Cost of tests -- which tests take longer to run than they are "worth"?
-    - Cost of maintenance / running time / resources
-    - flaky?
-    - Transients?
-    - never failing?
-    - Is it a problem with tests or code?
-    - How do you identify a "bad test"?
-    - Did we learn anything from this test? Video game scoring
-    - Future ideas: 
-      - sub systems integrated together
-      - qaelk = repo of test run data <--> jira integration (bordain?)(what bugs were found by tests?)  --> report back to jira if an issue was fixed or not
-      - testrail (cry)
-    - More subtopics here (What is a flaky test? Does a test that never fails provide value? etc.)
-- What decisions / actions have we made based on data from QAELK
-  - What will you do when you find out XYZ about ABC metrics?
-  - Refactor, throw away, or do nothing, put into different testing tier
-- Possibly a demo
-- Future plans / hopes / dreams
-- Resources
-- Questions
