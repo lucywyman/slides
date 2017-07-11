@@ -50,9 +50,32 @@ TODO talk about project requirements / goals here?
 QAELK phase 1
 -------------
 
+"QA ElasticSearch Logstash Kibana/Grafana"
+
+* A metrics project
+* Aggregated acceptance testing results
+* Learning things about how our tests run in CI
+* Keep acceptance testing valuable
+
 QAELK phase 2
 -------------
+"QAELK2"
 
+Replace the stack
+* Google BigQuery (replaces ElasticSearch)
+* Custom Application Dr. Teeth (replaces Logstash)
+* Looker (replaces Kibana/Grafana)
+* Maybe we should call it "QABqDrThL" ¯\_(ツ)_/¯
+
+Decoupling ourselves from specific testing tools
+* Only dependency is tool produces JUNIT.xml
+* Other data relevant to test runs accepted by Dr. Teeth REST endpoint
+
+Benefits of the new stack
+* Custom dashboards built in Looker
+* Specific 'Looks' shipped to confluence
+* Specific 'Looks' shipped to teams via email
+* Querying with SQL is a fallback for those on the bleeding edge
 Demo
 ====
 
