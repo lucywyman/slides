@@ -56,6 +56,10 @@ QAELK phase 1
 * Aggregated acceptance testing results
 * Learning things about how our tests run in CI
 * Keep acceptance testing valuable
+# why was it the right tool at the time
+# shortcomings of ELK/G
+# elastic cloud is
+#everybodyelse is doing it
 
 QAELK phase 2
 -------------
@@ -75,8 +79,9 @@ Decoupling ourselves from specific testing tools
 
 .. rst-class:: build
 
-* Only dependency is tool produces JUNIT.xml
-* Other data relevant to test runs accepted by Dr. Teeth REST endpoint
+* Tracking test results from all the tools
+* Only dependency is that your tool produces JUNIT.xml
+* Concepts that are not part of the JUNIT.xml are communicated via query params
 
 .. nextslide::
 
@@ -93,9 +98,18 @@ Demo
 ====
 
 TODO this should include talking about how we use QAELK data. Maybe 2-3 examples? "Our SRE team uses this feature to do XYZ"
+# Base this on the demo given in the MPR
 
 What's Next?
 ------------
+Go Beyond our POC
+
+.. rst-class:: build
+
+* Polish what we have
+* Find the edges of what is possible with our current stack
+* Make our data more accurate
+* integrate with existing tools at puppet that identify transient errors
 
 Resources
 ---------
