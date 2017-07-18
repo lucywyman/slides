@@ -6,29 +6,29 @@ Are Our Tests Any Good?
 Roadmap
 -------
 
-- What QAELK is
-- Why we built it
-- How we're using it
-- Demo
-- Goals | dreams | next year's disappointments
+* Problems with testing at Puppet
+* Why we built QAELK
+* What QAELK is
+* How we're using it
+* Demo
+* Goals | dreams | next year's disappointments
 
 Who Are We?
 -----------
 
-What is QAELK?
---------------
+.. table::
+   :class: no-border
 
-A dashboard for aggregating and visualizing data about our Jenkins pipelines
+Testing At Puppet
+-----------------
 
-.. rst-class:: build
+* Waaaaayyyy too many pipelines
+* Testing on many supported platforms
+* Lots of transients
+* Difficult to keep track of what failed, when, and why
 
-* Test duration (which tests are taking the longest?)
-* Test flakiness
-* Test failure rate
-* And more!
-
-Down the Rabbit Hole
---------------------
+We had a lot of questions
+-------------------------
 
 .. rst-class:: build
 
@@ -40,10 +40,23 @@ Down the Rabbit Hole
 * How can we know the answers to any of these?
 * Why is grafana so terrible?
 
-So...We had a lot of questions
-==============================
+.. figure:: static/whyyy.gif
+    :align: center
+    :height: 200px
 
-And we decided to make a tool that could answer them
+What is QAELK?
+--------------
+
+"A window into the testing layer of CI"
+
+A dashboard for aggregating and visualizing data about our Jenkins pipelines
+
+.. rst-class:: build
+
+* Test duration (which tests are taking the longest?)
+* Test flakiness
+* Test failure rate
+* And more!
 
 QAELK phase 1
 -------------
