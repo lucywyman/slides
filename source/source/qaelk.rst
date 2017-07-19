@@ -3,65 +3,86 @@ QAELK
 
 Are Our Tests Any Good?
 
+Note: Press 'c' to see presenter notes
+
+This kind of doesn't work for me, but I'll see if I can troubleshoot why later today. Let me know if it does work for you
+
 Roadmap
 -------
 
 * Problems with testing at Puppet
 * Why we built QAELK
 * What QAELK is
-* How we're using it
+* How we're using QAELK
 * Demo
 * Goals | dreams | next year's disappointments
 
 Who Are We?
 -----------
 
-.. table::
-   :class: no-border
+.. rst-class:: build
+
+    .. figure:: static/koalaty-assurance.jpg
+        :align: left
+        :height: 250px
+
+    .. figure:: static/hacking.gif
+        :align: center
+        :height: 250px
+
+.. note::
+    
+    The empty lines are so that these are rendered onto their own lines :P
+
+Lucy Wyman | Zach Reichert
+
+Software Developers in Test
+
+Puppet (Labs)
 
 Testing At Puppet
 -----------------
 
-* Waaaaayyyy too many pipelines
-* Testing on many supported platforms
-* Lots of transients
-* Difficult to keep track of what failed, when, and why
+.. rst-class:: build
 
-We had a lot of questions
--------------------------
+    Too many...
+
+    * Pipelines
+    * Supported platforms
+    * Transients
+    * Jenkins restarts
+    * Difficult to keep track of what tests ran, when, and why
+
+Why We Made QAELK
+-----------------
+
+We had a lot of questions...
 
 .. rst-class:: build
 
-* **How do we know if our tests are providing value?**
+* **Are our tests providing value?**
 * What makes a test valuable?
 * Which tests tell us our code is broken? How much do those tests cost?
-* How do we know if a failure is a broken test, or broken code?
 * Can a test that never fails provide value?
-* How can we know the answers to any of these?
 * Why is grafana so terrible?
-
-.. figure:: static/whyyy.gif
-    :align: center
-    :height: 200px
 
 What is QAELK?
 --------------
 
-"A window into the testing layer of CI"
-
-A dashboard for aggregating and visualizing data about our Jenkins pipelines
+"QA ElasticSearch Logstash Kibana/Grafana"
 
 .. rst-class:: build
 
-* Test duration (which tests are taking the longest?)
-* Test flakiness
-* Test failure rate
-* And more!
+* "A window into the testing layer of CI"
+* **A dashboard for aggregating and visualizing data about our Jenkins pipelines**
+* Helps us make informed decisions based on:
+    * Test duration 
+    * Test flakiness
+    * Test failure rate
+    * And more!
 
 QAELK phase 1
 -------------
-
-"QA ElasticSearch Logstash Kibana/Grafana"
 
 .. rst-class:: build
 
@@ -69,10 +90,13 @@ QAELK phase 1
 * Aggregated acceptance testing results
 * Learning things about how our tests run in CI
 * Keep acceptance testing valuable
-# why was it the right tool at the time
-# shortcomings of ELK/G
-# elastic cloud is
-#everybodyelse is doing it
+
+.. note::
+
+    I would talk about 
+    1. Why we chose the ELK stack at the time
+    2. What the E, L, and K all do in the system, and 
+    3. Why we moved off the ELK stack
 
 QAELK phase 2
 -------------
@@ -81,10 +105,18 @@ Replace the stack
 
 .. rst-class:: build
 
-* Google BigQuery (replaces ElasticSearch)
-* Custom Application Dr. Teeth (replaces Logstash)
-* Looker (replaces Kibana/Grafana)
-* Maybe we should call it "QABqDrThL" ¯\_(ツ)_/¯
+* `Google BigQuery`_ (replaces ElasticSearch)
+* Custom Application `Dr. Teeth`_ (replaces Logstash)
+* `Looker`_ (replaces Kibana/Grafana)
+* Maybe we should call it "QABqDrThL" ¯\\_(ツ)_/¯
+
+.. _Google BigQuery: https://cloud.google.com/bigquery/
+.. _Dr. Teeth: http://muppet.wikia.com/wiki/Dr._Teeth
+.. _Looker: https://looker.com
+
+.. note::
+
+    Why are these new tools better than the old ones? Are they easier to work with? Better documented? Technical details are a plus!
 
 .. nextslide::
 
@@ -107,11 +139,15 @@ Benefits of the new stack
 * Specific 'Looks' shipped to teams via email
 * Querying with SQL is a fallback for those on the bleeding edge
 
+How We Use QAELK
+----------------
+
+.. note::
+
+    2-3 examples of "We made this decision based on data from qaelk"
+
 Demo
 ====
-
-TODO this should include talking about how we use QAELK data. Maybe 2-3 examples? "Our SRE team uses this feature to do XYZ"
-# Base this on the demo given in the MPR
 
 What's Next?
 ------------
@@ -126,6 +162,10 @@ Go Beyond our POC
 
 Resources
 ---------
+
+* `The ELK Stack`_ - The everything you need to know guide
+
+.. _The ELK Stack: https://logz.io/learn/complete-guide-elk-stack/
 
 Questions?
 ==========
