@@ -74,7 +74,7 @@ What is QAELK?
 .. rst-class:: build
 
 * "A window into the testing layer of CI"
-* **A dashboard for aggregating and visualizing data about our Jenkins pipelines**
+* **A dashboard for aggregating and visualizing data about our acceptance testing**
 * Helps us make informed decisions based on:
     * Test duration 
     * Test flakiness
@@ -93,10 +93,13 @@ QAELK phase 1
 
 .. note::
 
-    I would talk about 
-    1. Why we chose the ELK stack at the time
-    2. What the E, L, and K all do in the system, and 
-    3. Why we moved off the ELK stack
+    1. We chose ELK bc oss, others where using in house
+    2. Elastic Search: No SQL database
+    3. Logstash: server-side data processing pipeline
+    4. Kibana/Grafana: Visualization tool often used for Analytics and Monitoring
+    3. In the end ELK/G was the wrong tool for the job
+        a. Logstash is optimized for performance not accuracy
+        b. The questions we are trying to answer are not Analytics or Monitoring
 
 QAELK phase 2
 -------------
@@ -116,7 +119,10 @@ Replace the stack
 
 .. note::
 
-    Why are these new tools better than the old ones? Are they easier to work with? Better documented? Technical details are a plus!
+    Better BC:
+    BQ: provides a SQL interface which I find more appealing to work with
+    DrTH: Our custom application is built to be more testable
+    Looker: Used by other organizations at Puppet
 
 .. nextslide::
 
