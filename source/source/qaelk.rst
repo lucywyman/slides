@@ -3,13 +3,9 @@ QAELK
 
 Are Our Tests Any Good?
 
-Note: Press 'c' to see presenter notes
-
-This kind of doesn't work for me, but I'll see if I can troubleshoot why later today. Let me know if it does work for you
-
 Roadmap
 -------
-
+L
 * Problems with testing at Puppet
 * Why we built QAELK
 * What QAELK is
@@ -19,7 +15,7 @@ Roadmap
 
 Who Are We?
 -----------
-
+B
 .. rst-class:: build
 
     .. figure:: static/koalaty-assurance.jpg
@@ -42,7 +38,7 @@ Puppet (Labs)
 
 Testing At Puppet
 -----------------
-
+Z
 .. rst-class:: build
 
     Too many...
@@ -53,9 +49,13 @@ Testing At Puppet
     * Jenkins restarts
     * Difficult to keep track of what tests ran, when, and why
 
+    .. figure:: static/limes.jpg
+        :align: center
+        :height: 250px
+
 Why We Made QAELK
 -----------------
-
+L
 We had a lot of questions...
 
 .. rst-class:: build
@@ -68,8 +68,8 @@ We had a lot of questions...
 
 What is QAELK?
 --------------
-
-"QA ElasticSearch Logstash Kibana/Grafana"
+L
+"Quality Assurance ElasticSearch Logstash Kibana(Grafana)"
 
 .. rst-class:: build
 
@@ -77,13 +77,13 @@ What is QAELK?
 * **A dashboard for aggregating and visualizing data about our acceptance testing**
 * Helps us make informed decisions based on:
     * Test duration 
-    * Test flakiness
+    * Test flakiness 
     * Test failure rate
     * And more!
 
 QAELK phase 1
 -------------
-
+Z
 .. rst-class:: build
 
 * A metrics project
@@ -103,7 +103,7 @@ QAELK phase 1
 
 QAELK phase 2
 -------------
-
+Z
 Replace the stack
 
 .. rst-class:: build
@@ -126,6 +126,8 @@ Replace the stack
 
 .. nextslide::
 
+Z
+
 Decoupling ourselves from specific testing tools
 
 .. rst-class:: build
@@ -135,6 +137,8 @@ Decoupling ourselves from specific testing tools
 * Concepts that are not part of the JUNIT.xml are communicated via query params
 
 .. nextslide::
+
+Z
 
 Benefits of the new stack
 
@@ -147,6 +151,8 @@ Benefits of the new stack
 
 How We Use QAELK
 ----------------
+L
+* Track how often a particular test fails 
 
 .. note::
 
@@ -157,6 +163,7 @@ Demo
 
 What's Next?
 ------------
+Z
 Go Beyond our POC
 
 .. rst-class:: build
@@ -164,12 +171,13 @@ Go Beyond our POC
 * Polish what we have
 * Find the edges of what is possible with our current stack
 * Make our data more accurate
-* integrate with existing tools at puppet that identify transient errors
+* Integrate with existing tools at puppet that identify transient errors
 
 Resources
 ---------
 
 * `The ELK Stack`_ - The everything you need to know guide
+* TODO What else should go here?
 
 .. _The ELK Stack: https://logz.io/learn/complete-guide-elk-stack/
 

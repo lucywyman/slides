@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>QAELK &mdash; slides</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2015.07.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    
+    <link rel="top" title="slides" href="index.html" />
+    <link rel="next" title="Sass: What it is, how it&#39;s used, and why it&#39;s so Syntactically Awesome" href="sass.html" />
+    <link rel="prev" title="Your Roots Are Showing" href="polynomials.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="qaelk">
+
+<h1>QAELK</h1>
+
+<p>Are Our Tests Any Good?</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="roadmap">
+
+<h2>Roadmap</h2>
+
+<p>L
+* Problems with testing at Puppet
+* Why we built QAELK
+* What QAELK is
+* How we're using QAELK
+* Demo
+* Goals | dreams | next year's disappointments</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="who-are-we">
+
+<h2>Who Are We?</h2>
+
+<p>B
+.. rst-class:: build</p>
+<blockquote>
+<div><div class="figure align-left">
+<a class="reference internal image-reference" href="_images/koalaty-assurance.jpg"><img alt="_images/koalaty-assurance.jpg" src="_images/koalaty-assurance.jpg" style="height: 250px;" /></a>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/hacking.gif"><img alt="_images/hacking.gif" src="_images/hacking.gif" style="height: 250px;" /></a>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The empty lines are so that these are rendered onto their own lines :P</p>
+</div>
+<p>Lucy Wyman | Zach Reichert</p>
+<p>Software Developers in Test</p>
+<p>Puppet (Labs)</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="testing-at-puppet">
+
+<h2>Testing At Puppet</h2>
+
+<p>Z
+.. rst-class:: build</p>
+<blockquote>
+<div><p>Too many...</p>
+<ul class="simple">
+<li>Pipelines</li>
+<li>Supported platforms</li>
+<li>Transients</li>
+<li>Jenkins restarts</li>
+<li>Difficult to keep track of what tests ran, when, and why</li>
+</ul>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/limes.jpg"><img alt="_images/limes.jpg" src="_images/limes.jpg" style="height: 250px;" /></a>
+</div>
+</div></blockquote>
+
+
+
+
+</article>
+<article class="slide level-2" id="why-we-made-qaelk">
+
+<h2>Why We Made QAELK</h2>
+
+<p>L
+We had a lot of questions...</p>
+<ul class="build simple">
+<li><strong>Are our tests providing value?</strong></li>
+<li>What makes a test valuable?</li>
+<li>Which tests tell us our code is broken? How much do those tests cost?</li>
+<li>Can a test that never fails provide value?</li>
+<li>Why is grafana so terrible?</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="what-is-qaelk">
+
+<h2>What is QAELK?</h2>
+
+<p>L
+&quot;Quality Assurance ElasticSearch Logstash Kibana(Grafana)&quot;</p>
+<ul class="build simple">
+<li>&quot;A window into the testing layer of CI&quot;</li>
+<li><strong>A dashboard for aggregating and visualizing data about our Jenkins pipelines</strong></li>
+<li><dl class="first docutils">
+<dt>Helps us make informed decisions based on:</dt>
+<dd><ul class="first last">
+<li>Test duration</li>
+<li>Test flakiness</li>
+<li>Test failure rate</li>
+<li>And more!</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="qaelk-phase-1">
+
+<h2>QAELK phase 1</h2>
+
+<p>Z
+.. rst-class:: build</p>
+<ul class="simple">
+<li>A metrics project</li>
+<li>Aggregated acceptance testing results</li>
+<li>Learning things about how our tests run in CI</li>
+<li>Keep acceptance testing valuable</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">I would talk about
+1. Why we chose the ELK stack at the time
+2. What the E, L, and K all do in the system, and
+3. Why we moved off the ELK stack</p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="qaelk-phase-2">
+
+<h2>QAELK phase 2</h2>
+
+<p>Z
+Replace the stack</p>
+<ul class="build simple">
+<li><a class="reference external" href="https://cloud.google.com/bigquery/">Google BigQuery</a> (replaces ElasticSearch)</li>
+<li>Custom Application <a class="reference external" href="http://muppet.wikia.com/wiki/Dr._Teeth">Dr. Teeth</a> (replaces Logstash)</li>
+<li><a class="reference external" href="https://looker.com">Looker</a> (replaces Kibana/Grafana)</li>
+<li>Maybe we should call it &quot;QABqDrThL&quot; ¯\_(ツ)_/¯</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Why are these new tools better than the old ones? Are they easier to work with? Better documented? Technical details are a plus!</p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="id1">
+
+<h2>QAELK phase 2</h2>
+
+<p>Z</p>
+<p>Decoupling ourselves from specific testing tools</p>
+<ul class="build simple">
+<li>Tracking test results from all the tools</li>
+<li>Only dependency is that your tool produces JUNIT.xml</li>
+<li>Concepts that are not part of the JUNIT.xml are communicated via query params</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id2">
+
+<h2>QAELK phase 2</h2>
+
+<p>Z</p>
+<p>Benefits of the new stack</p>
+<ul class="build simple">
+<li>Custom dashboards built in Looker</li>
+<li>Specific 'Looks' shipped to confluence</li>
+<li>Specific 'Looks' shipped to teams via email</li>
+<li>Querying with SQL is a fallback for those on the bleeding edge</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="how-we-use-qaelk">
+
+<h2>How We Use QAELK</h2>
+
+<p>L
+* Track how often a particular test fails</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">2-3 examples of &quot;We made this decision based on data from qaelk&quot;</p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-1" id="demo">
+
+<h1>Demo</h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="what-s-next">
+
+<h2>What's Next?</h2>
+
+<p>Z
+Go Beyond our POC</p>
+<ul class="build simple">
+<li>Polish what we have</li>
+<li>Find the edges of what is possible with our current stack</li>
+<li>Make our data more accurate</li>
+<li>Integrate with existing tools at puppet that identify transient errors</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="resources">
+
+<h2>Resources</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="https://logz.io/learn/complete-guide-elk-stack/">The ELK Stack</a> - The everything you need to know guide</li>
+<li>TODO What else should go here?</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-1" id="questions">
+
+<h1>Questions?</h1>
+
+
+
+
+
+</article>
+<article class="slide level-1" id="thank-you">
+
+<h1>Thank you!</h1>
+
+
+
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>
