@@ -6,6 +6,7 @@ Are Our Tests Any Good?
 Roadmap
 -------
 L
+
 * Problems with testing at Puppet
 * Why we built QAELK
 * What QAELK is
@@ -15,7 +16,9 @@ L
 
 Who Are We?
 -----------
+
 B
+
 .. rst-class:: build
 
     .. figure:: static/koalaty-assurance.jpg
@@ -38,7 +41,9 @@ Puppet (Labs)
 
 Testing At Puppet
 -----------------
+
 Z
+
 .. rst-class:: build
 
     Too many...
@@ -55,7 +60,9 @@ Z
 
 Why We Made QAELK
 -----------------
+
 L
+
 We had a lot of questions...
 
 .. rst-class:: build
@@ -68,7 +75,9 @@ We had a lot of questions...
 
 What is QAELK?
 --------------
+
 L
+
 "Quality Assurance ElasticSearch Logstash Kibana(Grafana)"
 
 .. rst-class:: build
@@ -83,7 +92,9 @@ L
 
 QAELK phase 1
 -------------
+
 Z
+
 .. rst-class:: build
 
 * A metrics project
@@ -97,13 +108,15 @@ Z
     2. Elastic Search: No SQL database
     3. Logstash: server-side data processing pipeline
     4. Kibana/Grafana: Visualization tool often used for Analytics and Monitoring
-    3. In the end ELK/G was the wrong tool for the job
+    5. In the end ELK/G was the wrong tool for the job
         a. Logstash is optimized for performance not accuracy
         b. The questions we are trying to answer are not Analytics or Monitoring
 
 QAELK phase 2
 -------------
+
 Z
+
 Replace the stack
 
 .. rst-class:: build
@@ -151,7 +164,9 @@ Benefits of the new stack
 
 How We Use QAELK
 ----------------
+
 L
+
 * Track how often a particular test fails 
 
 .. note::
@@ -163,7 +178,9 @@ Demo
 
 What's Next?
 ------------
+
 Z
+
 Go Beyond our POC
 
 .. rst-class:: build
