@@ -13,8 +13,8 @@ Roadmap
 * Demo
 * Goals | dreams | next year's disappointments
 
-Who Are We?
------------
+$whoami
+-------
 
 .. rst-class:: build
 
@@ -26,15 +26,16 @@ Who Are We?
         :align: center
         :height: 250px
 
-.. note::
-    
-    The empty lines are so that these are rendered onto their own lines :P
-
 Lucy Wyman | Zach Reichert
 
 Software Developers in Test
 
 Puppet
+
+Thesis
+------
+
+You can use data about your tests to improve your test suites. 
 
 Testing At Puppet
 -----------------
@@ -62,8 +63,9 @@ We had a lot of questions...
 
 * **Are our tests providing value?**
 * What makes a test valuable?
-* Which tests tell us our code is broken? What resources are these tests consuming?
+* Which tests tell us our code is broken?
 * Can a test that never fails provide value?
+* **Are our tests worth the cost of running them?**
 * Why is grafana so terrible?
 
 What is QAELK?
@@ -73,9 +75,8 @@ What is QAELK?
 
 .. rst-class:: build
 
-* "A window into the testing layer of CI"
 * **A dashboard for aggregating and visualizing data about our acceptance testing**
-* Helps us make informed decisions based on:
+* Helps us make data-informed decisions based on:
     * Test duration 
     * Test flakiness 
     * Test failure rate
@@ -84,7 +85,7 @@ What is QAELK?
 QAELK phase 1
 -------------
 
- First attempt at testing metrics in CI based on ELK
+First attempt at testing metrics in CI based on ELK
 
 .. rst-class:: build
 
@@ -151,11 +152,7 @@ Benefits of the new stack
 How We Use QAELK
 ----------------
 
-* Track how often a particular test fails 
-
-.. note::
-
-    2-3 examples of "We made this decision based on data from qaelk"
+* Pinpoint most expensive tests
 
 Demo
 ====
@@ -163,7 +160,7 @@ Demo
 What's Next?
 ------------
 
-Go Beyond our POC
+Go beyond our proof of concept
 
 .. rst-class:: build
 
@@ -172,12 +169,6 @@ Go Beyond our POC
 * Make our data more accurate
 * Integrate with existing tools at puppet that identify transient errors
 
-Resources
----------
-
-* `The ELK Stack`_ - The everything you need to know guide
-
-.. _The ELK Stack: https://logz.io/learn/complete-guide-elk-stack/
 .. _Looker: https://looker.com
 .. _Google BigQuery: https://cloud.google.com/bigquery/
 
