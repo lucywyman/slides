@@ -5,7 +5,6 @@ Are Our Tests Any Good?
 
 Roadmap
 -------
-L
 
 * Problems with testing at Puppet
 * Why we built QAELK
@@ -16,8 +15,6 @@ L
 
 Who Are We?
 -----------
-
-B
 
 .. rst-class:: build
 
@@ -37,12 +34,10 @@ Lucy Wyman | Zach Reichert
 
 Software Developers in Test
 
-Puppet (Labs)
+Puppet
 
 Testing At Puppet
 -----------------
-
-Z
 
 .. rst-class:: build
 
@@ -50,7 +45,7 @@ Z
 
     * Pipelines
     * Supported platforms
-    * Transients
+    * Configurations
     * Jenkins restarts
     * Difficult to keep track of what tests ran, when, and why
 
@@ -61,22 +56,18 @@ Z
 Why We Made QAELK
 -----------------
 
-L
-
 We had a lot of questions...
 
 .. rst-class:: build
 
 * **Are our tests providing value?**
 * What makes a test valuable?
-* Which tests tell us our code is broken? How much do those tests cost?
+* Which tests tell us our code is broken? What resources are these tests consuming?
 * Can a test that never fails provide value?
 * Why is grafana so terrible?
 
 What is QAELK?
 --------------
-
-L
 
 "Quality Assurance ElasticSearch Logstash Kibana(Grafana)"
 
@@ -93,11 +84,10 @@ L
 QAELK phase 1
 -------------
 
-Z
+ First attempt at testing metrics in CI based on ELK
 
 .. rst-class:: build
 
-* A metrics project
 * Aggregated acceptance testing results
 * Learning things about how our tests run in CI
 * Keep acceptance testing valuable
@@ -114,8 +104,6 @@ Z
 
 QAELK phase 2
 -------------
-
-Z
 
 Replace the stack
 
@@ -139,9 +127,8 @@ Replace the stack
 
 .. nextslide::
 
-Z
-
 Decoupling ourselves from specific testing tools
+------------------------------------------------
 
 .. rst-class:: build
 
@@ -151,9 +138,8 @@ Decoupling ourselves from specific testing tools
 
 .. nextslide::
 
-Z
-
 Benefits of the new stack
+-------------------------
 
 .. rst-class:: build
 
@@ -164,8 +150,6 @@ Benefits of the new stack
 
 How We Use QAELK
 ----------------
-
-L
 
 * Track how often a particular test fails 
 
@@ -178,8 +162,6 @@ Demo
 
 What's Next?
 ------------
-
-Z
 
 Go Beyond our POC
 
@@ -194,9 +176,10 @@ Resources
 ---------
 
 * `The ELK Stack`_ - The everything you need to know guide
-* TODO What else should go here?
 
 .. _The ELK Stack: https://logz.io/learn/complete-guide-elk-stack/
+.. _Looker: https://looker.com
+.. _Google BigQuery: https://cloud.google.com/bigquery/
 
 Questions?
 ==========
