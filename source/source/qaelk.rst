@@ -5,7 +5,6 @@ Are Our Tests Any Good?
 
 Roadmap
 -------
-L
 
 * Problems with testing at Puppet
 * Why we built QAELK
@@ -14,10 +13,8 @@ L
 * Demo
 * Goals | dreams | next year's disappointments
 
-Who Are We?
------------
-
-B
+$whoami
+-------
 
 .. rst-class:: build
 
@@ -29,20 +26,19 @@ B
         :align: center
         :height: 250px
 
-.. note::
-    
-    The empty lines are so that these are rendered onto their own lines :P
-
 Lucy Wyman | Zach Reichert
 
 Software Developers in Test
 
-Puppet (Labs)
+Puppet
+
+Thesis
+------
+
+You can use data about your tests to improve your test suites. 
 
 Testing At Puppet
 -----------------
-
-Z
 
 .. rst-class:: build
 
@@ -50,7 +46,7 @@ Z
 
     * Pipelines
     * Supported platforms
-    * Transients
+    * Configurations
     * Jenkins restarts
     * Difficult to keep track of what tests ran, when, and why
 
@@ -61,30 +57,26 @@ Z
 Why We Made QAELK
 -----------------
 
-L
-
 We had a lot of questions...
 
 .. rst-class:: build
 
 * **Are our tests providing value?**
 * What makes a test valuable?
-* Which tests tell us our code is broken? How much do those tests cost?
+* Which tests tell us our code is broken?
 * Can a test that never fails provide value?
+* **Are our tests worth the cost of running them?**
 * Why is grafana so terrible?
 
 What is QAELK?
 --------------
 
-L
-
 "Quality Assurance ElasticSearch Logstash Kibana(Grafana)"
 
 .. rst-class:: build
 
-* "A window into the testing layer of CI"
 * **A dashboard for aggregating and visualizing data about our acceptance testing**
-* Helps us make informed decisions based on:
+* Helps us make data-informed decisions based on:
     * Test duration 
     * Test flakiness 
     * Test failure rate
@@ -93,11 +85,10 @@ L
 QAELK phase 1
 -------------
 
-Z
+First attempt at testing metrics in CI based on ELK
 
 .. rst-class:: build
 
-* A metrics project
 * Aggregated acceptance testing results
 * Learning things about how our tests run in CI
 * Keep acceptance testing valuable
@@ -114,8 +105,6 @@ Z
 
 QAELK phase 2
 -------------
-
-Z
 
 Replace the stack
 
@@ -139,9 +128,8 @@ Replace the stack
 
 .. nextslide::
 
-Z
-
 Decoupling ourselves from specific testing tools
+------------------------------------------------
 
 .. rst-class:: build
 
@@ -151,9 +139,8 @@ Decoupling ourselves from specific testing tools
 
 .. nextslide::
 
-Z
-
 Benefits of the new stack
+-------------------------
 
 .. rst-class:: build
 
@@ -165,13 +152,7 @@ Benefits of the new stack
 How We Use QAELK
 ----------------
 
-L
-
-* Track how often a particular test fails 
-
-.. note::
-
-    2-3 examples of "We made this decision based on data from qaelk"
+* Pinpoint most expensive tests
 
 Demo
 ====
@@ -179,9 +160,7 @@ Demo
 What's Next?
 ------------
 
-Z
-
-Go Beyond our POC
+Go beyond our proof of concept
 
 .. rst-class:: build
 
@@ -190,13 +169,8 @@ Go Beyond our POC
 * Make our data more accurate
 * Integrate with existing tools at puppet that identify transient errors
 
-Resources
----------
-
-* `The ELK Stack`_ - The everything you need to know guide
-* TODO What else should go here?
-
-.. _The ELK Stack: https://logz.io/learn/complete-guide-elk-stack/
+.. _Looker: https://looker.com
+.. _Google BigQuery: https://cloud.google.com/bigquery/
 
 Questions?
 ==========
