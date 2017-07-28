@@ -152,7 +152,11 @@ Benefits of the new stack
 How We Use QAELK
 ----------------
 
-* Pinpoint most expensive tests
+.. rst-class:: build
+
+* Identify most expensive tests
+* Identify flaky tests
+* See failure history of tests
 
 Demo
 ====
