@@ -66,6 +66,7 @@
 <li>Why we built QAELK</li>
 <li>What QAELK is</li>
 <li>How we're using QAELK</li>
+<li>QAELK V1 and V2</li>
 <li>Demo</li>
 <li>Goals | dreams | next year's disappointments</li>
 </ul>
@@ -76,15 +77,12 @@
 </article>
 <article class="slide level-2" id="whoami">
 
-<h2>$whoami</h2>
+<h2>$ whoami</h2>
 
-<div class="build figure align-left">
-<a class="reference internal image-reference" href="images/koalaty-assurance.jpg"><img alt="images/koalaty-assurance.jpg" src="images/koalaty-assurance.jpg" style="height: 250px;" /></a>
-</div>
 <div class="build figure align-center">
-<a class="reference internal image-reference" href="images/hacking.gif"><img alt="images/hacking.gif" src="images/hacking.gif" style="height: 250px;" /></a>
+<a class="reference internal image-reference" href="images/testing.gif"><img alt="images/testing.gif" src="images/testing.gif" style="height: 300px;" /></a>
 </div>
-<p>Lucy Wyman | Zach Reichert</p>
+<p>Lucy Wyman &amp; Zach Reichert</p>
 <p>Software Developers in Test</p>
 <p>Puppet</p>
 
@@ -96,7 +94,10 @@
 
 <h2>Thesis</h2>
 
-<p>You can use data about your tests to improve your test suites.</p>
+<p>You can use data to make your test suites more efficient + cheaper using ~science~</p>
+<div class="figure align-center">
+<img alt="images/the-more-you-know.gif" src="images/the-more-you-know.gif" />
+</div>
 
 
 
@@ -164,6 +165,21 @@
 
 
 </article>
+<article class="slide level-2" id="how-we-use-qaelk">
+
+<h2>How We Use QAELK</h2>
+
+<ul class="build simple">
+<li>Identify most expensive tests</li>
+<li>Identify flaky tests</li>
+<li>See failure history of tests</li>
+<li>Improve developer feedback time</li>
+</ul>
+
+
+
+
+</article>
 <article class="slide level-2" id="qaelk-phase-1">
 
 <h2>QAELK phase 1</h2>
@@ -174,24 +190,6 @@
 <li>Learning things about how our tests run in CI</li>
 <li>Keep acceptance testing valuable</li>
 </ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ol class="last arabic simple">
-<li>We chose ELK bc oss, others where using in house</li>
-<li>Elastic Search: No SQL database</li>
-<li>Logstash: server-side data processing pipeline</li>
-<li>Kibana/Grafana: Visualization tool often used for Analytics and Monitoring</li>
-<li><dl class="first docutils">
-<dt>In the end ELK/G was the wrong tool for the job</dt>
-<dd><ol class="first last loweralpha">
-<li>Logstash is optimized for performance not accuracy</li>
-<li>The questions we are trying to answer are not Analytics or Monitoring</li>
-</ol>
-</dd>
-</dl>
-</li>
-</ol>
-</div>
 
 
 
@@ -208,13 +206,6 @@
 <li><a class="reference external" href="https://looker.com">Looker</a> (replaces Kibana/Grafana)</li>
 <li>Maybe we should call it &quot;QABqDrThL&quot; ¯\_(ツ)_/¯</li>
 </ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Better BC:
-BQ: provides a SQL interface which I find more appealing to work with
-DrTH: Our custom application is built to be more testable
-Looker: Used by other organizations at Puppet</p>
-</div>
 
 
 
@@ -249,20 +240,6 @@ Looker: Used by other organizations at Puppet</p>
 
 
 </article>
-<article class="slide level-2" id="how-we-use-qaelk">
-
-<h2>How We Use QAELK</h2>
-
-<ul class="build simple">
-<li>Identify most expensive tests</li>
-<li>Identify flaky tests</li>
-<li>See failure history of tests</li>
-</ul>
-
-
-
-
-</article>
 <article class="slide level-1" id="demo">
 
 <h1>Demo</h1>
@@ -280,8 +257,8 @@ Looker: Used by other organizations at Puppet</p>
 <ul class="build simple">
 <li>Polish what we have</li>
 <li>Find the edges of what is possible with our current stack</li>
-<li>Make our data more accurate</li>
-<li>Integrate with existing tools at puppet that identify transient errors</li>
+<li>Integrate with existing tools at Puppet that identify transient errors</li>
+<li>Dynamically tier tests</li>
 </ul>
 
 
