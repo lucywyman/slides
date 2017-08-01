@@ -10,23 +10,20 @@ Roadmap
 * Why we built QAELK
 * What QAELK is
 * How we're using QAELK
+* QAELK V1 and V2
 * Demo
 * Goals | dreams | next year's disappointments
 
-$whoami
--------
+$ whoami
+--------
 
 .. rst-class:: build
 
-    .. figure:: static/koalaty-assurance.jpg
-        :align: left
-        :height: 250px
-
-    .. figure:: static/hacking.gif
+    .. figure:: static/testing.gif
         :align: center
-        :height: 250px
+        :height: 300px
 
-Lucy Wyman | Zach Reichert
+Lucy Wyman & Zach Reichert
 
 Software Developers in Test
 
@@ -35,7 +32,10 @@ Puppet
 Thesis
 ------
 
-You can use data about your tests to improve your test suites. 
+You can use data to make your test suites more efficient + cheaper using ~science~
+
+.. figure:: static/the-more-you-know.gif
+    :align: center
 
 Testing At Puppet
 -----------------
@@ -82,6 +82,16 @@ What is QAELK?
     * Test failure rate
     * And more!
 
+How We Use QAELK
+----------------
+
+.. rst-class:: build
+
+* Identify most expensive tests
+* Identify flaky tests
+* See failure history of tests
+* Improve developer feedback time
+
 QAELK phase 1
 -------------
 
@@ -92,16 +102,6 @@ First attempt at testing metrics in CI based on ELK
 * Aggregated acceptance testing results
 * Learning things about how our tests run in CI
 * Keep acceptance testing valuable
-
-.. note::
-
-    1. We chose ELK bc oss, others where using in house
-    2. Elastic Search: No SQL database
-    3. Logstash: server-side data processing pipeline
-    4. Kibana/Grafana: Visualization tool often used for Analytics and Monitoring
-    5. In the end ELK/G was the wrong tool for the job
-        a. Logstash is optimized for performance not accuracy
-        b. The questions we are trying to answer are not Analytics or Monitoring
 
 QAELK phase 2
 -------------
@@ -118,13 +118,6 @@ Replace the stack
 .. _Google BigQuery: https://cloud.google.com/bigquery/
 .. _Dr. Teeth: http://muppet.wikia.com/wiki/Dr._Teeth
 .. _Looker: https://looker.com
-
-.. note::
-
-    Better BC:
-    BQ: provides a SQL interface which I find more appealing to work with
-    DrTH: Our custom application is built to be more testable
-    Looker: Used by other organizations at Puppet
 
 .. nextslide::
 
@@ -149,15 +142,6 @@ Benefits of the new stack
 * Specific 'Looks' shipped to teams via email
 * Querying with SQL is a fallback for those on the bleeding edge
 
-How We Use QAELK
-----------------
-
-.. rst-class:: build
-
-* Identify most expensive tests
-* Identify flaky tests
-* See failure history of tests
-
 Demo
 ====
 
@@ -170,8 +154,8 @@ Go beyond our proof of concept
 
 * Polish what we have
 * Find the edges of what is possible with our current stack
-* Make our data more accurate
-* Integrate with existing tools at puppet that identify transient errors
+* Integrate with existing tools at Puppet that identify transient errors
+* Dynamically tier tests
 
 .. _Looker: https://looker.com
 .. _Google BigQuery: https://cloud.google.com/bigquery/
