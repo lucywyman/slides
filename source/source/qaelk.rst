@@ -3,6 +3,8 @@ QAELK
 
 Are Our Tests Any Good?
 
+http://slides.lucywyman.me/qaelk.html
+
 Roadmap
 -------
 
