@@ -7,12 +7,14 @@ Short Description
 
 Long Description
 ----------------
-Puppet probably isn't the first tool you think of when you want to manage your
-container infrastructure. But when it comes to modeling your infrastructure,
-addressing configuration drift, and managing the state of resources (including
-Kubernetes primitives), configuration management is the best tool for the job.
-Using Puppet in concert with Container Linux and Kubernetes can help you take
-your integration and delivery processes to the next level. This talk will cover
-the why, what, and how: why you would want to manage Container Linux with
-Puppet, what use cases Puppet is most appropriate for, and how to set up an
-application running on Container Linux that's managed by Puppet. See you there!
+Puppet probably isn't the first tool you think of when you want to
+manage your container infrastructure. But when it comes to modeling
+your infrastructure, addressing configuration drift, and managing the
+state of resources (including Kubernetes primitives), configuration
+management is the best tool for the job.  Using Puppet in concert with
+Container Linux and Kubernetes can help you take your integration and
+delivery processes to the next level. This talk will cover the why,
+what, and how: why you would want to manage Container Linux with
+Puppet, what use cases Puppet is most appropriate for, and how to set
+up an application running on Container Linux that's managed by Puppet.
+See you there!

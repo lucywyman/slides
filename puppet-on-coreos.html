@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Who Orchestrates the Orchestrators? &mdash; slides</title>
+    
+    <link rel="stylesheet" href="static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2015.07.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/common.js"></script>
+    
+    <script type="text/javascript" src="static/slides.js"></script>
+    <script type="text/javascript" src="static/sync.js"></script>
+    <script type="text/javascript" src="static/controller.js"></script>
+    <script type="text/javascript" src="static/init.js"></script>
+    
+    
+    <link rel="top" title="slides" href="index.html" />
+    <link rel="next" title="QAELK" href="qaelk.html" />
+    <link rel="prev" title="Sass: What it is, how it&#39;s used, and why it&#39;s so Syntactically Awesome" href="oscon-sass.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="who-orchestrates-the-orchestrators">
+
+<h1>Who Orchestrates the Orchestrators?</h1>
+
+<p>Managing Container Linux and Kubernetes with Puppet</p>
+<p><a class="reference external" href="https://slides.lucywyman.me/puppet-on-coreos.html">https://slides.lucywyman.me/puppet-on-coreos.html</a></p>
+
+
+
+
+</article>
+<article class="slide level-2" id="roadmap">
+
+<h2>Roadmap</h2>
+
+<ul class="simple">
+<li>Why?</li>
+<li>How to manage CoreOS and K8s with Puppet</li>
+<li>Demo</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="whoami">
+
+<h2><code class="code docutils literal"><span class="pre">$</span> <span class="pre">whoami</span></code></h2>
+
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="images/beaker-fire.gif"><img alt="images/beaker-fire.gif" src="images/beaker-fire.gif" style="height: 300px;" /></a>
+</div>
+<p>Lucy Wyman (lucyw)</p>
+<p>Software Engineer</p>
+<p>Puppet</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="why-this-doesn-t-make-sense">
+
+<h2>Why This Doesn't Make Sense</h2>
+
+<ul class="build simple">
+<li>Containers are &quot;immutable&quot;</li>
+<li>CoreOS is &quot;immutable&quot;<ul>
+<li>Configured using <a class="reference external" href="https://coreos.com/ignition/docs/latest/">ignition</a> | <a class="reference external" href="https://coreos.com/os/docs/latest/cloud-config.html">cloud-config</a></li>
+</ul>
+</li>
+<li>Puppet is used to make changes to systems, and manage their lifecycle</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="why-or-when-this-makes-sense">
+
+<h2>Why (or when) This Makes Sense</h2>
+
+<ul class="build simple">
+<li>Manage information about your entire infrastructure in one place</li>
+<li>When immutable infra doesn't work for you, but containers do<ul>
+<li>Systems aren't immutable, we just pretend they are!</li>
+</ul>
+</li>
+<li>Handle configuration drift</li>
+<li>Add or modify services without restarting</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="this-is-where-the-magic-happens">
+
+<h2>This Is Where The Magic Happens</h2>
+
+<ul class="build simple">
+<li><a class="reference external" href="https://hub.docker.com/r/puppet/puppet-agent/">Puppet agent container</a> running on the CoreOS system it's managing</li>
+<li>Mount directories we care about</li>
+<li>Make changes to the CoreOS system from within the container</li>
+<li>Have a networking expert on hand</li>
+</ul>
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="images/magic.gif"><img alt="images/magic.gif" src="images/magic.gif" style="height: 200px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="demo-time">
+
+<h2>Demo Time</h2>
+
+<p><a class="reference external" href="https://github.com/lucywyman/puppet-on-coreos-demo">https://github.com/lucywyman/puppet-on-coreos-demo</a></p>
+
+
+
+
+</article>
+<article class="slide level-2" id="where-to-start">
+
+<h2>Where To Start</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="http://blog.lucywyman.me/puppet-on-coreos">http://blog.lucywyman.me/puppet-on-coreos</a></li>
+<li><a class="reference external" href="https://github.com/jumanjihouse/puppet-on-coreos">Puppet on CoreOS</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="resources">
+
+<h2>Resources</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="https://puppet.com/blog/using-puppet-coreos-rkt-flannel-and-etcd">Using Puppet with CoreOS Tools</a></li>
+<li><a class="reference external" href="http://www.admintome.com/blog/configure-puppet-on-coreos/">Puppet master and agent on CoreOS</a></li>
+<li><a class="reference external" href="https://hub.docker.com/r/epflsti/cluster.coreos.puppet/">https://hub.docker.com/r/epflsti/cluster.coreos.puppet/</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="questions">
+
+<h2>Questions?</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="images/puppy-questions.gif"><img alt="images/puppy-questions.gif" src="images/puppy-questions.gif" style="height: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-1" id="thank-you">
+
+<h1>Thank you!</h1>
+
+
+
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>
