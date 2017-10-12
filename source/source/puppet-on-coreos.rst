@@ -76,21 +76,30 @@ Demo Time
 
 https://github.com/lucywyman/puppet-on-coreos-demo
 
-Where To Start
---------------
+The Shiny New
+-------------
 
-* http://blog.lucywyman.me/puppet-on-coreos
-* `Puppet on CoreOS`_
+We have a `kubernetes module`_ that installs k8s now!
 
-.. _Puppet on CoreOS: https://github.com/jumanjihouse/puppet-on-coreos
+https://forge.puppet.com/puppetlabs/kubernetes
+
+
+.. _kubernetes module: https://forge.puppet.com/puppetlabs/kubernetes
+
+Demo Time
+---------
+
+https://github.com/puppetlabs/puppetlabs-kubernetes
 
 Resources
 ---------
 
+* `Puppet on CoreOS`_
 * `Using Puppet with CoreOS Tools`_
 * `Puppet master and agent on CoreOS`_
 * https://hub.docker.com/r/epflsti/cluster.coreos.puppet/
 
+.. _Puppet on CoreOS: https://github.com/jumanjihouse/puppet-on-coreos
 .. _Using Puppet with CoreOS Tools: https://puppet.com/blog/using-puppet-coreos-rkt-flannel-and-etcd
 .. _Puppet master and agent on CoreOS: http://www.admintome.com/blog/configure-puppet-on-coreos/
 
