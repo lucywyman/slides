@@ -1,20 +1,31 @@
 Title
 -----
-Who Orchestrates the Orchestrators?
+
+Managing CoreOS and Kubernetes with Puppet: Wat? Why? HOW?
 
 Short Description
 -----------------
+Puppet probably isn't the first tool you think of when you want to manage
+your container infrastructure. But when you want to integrate containers into
+your existing infrastructure, address configuration drift, or model your
+infrastructure Puppet is the best tool for the job.  This talk will cover
+the why, what, and how: why you would want to manage CoreOS and Kubernetes
+with Puppet, what use cases Puppet is most appropriate for, and how to set up
+an application running in a Kubernets cluster on CoreOS with Puppet.
 
 Long Description
 ----------------
-Puppet probably isn't the first tool you think of when you want to
-manage your container infrastructure. But when it comes to modeling
-your infrastructure, addressing configuration drift, and managing the
-state of resources (including Kubernetes primitives), configuration
-management is the best tool for the job.  Using Puppet in concert with
-Container Linux and Kubernetes can help you take your integration and
-delivery processes to the next level. This talk will cover the why,
-what, and how: why you would want to manage Container Linux with
-Puppet, what use cases Puppet is most appropriate for, and how to set
-up an application running on Container Linux that's managed by Puppet.
-See you there!
+Puppet probably isn't the first tool you think of when you want to manage
+your container infrastructure. But when you want to integrate containers into
+your existing infrastructure, address configuration drift, or model your
+infrastructure Puppet is the best tool for the job. While we tend to treat
+container infrastructure as immutable, in reality it isn't.  Third-party
+dependencies, persistent storage, and poorly-written applications can still
+change the state of your container and it's underlying OS in ways you don't
+expect, and cause things to break without you knowing what's running in the
+container or why it's breaking. Puppet can solve for this, providing security
+and assurance in your state and helping you have a hybrid infrastructure
+that's stable. This talk will cover the why, what, and how: why you would
+want to manage CoreOS and Kubernetes with Puppet, what use cases Puppet is
+most appropriate for, and how to set up an application running in a Kubernets
+cluster on CoreOS with Puppet.
