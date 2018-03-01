@@ -1,19 +1,38 @@
-Introduction to the Blockchain
-------------------------------
+Introduction to Blockchains
+---------------------------
 
 Short description
 -----------------
 
-Since 2012 we've been reading about how crytpocurrencies are the new
-internet, and have heard every opinion from positive to skeptical to
-vehemently against. How do cryptocurrencies actually work though? What
-technologies and principles are they based on? This talk will
-introduce the audience to the blockchain: a <definition of block chain
-here>. We'll cover what a blockchain is, how it works, the cool math
-and logic that it uses, and discuss some uses of the blockchain beyond
-just cryptocurrencies. This will explain the nuts and bolts of
-blockchains
+Since Bitcoin was open sourced in 2009 we've been reading about how crytpocurrencies are the new internet. How do cryptocurrencies actually work though? What technologies and principles lie under the hood? This talk will introduce the audience to the blockchain: a linked list used as a distributed ledger to record transactions between parties. We'll cover what a blockchain is, how it works, the cool math and theory that it uses, and discuss some applications of the blockchain beyond just cryptocurrencies.
 
 Long description
 ----------------
 
+Since Bitcoin was open sourced in 2009 we've been reading about how crytpocurrencies are the new internet, and are going to change the world for better or worse (depending on who you ask). How do cryptocurrencies actually work though? What technologies and principles lie under the hood? This talk will introduce the audience to the blockchain: a linked list used as a distributed ledger to record transactions between parties. Attendees will learn:
+    
+    * The structure of a blockchain, and why we can trust them
+    * Interesting properties of blockchains, and their implications
+    * How blockchains are decentralized, and why 
+    * Other uses for blockchains
+    
+If you're interested in knowing more about the "mathy" side of cryptocurrencies, or want to learn more about blockchains outside of the context of bitcoin, this talk is for you! No prior knowledge of data structures or security algorithms is necessary. This talk is an explanation of blockchains from the ground up, covering topics from merkle trees to hashing algorithms to Byzantine fault tolerance. I hope to see you there!
+
+Main takeaways
+--------------
+
+* The structure of a blockchain, and why we can trust them
+  * What a 'block' is
+  * What a hash is
+  * How blockchains are merkle trees, and what a merkle tree is
+  * Why it's difficult to change information in a block once it's part of a blockchain
+* Interesting properties of blockchains, and their implications
+  * How blockchains have a high Byzantine fault tolerance, and what that means
+  * 
+* How blockchains are decentralized, and why
+  * Basics of peer to peer networking
+  * Distributed networking strategies used by popular blockchains
+* Other uses for blockchains
+  * For land registration in Sweden
+  * The Alexandria Project
+  * Use in the UN World Food Programme's distribution project

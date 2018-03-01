@@ -4,25 +4,19 @@ Linux System Fundamentals
 Today's Agenda
 --------------
 
-* The Terminal & Shell
-    * Scripts, file paths, special characters
+* The Terminal and Shell
 
 .. figure:: static/Tux.png
     :align: right
 
-* Productivity tricks
-    * Getting help
-* What are files?
-    * File permissions
-* What are user accounts?
-    * User and group management
-* What are packages?
-    * How to use package managers
+* Getting help
+* Files
+* Users and Groups
+* Packages
     
 Operating Systems
 -----------------
 
-* What is an OS
 * GNU/Linux, BSD, Windows, OS X, Plan 9
 * Different use cases - desktop, server, phone
 
@@ -49,26 +43,17 @@ The Terminal
 Basic Shell Commands
 --------------------
 
-.. note::
-
-  :Explain architecture: built in commands vs. external binaries
-  :Demo commands:
-    Directory movement and file manipulation: Cd, pwd, ls, rm, mv, touch
-  :User info: id, whoami, w
-  :Pipes: redirection (pipe.txt, redirect.txt)
-  :Special variables: $?, $$ (pid.sh), !!, !*, !$
-
 .. figure:: static/bash.png
     :align: right
-    :height: 75pc
+    :height: 200px
 
 * ``ls``, ``cd``, ``cat``, ``echo``
-* invoke/call an installed program
-* get help: ``man <program>``
+* invoke or call an installed program
+* get help with ``man <program>``
 
 ::
 
-    test@x230 ~ $ tree
+    ~ $ tree
     .
     ├── Documents
     │   ├── Code
@@ -82,10 +67,8 @@ Basic Shell Commands
 
     6 directories, 5 files
 
-Invoking a script
+Invoking a Script
 -----------------
-
-.. note:: Permissions discussed later.
 
 .. code-block:: bash
 
@@ -124,11 +107,6 @@ File Paths
     test@x230 ~/Documents $ pwd
     /home/test/Documents
 
-
-.. note::
-  root directory is not to be confused with a home directory for the root
-  account
-
 Special Characters
 ------------------
 
@@ -140,20 +118,20 @@ Special Characters
 
 .. figure:: static/xkcd_regex.png
     :align: center
-    :height: 50pc
+    :height: 300px
 
 Type less
 ---------
 
 * Reverse-i-search
     * ctrl+r then type command
-* aliases
+* Alias commands 
     * ``~/.bashrc``
 * Tab completion
 
 .. figure:: static/space_cadet_keyboard.gif
     :align: center
-    :height: 75pc
+    :height: 400px
 
 Automation > Typing > Mouse
 
@@ -162,6 +140,7 @@ Help, get me out of here!
 
 .. figure:: static/exit.jpg
     :align: center
+    :height: 200px
 
 * ctrl+c kills or quits process
 * ctrl+d sends EOF (end-of-file), closes terminal
@@ -193,7 +172,7 @@ Knowledge Check
 More about Man Pages
 --------------------
 
-* the manual (rtfm)::
+::
 
     $ man <program>
     $ man man
@@ -207,11 +186,9 @@ More about Man Pages
 Documentation
 -------------
 
-Man pages, blogs you find by Googling, StackOverflow
-
 .. figure:: static/google.gif
     :align: center
-    :height: 50pc
+    :height: 200px
 
 *  Contribute to community
     * Correct it if it's wrong
@@ -234,8 +211,6 @@ It's okay to ask.
    mentioning what possibilities you've ruled out by searching.
 
 **Contributions = expertise + time**
-
-Don't waste experts' time, but do build your expertise.
 
 Review
 ------

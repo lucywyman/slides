@@ -3,32 +3,36 @@ How Can I Contribute?
 
 A Guide to Making Your First Open Source Contribution
 
-Roadmap
--------
+https://slides.lucywyman.me/how-can-i-contribute.html
 
-* Why should you contribute?
-* What are different ways of contributing?
+By The End You'll Know...
+-------------------------
+
+* Why you should contribute
+* Skillz you can contribute
 * How to find a project
 * Lightening fast introduction to Git and Github
 
-`$ whoami`
-----------
+:code:`$ whoami`
+----------------
 
 .. rst-class:: build
 
-    .. figure:: static/koalaty-assurance.jpg
-        :align: left
-        :height: 250px
+  .. figure:: static/cartoon-programming.gif
+      :align: center
+      :height: 300px
 
-    .. figure:: static/hacking.gif
-        :align: center
-        :height: 250px
 
 Lucy Wyman
 
-Software Developer in Test
+Software Engineer - `Bolt`_
 
-The Company Formerly Known As Puppet Labs
+`Puppet`_
+
+.. _Bolt: https://github.com/puppetlabs/bolt
+.. _Puppet: https://puppet.com
+
+`Source <https://arghh.github.io/>`_
 
 What is Open Source?
 --------------------
@@ -38,54 +42,57 @@ What is Open Source?
 * Code is publicly available
 * Can be contributed to by the public
 * Actively maintained and open to contribution
-* Free software?
-* `What Free Software Means to Me`_ by Matthew Garrett
+* Free software? 
 
-.. _What Free Software Means to Me: http://mjg59.dreamwidth.org/30420.html
+Sounds great, but...
+--------------------
+
+.. rst-class:: build
+
+* Contributing to open source doesn’t benefit me at all # I know you don't think this, but some people do!
+* I’m not a good enough programmer to contribute to open source
+* I don’t know the project well enough to contribute
+* I don’t write code, so I have nothing to contribute
+* I’m just a student / community member / manager / llama, I don’t have anything to contribute
+* Contributing to open source is hard
 
 Why Should You Contribute?
 --------------------------
 
 .. rst-class:: build
 
-* Don't reinvent the wheel!
 * Give back to a project you use + love
 * Encourage collaboration and innovation
 * Improve a skill
+* Don't reinvent the wheel
+* Make the world a better place!
 
-But...
-------
-
-.. rst-class:: build
-
-* I’m not a good enough programmer to contribute to open source
-* I don’t know the repo well enough to contribute
-* I don’t write code, so I have nothing to contribute
-* I’m just a student / community member / manager / llama, I don’t have anything to contribute
-* Contributing to open source is hard
-* Contributing to open source doesn’t benefit me at all
-
-Turns Out
-=========
-
-There are more ways to contribute than you might expect!
+How Can You Contribute?
+=======================
 
 File Bugs
 ---------
 
 .. figure:: static/bugs-bunny.jpg
     :align: center
-    :height: 250px
+    :height: 300px
 
-.. rst-class:: build
+`Source <http://www.neatorama.com/2010/11/08/a-brief-history-of-bugs-bunny/>`_
+
+.. nextslide::
+
+Github issues | Bug tracker | Contact (email, twitter, etc.)
 
 Include:
 
-- Steps for reproduction - how did you get into this state?
+.. rst-class:: build
+
+- What version you were using, browser version, OS, etc.
+- What you were trying to do
+- How you tried to do it (be detailed!)
+    - Steps for reproduction
 - What you expected to happen
 - What actually happened
-
-Github issues | Bug tracker | Direct contact (email, twitter, etc.)
 
 Write Documentation
 -------------------
@@ -93,39 +100,58 @@ Write Documentation
 .. rst-class:: build
 
 * Contribute to official documentation
-* Fix typos and grammar
-* Add or edit a README
-* Add comments to code
+* Add or update a `README`_
 * Write a blog post
+* Getting started guide
+
+.. figure:: static/rtfm.png
+    :align: right
+    :height: 250px
+
+`Source <https://cmenghi.deviantart.com/art/Mao-RTFM-vectorize-72728695>`_
+
+.. _README: https://www.computerhope.com/jargon/r/readme.htm
 
 Answer Questions
 ----------------
 
+.. figure:: static/kelly-kapoor-questions.gif
+    :align: center
+    :height: 250px
+
 .. rst-class:: build
 
 * In `Github`_ issues
-* On `IRC`_
+* On `IRC`_ or `Slack`_
 * On `StackOverflow`_
 * On `Reddit`_
 
+`Source <http://mtv.tumblr.com/post/121053588885>`_
+
 .. _Github: https://github.com
 .. _IRC: https://kiwiirc.com/
+.. _Slack: https://slack.com/
 .. _StackOverflow: https://stackoverflow.com
 .. _Reddit: https://www.reddit.com/r/linuxquestions/
 
 Educate
 -------
 
-.. figure:: static/educate-yourself.jpg
+.. figure:: static/the-more-you-know.gif
     :align: center
-    :height: 300px
+    :height: 200px
 
 .. rst-class:: build
 
 * Give a talk!
-    * This can also be at a User Group meeting, bar camp, or other event
-* Volunteer for a workshop
+    * This can be at a `user group`_ meeting, `bar camp`_, or other event
+* Volunteer for a workshop or event
+    * `Resources`_
 * Represent an open source project at an event
+
+.. _user group: https://www.meetup.com/find/events/tech/
+.. _bar camp: http://beaverbarcamp.org/
+.. _Resources: 
 
 Design
 ------
@@ -139,6 +165,8 @@ Design
 * A logo
 * A `helpful diagram`_
 * A new feature
+
+`Source <https://www.redbubble.com/people/talisso/works/26870087-docker-logo?p=sticker>`_
   
 .. _helpful diagram: https://deis.com/images/blog-images/kubernetes-overview-1-0.png 
 
@@ -162,12 +190,15 @@ Getting Started Contributing
 
 Making your first PR
 
+https://slides.lucywyman.me/how-can-i-contribute.html#15
+https://github.com/pop/i-love-tacos
+
 First Steps
 -----------
 
 * Make an account on `Github`_
 * Read the README and/or CONTRIBUTING docs. 
-    * If these don't exist, make an issue!
+    * If these don't exist, make an issue and add them!
 
 .. _Github: https://github.com
 
@@ -265,7 +296,11 @@ Resources
 .. _8 non-code ways to contribute to open source: https://opensource.com/life/16/1/8-ways-contribute-open-source-without-writing-code
 
 Questions?
-==========
+----------
+
+.. figure:: static/rdj-question.gif
+    :align: center
+    :height: 300px
 
 Thank you!
 ==========

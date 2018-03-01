@@ -17,18 +17,32 @@ Roadmap
 
 .. rst-class:: build
 
-    .. figure:: static/beaker-fire.gif
+    .. figure:: static/programmer-valentine.gif
         :align: center
         :height: 300px
 
-Lucy Wyman (lucyw)
+Lucy Wyman
 
-Software Engineer
+Software Engineer - `Bolt`_
 
-Puppet
+`Puppet`_
+
+`Source`_
+.. _Bolt: https://github.com/puppetlabs/bolt
+.. _Puppet: https://puppet.com
+.. _Source: https://www.reddit.com/r/gifs/comments/5tyymj/programmer_valentain_day/
 
 Why This Doesn't Make Sense
 ---------------------------
+
+.. note::
+    - Once my thing is working it should always work
+    - Reproducible
+    - Dev --> production is reliable
+    - Poor man's version control
+    - Everything is in config files, similar to Puppet
+    - No package manager on container linux
+    - Puppet is used to get your machine to a state, but with immutable infra and config files that is already happening
 
 .. rst-class:: build
 
@@ -37,6 +51,7 @@ Why This Doesn't Make Sense
 
   * Configured using `ignition`_ | `cloud-config`_
 
+* Configuration files are your "configuration management"
 * Puppet is used to make changes to systems, and manage their lifecycle
 
 .. _cloud-config: https://coreos.com/os/docs/latest/cloud-config.html
@@ -106,9 +121,9 @@ Resources
 Questions?
 ----------
 
-.. figure:: static/puppy-questions.gif
+.. figure:: static/jlaw-questions.gif
     :align: center
-    :height: 400px
+    :height: 300px
 
 Thank you!
 ==========
