@@ -6,15 +6,18 @@ From AFK to Zero-day
 Short Description
 -----------------
 
-Join me on a cultural, technical, and philosophical journey through time and
-space. Not sure what BDFL, Backus-Naur Form, gparted, astroturfing, or The Evil
-Bit are? I've got you covered. This talk aims to introduce common phrases,
-tools, protocols, cultural references, and other tech jargon to help you keep
-up with technical discussions and learn some great vocabulary! We'll cover some
-more useful, day-to-day programming terms like API, grep, and daemon, as well
-as some more fun cultural phrases such as fork bomb, quine, and hunter2. 
+Join me on a cultural, technical, and philosophical journey through time and space. Not sure what BDFL, Backus-Naur Form, gparted, astroturfing, or The Evil Bit are? I've got you covered. This talk aims to introduce common phrases, tools, protocols, cultural references, and other tech jargon to help you keep up with technical discussions and learn some great vocabulary! We'll cover some more useful, day-to-day programming terms like API, grep, and daemon, as well as some more fun cultural phrases such as fork bomb, quine, and hunter2. 
 
 Long Description
 ----------------
 
 
+This Talk is For
+----------------
+
+This talk is for beginner to intermediate folks who may be familiar with specific technologies, but aren't necessarily entrenched in the culture and lexicon of technology. This is meant to be a fun and informative talk covering the definition, history, and stories behind some of the jargon we use in the tech industry. The audience will walk away having learned some new vocabulary, and will be 'in' on some of the inside jokes technologists share. 
+
+Benefits to the Ecosystem
+-------------------------
+
+It's easy to feel left out of technical conversations when people are using words and phrases you don't know, especially when it's not clear what the joke is or what a word means in a technical context. This talk aims to break down those barriers of feeling 'on the outside' of technical conversations, and help people feel included in conversations. By understanding a wide range of basic concepts (such as what an API and daemon are) as well as cultural touchstones (hunter2 and 'Hack the Planet'), the audience will be more informed both technically and culturally, and feel more included in the technical community.

@@ -1,0 +1,30 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+body{
+    background: #fff;
+    margin: 0px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    padding: 15px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 600;
+    font-size: 2.2em;
+    line-height: 1em;
+} 
+
+ul li a:hover{
+    color: red;
+}
+
+.tiny{
+    font-size: .6em;
+}

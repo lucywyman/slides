@@ -36,8 +36,8 @@
     
     
     <link rel="top" title="slides" href="index.html" />
-    <link rel="next" title="QAELK" href="qaelk.html" />
-    <link rel="prev" title="Your Roots Are Showing" href="polynomials.html" /> 
+    <link rel="next" title="Linux System Fundamentals" href="single-system-fundamentals.html" />
+    <link rel="prev" title="Linux Jargon" href="linux-jargon.html" /> 
   </head>
   <body>
 
@@ -58,15 +58,36 @@
 
 
 </article>
-<article class="slide level-2" id="roadmap">
+<article class="slide level-2" id="where-we-re-going">
 
-<h2>Roadmap</h2>
+<h2>Where We're Going</h2>
 
 <ul class="simple">
+<li>The Stack</li>
 <li>Why?</li>
-<li>How to manage CoreOS and K8s with Puppet</li>
+<li>How to manage CoreOS with Puppet</li>
+<li>Deploy K8s to CoreOS with Puppet</li>
 <li>Demo</li>
 </ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="caveats">
+
+<h2>Caveats</h2>
+
+<ul class="simple">
+<li>I don't do this in production
+* More of a 'proof of concept'</li>
+<li>Literally spawned from &quot;I wonder if I can manage CoreOS with Puppet...&quot;</li>
+<li>No cloud providers, just local VMs</li>
+</ul>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/no-idea.jpg"><img alt="static/no-idea.jpg" src="static/no-idea.jpg" style="height: 300px;" /></a>
+</div>
+<p><a class="reference external" href="http://knowyourmeme.com/memes/i-have-no-idea-what-im-doing">Source</a></p>
 
 
 
@@ -77,11 +98,30 @@
 <h2><code class="code docutils literal"><span class="pre">$</span> <span class="pre">whoami</span></code></h2>
 
 <div class="build figure align-center">
-<a class="reference internal image-reference" href="images/beaker-fire.gif"><img alt="images/beaker-fire.gif" src="images/beaker-fire.gif" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="static/programmer-valentine.gif"><img alt="static/programmer-valentine.gif" src="static/programmer-valentine.gif" style="height: 300px;" /></a>
 </div>
-<p>Lucy Wyman (lucyw)</p>
-<p>Software Engineer</p>
-<p>Puppet</p>
+<p>Lucy Wyman</p>
+<p>Software Engineer - <a class="reference external" href="https://github.com/puppetlabs/bolt">Bolt</a></p>
+<p><a class="reference external" href="https://puppet.com">Puppet</a></p>
+<p><a class="reference external" href="https://www.reddit.com/r/gifs/comments/5tyymj/programmer_valentain_day/">Source</a></p>
+
+
+
+
+</article>
+<article class="slide level-2" id="the-stack">
+
+<h2>The Stack</h2>
+
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="static/pancakes.jpg"><img alt="static/pancakes.jpg" src="static/pancakes.jpg" style="height: 250px;" /></a>
+</div>
+<ul class="build simple">
+<li><a class="reference external" href="https://puppet.com">Puppet</a></li>
+<li><a class="reference external" href="https://coreos.com/">Container Linux</a></li>
+<li><a class="reference external" href="https://kubernetes.io/">Kubernetes</a></li>
+</ul>
+<p><a class="reference external" href="https://www.justataste.com/fluffy-greek-yogurt-pancakes-recipe/">Source</a></p>
 
 
 
@@ -91,12 +131,25 @@
 
 <h2>Why This Doesn't Make Sense</h2>
 
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Once my thing is working it should always work</li>
+<li>Reproducible</li>
+<li>Dev --&gt; production is reliable</li>
+<li>Poor man's version control</li>
+<li>Everything is in config files, similar to Puppet</li>
+<li>No package manager on container linux</li>
+<li>Puppet is used to get your machine to a state, but with immutable infra and config files that is already happening</li>
+</ul>
+</div>
 <ul class="build simple">
 <li>Containers are &quot;immutable&quot;</li>
 <li>CoreOS is &quot;immutable&quot;<ul>
 <li>Configured using <a class="reference external" href="https://coreos.com/ignition/docs/latest/">ignition</a> | <a class="reference external" href="https://coreos.com/os/docs/latest/cloud-config.html">cloud-config</a></li>
 </ul>
 </li>
+<li>Configuration files are your &quot;configuration management&quot;</li>
 <li>Puppet is used to make changes to systems, and manage their lifecycle</li>
 </ul>
 
@@ -108,14 +161,37 @@
 
 <h2>Why (or when) This Makes Sense</h2>
 
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Don't always want things to be immutable
+- Don't have to worry much about upgrading
+- But, if you have 20 node cluster, want to add ssh key, need to rebuild the whole thing
+- Lose a lot of state caches
+- Brings a lot of risk (latest tag)
+- Can be expensive and slow</li>
+<li>Testing and debuggability is critical</li>
+<li>Dependencies need to be versioned</li>
+<li>Cluster PKI management is not easy
+- No key rotation</li>
+<li>Terraform abstracts a lot of this away</li>
+<li>Having bash scripts to manage things is --, not flexible</li>
+<li>Difference between desired state + actual state</li>
+<li>End up having state -- databases, caches, etc.
+- Big risk of downtime</li>
+</ul>
+</div>
 <ul class="build simple">
-<li>Manage information about your entire infrastructure in one place</li>
-<li>When immutable infra doesn't work for you, but containers do<ul>
-<li>Systems aren't immutable, we just pretend they are!</li>
+<li>Manage your entire infra in one place</li>
+<li>When immutable infra doesn't work<ul>
+<li>Changes can be expensive</li>
+<li>Lose cache</li>
+<li>Can be risky</li>
 </ul>
 </li>
 <li>Handle configuration drift</li>
 <li>Add or modify services without restarting</li>
+<li><a class="reference external" href="https://youtu.be/ThbcHUj70EA?list=PLV86BgbREluVYuJaYGQ0-ep45NCAFe3OQ&amp;t=550">Puppetconf talk</a></li>
 </ul>
 
 
@@ -133,8 +209,34 @@
 <li>Have a networking expert on hand</li>
 </ul>
 <div class="build figure align-center">
-<a class="reference internal image-reference" href="images/magic.gif"><img alt="images/magic.gif" src="images/magic.gif" style="height: 200px;" /></a>
+<a class="reference internal image-reference" href="static/magic.gif"><img alt="static/magic.gif" src="static/magic.gif" style="height: 200px;" /></a>
 </div>
+
+
+
+
+</article>
+<article class="slide level-2" id="demo">
+
+<h2>Demo</h2>
+
+<p><a class="reference external" href="https://github.com/lucywyman/puppet-on-coreos-demo">https://github.com/lucywyman/puppet-on-coreos-demo</a></p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/stadium-bus-demo.gif"><img alt="static/stadium-bus-demo.gif" src="static/stadium-bus-demo.gif" style="height: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="create-kubernetes-cluster">
+
+<h2>Create Kubernetes Cluster</h2>
+
+<ul class="build simple">
+<li>Use the <a class="reference external" href="https://forge.puppet.com/puppetlabs/kubernetes">Puppet Kubernetes module</a></li>
+<li>Some manual setup required</li>
+</ul>
 
 
 
@@ -145,27 +247,9 @@
 <h2>Demo Time</h2>
 
 <p><a class="reference external" href="https://github.com/lucywyman/puppet-on-coreos-demo">https://github.com/lucywyman/puppet-on-coreos-demo</a></p>
-
-
-
-
-</article>
-<article class="slide level-2" id="the-shiny-new">
-
-<h2>The Shiny New</h2>
-
-<p>We have a <a class="reference external" href="https://forge.puppet.com/puppetlabs/kubernetes">kubernetes module</a> that installs k8s now!</p>
-<p><a class="reference external" href="https://forge.puppet.com/puppetlabs/kubernetes">https://forge.puppet.com/puppetlabs/kubernetes</a></p>
-
-
-
-
-</article>
-<article class="slide level-2" id="id1">
-
-<h2>Demo Time</h2>
-
-<p><a class="reference external" href="https://github.com/puppetlabs/puppetlabs-kubernetes">https://github.com/puppetlabs/puppetlabs-kubernetes</a></p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/demo-day.gif"><img alt="static/demo-day.gif" src="static/demo-day.gif" style="height: 300px;" /></a>
+</div>
 
 
 
@@ -180,6 +264,8 @@
 <li><a class="reference external" href="https://puppet.com/blog/using-puppet-coreos-rkt-flannel-and-etcd">Using Puppet with CoreOS Tools</a></li>
 <li><a class="reference external" href="http://www.admintome.com/blog/configure-puppet-on-coreos/">Puppet master and agent on CoreOS</a></li>
 <li><a class="reference external" href="https://hub.docker.com/r/epflsti/cluster.coreos.puppet/">https://hub.docker.com/r/epflsti/cluster.coreos.puppet/</a></li>
+<li><a class="reference external" href="https://forge.puppet.com/puppetlabs/kubernetes">Puppet Kubernetes module</a></li>
+<li><a class="reference external" href="https://github.com/coreos/coreos-kubernetes">Kubernetes on CoreOS</a></li>
 </ul>
 
 
@@ -191,7 +277,7 @@
 <h2>Questions?</h2>
 
 <div class="figure align-center">
-<a class="reference internal image-reference" href="images/puppy-questions.gif"><img alt="images/puppy-questions.gif" src="images/puppy-questions.gif" style="height: 400px;" /></a>
+<a class="reference internal image-reference" href="static/jlaw-questions.gif"><img alt="static/jlaw-questions.gif" src="static/jlaw-questions.gif" style="height: 300px;" /></a>
 </div>
 
 

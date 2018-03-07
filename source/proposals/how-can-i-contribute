@@ -20,7 +20,7 @@ But often those who want to contribute have a few assumptions or misconceptions
 that prevent them from making that first pull request, including:
 
 * I’m not a good enough programmer to contribute to open source
-* I don’t know the repo well enough to contribute
+* I don’t know the project well enough to contribute
 * I don’t write code, so I have nothing to contribute
 * I’m just a student / community member / manager / llama, I don’t have anything to contribute
 * Contributing to open source is hard
@@ -39,3 +39,8 @@ Topics include:
 * Determining what a repository needs
 * What to look for in a repository when you’re thinking of contributing
 * How to submit your first contribution
+
+Audience
+--------
+
+This talk is for anyone interested in contributing to open source (or contributing more to open source), but not sure where to start or not sure what skills they have to contribute. The audience should come away from the talk empowered to make their first pull request, with resources in hand to find a project, find an issue to work on, and make their first contribution. My primary goal is to disprove the assumption that open source contribution means writing code, or needing to understand an entire project in order for your contribution to be meaningful.
