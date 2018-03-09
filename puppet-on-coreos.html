@@ -79,15 +79,10 @@
 <h2>Caveats</h2>
 
 <ul class="simple">
-<li>I don't do this in production
-* More of a 'proof of concept'</li>
-<li>Literally spawned from &quot;I wonder if I can manage CoreOS with Puppet...&quot;</li>
+<li>Proof of concept</li>
+<li>Currently single-node demo</li>
 <li>No cloud providers, just local VMs</li>
 </ul>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="static/no-idea.jpg"><img alt="static/no-idea.jpg" src="static/no-idea.jpg" style="height: 300px;" /></a>
-</div>
-<p><a class="reference external" href="http://knowyourmeme.com/memes/i-have-no-idea-what-im-doing">Source</a></p>
 
 
 
@@ -114,7 +109,7 @@
 <h2>The Stack</h2>
 
 <div class="build figure align-center">
-<a class="reference internal image-reference" href="static/pancakes.jpg"><img alt="static/pancakes.jpg" src="static/pancakes.jpg" style="height: 250px;" /></a>
+<a class="reference internal image-reference" href="static/pancakes.jpg"><img alt="static/pancakes.jpg" src="static/pancakes.jpg" style="height: 200px;" /></a>
 </div>
 <ul class="build simple">
 <li><a class="reference external" href="https://puppet.com">Puppet</a></li>
@@ -131,18 +126,6 @@
 
 <h2>Why This Doesn't Make Sense</h2>
 
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>Once my thing is working it should always work</li>
-<li>Reproducible</li>
-<li>Dev --&gt; production is reliable</li>
-<li>Poor man's version control</li>
-<li>Everything is in config files, similar to Puppet</li>
-<li>No package manager on container linux</li>
-<li>Puppet is used to get your machine to a state, but with immutable infra and config files that is already happening</li>
-</ul>
-</div>
 <ul class="build simple">
 <li>Containers are &quot;immutable&quot;</li>
 <li>CoreOS is &quot;immutable&quot;<ul>
@@ -157,9 +140,9 @@
 
 
 </article>
-<article class="slide level-2" id="why-or-when-this-makes-sense">
+<article class="slide level-2" id="why-this-makes-sense">
 
-<h2>Why (or when) This Makes Sense</h2>
+<h2>Why This Makes Sense</h2>
 
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -182,7 +165,6 @@
 </ul>
 </div>
 <ul class="build simple">
-<li>Manage your entire infra in one place</li>
 <li>When immutable infra doesn't work<ul>
 <li>Changes can be expensive</li>
 <li>Lose cache</li>
@@ -190,8 +172,8 @@
 </ul>
 </li>
 <li>Handle configuration drift</li>
-<li>Add or modify services without restarting</li>
-<li><a class="reference external" href="https://youtu.be/ThbcHUj70EA?list=PLV86BgbREluVYuJaYGQ0-ep45NCAFe3OQ&amp;t=550">Puppetconf talk</a></li>
+<li>Add or modify resources without restarting</li>
+<li><a class="reference external" href="https://youtu.be/ThbcHUj70EA?list=PLV86BgbREluVYuJaYGQ0-ep45NCAFe3OQ&amp;t=550">Talk</a></li>
 </ul>
 
 
@@ -235,7 +217,7 @@
 
 <ul class="build simple">
 <li>Use the <a class="reference external" href="https://forge.puppet.com/puppetlabs/kubernetes">Puppet Kubernetes module</a></li>
-<li>Some manual setup required</li>
+<li>Some manual setup required (for now)</li>
 </ul>
 
 

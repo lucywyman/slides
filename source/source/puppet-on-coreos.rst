@@ -17,16 +17,9 @@ Where We're Going
 Caveats
 -------
 
-* I don't do this in production
-  * More of a 'proof of concept'
-* Literally spawned from "I wonder if I can manage CoreOS with Puppet..."
+* Proof of concept
+* Currently single-node demo
 * No cloud providers, just local VMs
-
-.. figure:: static/no-idea.jpg
-    :align: center
-    :height: 300px
-
-`Source <http://knowyourmeme.com/memes/i-have-no-idea-what-im-doing>`_
 
 :code:`$ whoami`
 ----------------
@@ -54,9 +47,9 @@ The Stack
 
   .. figure:: static/pancakes.jpg
       :align: center
-      :height: 250px
+      :height: 200px
 
-  * `Puppet`_
+  * `Puppet`_ 
   * `Container Linux`_
   * `Kubernetes`_
 
@@ -68,15 +61,6 @@ The Stack
 
 Why This Doesn't Make Sense
 ---------------------------
-
-.. note::
-    - Once my thing is working it should always work
-    - Reproducible
-    - Dev --> production is reliable
-    - Poor man's version control
-    - Everything is in config files, similar to Puppet
-    - No package manager on container linux
-    - Puppet is used to get your machine to a state, but with immutable infra and config files that is already happening
 
 .. rst-class:: build
 
@@ -91,8 +75,8 @@ Why This Doesn't Make Sense
 .. _cloud-config: https://coreos.com/os/docs/latest/cloud-config.html
 .. _ignition: https://coreos.com/ignition/docs/latest/
 
-Why (or when) This Makes Sense
-------------------------------
+Why This Makes Sense
+--------------------
 
 .. note::
 
@@ -114,7 +98,6 @@ Why (or when) This Makes Sense
 
 .. rst-class:: build
 
-* Manage your entire infra in one place
 * When immutable infra doesn't work 
 
   * Changes can be expensive
@@ -122,11 +105,11 @@ Why (or when) This Makes Sense
   * Can be risky
 
 * Handle configuration drift
-* Add or modify services without restarting
+* Add or modify resources without restarting
 
-* `Puppetconf talk`_
+* `Talk`_
 
-.. _Puppetconf talk: https://youtu.be/ThbcHUj70EA?list=PLV86BgbREluVYuJaYGQ0-ep45NCAFe3OQ&t=550
+.. _Talk: https://youtu.be/ThbcHUj70EA?list=PLV86BgbREluVYuJaYGQ0-ep45NCAFe3OQ&t=550
 
 This Is Where The Magic Happens
 -------------------------------
@@ -159,7 +142,7 @@ Create Kubernetes Cluster
 .. rst-class:: build
 
 * Use the `Puppet Kubernetes module`_
-* Some manual setup required
+* Some manual setup required (for now)
 
 Demo Time
 ---------
