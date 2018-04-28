@@ -1,11 +1,33 @@
 Linux Jargon
 ============
 
+http://slides.lucywyman.me/linux-jargon.html
+
 .. note::
 	Let us take a tour through space and time to visit
 	the milestones of Technology as we know it now.
 	This talk will be your guide, cultural and technical.
 	Rest easy, gentle n00b, and come along for the ride.
+
+:code:`$ whoami`
+----------------
+
+.. rst-class:: build
+
+    .. figure:: static/programmer-valentine.gif
+        :align: center
+        :height: 300px
+
+Lucy Wyman
+
+Software Engineer - `Bolt`_
+
+`Puppet`_
+
+`Source <https://www.reddit.com/r/gifs/comments/5tyymj/programmer_valentain_day/>`_
+
+.. _Puppet: https://puppet.com
+.. _Bolt: https://github.com/puppetlabs/bolt
 
 Hacker
 ------
@@ -47,19 +69,24 @@ Technical Acronyms
 * **DNS** - Domain Name System
 * **EMACS** - Editing MACroS - inferior text editor
 * **EO[f | l | d | m]** - End of [file | line | day | message]
-* **FIFO** - First In First Out
-* **FIXME/TODO** - (Highlighted) note to fix something
-* **GCC** - Gnu Compiler Collection
- 
+
 .. nextslide::
 
 .. rst-class:: build
 
+* **FIFO** - First In First Out
+* **FIXME/TODO** - (Highlighted) note to fix something
+* **GCC** - Gnu Compiler Collection
 * **GNU** - Gnu's Not Unix
 * **GUI** - Graphical User Interface
 * **INTERCAL** - Compiler Language With No Pronounceable Acronym
 * **ISP** - Internet Service Provider
 * **[K | M ]IPS** - [Kilo | Mega]Instructions Per Second
+
+.. nextslide::
+
+.. rst-class:: build
+
 * **MOTD** - Message of the Day
 * `RTFM`_ - Read the cussing manual
 * **TTY** - Teletype terminal
@@ -129,6 +156,8 @@ Utilities: Out there
 Directories
 -----------
 
+.. rst-class:: build
+
 * **/bin** - User binaries (things you run)
 * **/dev** - Device files (terminal, usb, ram, etc.)
 * **/etc** - Configurations for installed programs
@@ -153,13 +182,19 @@ Technical Words
   placed, usually by developers
 * **[Big | Little]-endian** - Whether the most significant bit is at
   the lowest (Big-endian) or highest (little-endian) address.
-* **Daemon** - A long-running process which...does stuff
+* **Daemon** - A process that runs in the background
 * **Fork bomb** - A program which creates two versions of itself upon
   startup, growing exponentially until you run out of memory
-* **Partition** - " the creation of one or more regions on a hard disk
+* **Partition** - "The creation of one or more regions on a hard disk
   or other secondary storage, so that an operating system can manage
   information in each region separately."
-* **POSIX** - 
+
+.. nextslide::
+
+.. rst-class:: build
+
+* **POSIX** - A family of API standards which maintain compatibility
+  between operating systems
 * **Quine** - A program which outputs itself (and only itself)
 * **Raid configuration** - combines multiple physical disk drives into
   a single logical unit
@@ -183,6 +218,11 @@ Work Culture Words
   hack into a system to retrieve a "flag" (on purpose)
 * **Code monkey** - Passionless code producer
 * **Copyleft - GPL** - The GNU General Public License
+
+.. nextslide::
+
+.. rst-class:: build
+
 * **Dogfooding** - Using software internally for testing
 * **Foo/bar/baz** - Placeholder words
 * **Grok** - To understand something all the way through, or very well
