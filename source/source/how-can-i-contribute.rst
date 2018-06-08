@@ -49,7 +49,7 @@ Sounds great, but...
 
 .. rst-class:: build
 
-* Contributing to open source doesn’t benefit me at all # I know you don't think this, but some people do!
+* Contributing to open source doesn’t benefit me at all 
 * I’m not a good enough programmer to contribute to open source
 * I don’t know the project well enough to contribute
 * I don’t write code, so I have nothing to contribute
