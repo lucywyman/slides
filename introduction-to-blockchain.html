@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introduction to Blockchains &mdash; slides</title>
+    
+    <link rel="stylesheet" href="static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2015.07.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/common.js"></script>
+    
+    <script type="text/javascript" src="static/slides.js"></script>
+    <script type="text/javascript" src="static/sync.js"></script>
+    <script type="text/javascript" src="static/controller.js"></script>
+    <script type="text/javascript" src="static/init.js"></script>
+    
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="slides" href="index.html" />
+    <link rel="next" title="Dr. Jekyll and Mr. Pelican" href="jekyll-pelican.html" />
+    <link rel="prev" title="How Can I Contribute?" href="how-can-i-contribute.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="introduction-to-blockchains">
+
+<h1>Introduction to Blockchains</h1>
+
+<p>All Aboard the Hype Train</p>
+<p><a class="reference external" href="http://slides.lucywyman.me/introduction-to-blockchain.html">http://slides.lucywyman.me/introduction-to-blockchain.html</a></p>
+
+
+
+
+</article>
+<article class="slide level-2" id="roadmap">
+
+<h2>Roadmap</h2>
+
+<ul class="simple">
+<li>What blockchains are?</li>
+<li>How blockchains work?</li>
+<li>When should you use blockchains?</li>
+<li>Who's using blockchains now?</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="whoami">
+
+<h2><code class="code docutils literal"><span class="pre">$</span> <span class="pre">whoami</span></code></h2>
+
+<div class="build figure align-center" id="id5">
+<a class="reference internal image-reference" href="images/homer-computer.gif"><img alt="images/homer-computer.gif" src="images/homer-computer.gif" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://media.giphy.com/media/citBl9yPwnUOs/giphy.gif">Source</a></span></p>
+</div>
+<p>Lucy Wyman</p>
+<p>Software Engineer - <a class="reference external" href="https://github.com/puppetlabs/bolt">Bolt</a></p>
+<p><a class="reference external" href="https://puppet.com">Puppet</a></p>
+
+
+
+
+</article>
+<article class="slide level-1" id="what-is-a-blockchain">
+
+<h1>What <em>is</em> a Blockchain?</h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="a-hash-function">
+
+<h2>A Hash Function</h2>
+
+<ul class="build simple">
+<li>Takes any input, of any size</li>
+<li>Outputs a fixed-sized string</li>
+<li>Output is 'unique' to input</li>
+<li>Idempotent</li>
+<li>Infeasible to invert</li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">Learn more</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id13">
+
+<h2>A Hash Function</h2>
+
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">hash</span><span class="p">(</span><span class="s1">&#39;Hello OSCON!&#39;</span><span class="p">)</span>
+<span class="go">&#39;83d1c98aea13290ef72bc7172343742e606e6e115330f41b3e55f2286e30b1cb&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">hash</span><span class="p">(</span><span class="s1">&#39;Longer input, same length output&#39;</span><span class="p">)</span>
+<span class="go">&#39;380e12f12589eda081e21c794e6379053c75a54c3394ddad0d84026c1a6947ab&#39;</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="public-key-encryption">
+
+<h2>Public Key Encryption</h2>
+
+<ul class="build simple">
+<li>2 keys: public key, private key</li>
+<li>Anyone can encrypt a message with my public key, and know that only
+I can decrypt it with my private key</li>
+<li>I can sign a message with my private key, and anyone can decrypt
+with my public key and know it's from me</li>
+<li>High degree of trust</li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Public-key_cryptography">Learn more</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="a-block">
+
+<h2>A Block</h2>
+
+<ul class="build simple">
+<li>A <a class="reference external" href="https://en.wikipedia.org/wiki/Cryptographic_hash">cryptographic hash</a> of the previous block</li>
+<li>Creation date timestamp</li>
+<li>Data</li>
+</ul>
+<blockquote class="build">
+<div><ul class="simple">
+<li>Each block stores owner's public-key (think <a class="reference external" href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">RSA</a>)</li>
+</ul>
+</div></blockquote>
+
+
+
+
+</article>
+<article class="slide level-2" id="for-example">
+
+<h2>For Example</h2>
+
+<p>From <a class="reference external" href="https://github.com/lucywyman/blockchain-example">https://github.com/lucywyman/blockchain-example</a></p>
+<div class="code ruby highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Block</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">previous_hash</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="nd">@index</span> <span class="o">=</span> <span class="n">index</span>
+    <span class="nd">@previous_hash</span> <span class="o">=</span> <span class="n">previous_hash</span>
+    <span class="nd">@timestamp</span> <span class="o">=</span> <span class="n">timestamp</span>
+    <span class="nd">@data</span> <span class="o">=</span> <span class="n">data</span>
+    <span class="nd">@hash</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hash_block</span>
+  <span class="n">end</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="other-examples">
+
+<h2>Other examples</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/lhartikk/naivechain/blob/master/main.js">Javascript</a></li>
+<li><a class="reference external" href="https://medium.com/crypto-currently/lets-build-the-tiniest-blockchain-e70965a248b">Python</a></li>
+<li><a class="reference external" href="https://medium.com/programmers-blockchain/create-simple-blockchain-java-tutorial-from-scratch-6eeed3cb03fa">Java</a></li>
+<li><a class="reference external" href="https://github.com/tko22/simple-blockchain">C++</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="another-link-in-the-chain">
+
+<h2>Another Link in the Chain</h2>
+
+<ul class="build simple">
+<li>A data structure</li>
+<li>A glorified linked list with only the 'append' function</li>
+<li>Decentralized | Distributed | &quot;Public&quot;</li>
+<li>&quot;A distributed digital ledger&quot;</li>
+</ul>
+<div class="build figure align-center" id="id6">
+<a class="reference internal image-reference" href="images/heath-ledger.jpeg"><img alt="images/heath-ledger.jpeg" src="images/heath-ledger.jpeg" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.ranker.com/list/handsome-heath-ledger-pictures-10-things-i-hate-about-you/brandon-michaels">Heath Source</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="id14">
+
+<h2>Another Link in the Chain</h2>
+
+<div class="figure align-center" id="id7">
+<img alt="images/blockchain.png" src="images/blockchain.png" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://medium.com/&#64;lhartikk/a-blockchain-in-200-lines-of-code-963cc1cc0e54">Chain Source</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="id2">
+
+<h2>For Example</h2>
+
+<div class="code ruby highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Blockchain</span>
+  <span class="k">def</span> <span class="nf">initialize</span>
+    <span class="nd">@chain</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">first_block</span><span class="p">]</span>
+  <span class="n">end</span>
+
+  <span class="k">def</span> <span class="nf">first_block</span>
+    <span class="k">return</span> <span class="n">Block</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">,</span> <span class="s2">&quot;Hello blockchain!&quot;</span><span class="p">)</span>
+  <span class="n">end</span>
+
+  <span class="k">def</span> <span class="nf">add_block</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="nd">@chain</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">previous_hash</span> <span class="o">=</span> <span class="nd">@chain</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">hash</span>
+    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">Time</span><span class="o">.</span><span class="n">now</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;#</span><span class="si">{name}</span><span class="s2"> has registered to vote in Washington!&quot;</span>
+    <span class="n">block</span> <span class="o">=</span> <span class="n">Block</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">previous_hash</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="nd">@chain</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+  <span class="n">end</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-1" id="how-do-blockchains-work">
+
+<h1>How do Blockchains Work?</h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="adding-a-block">
+
+<h2>Adding a Block</h2>
+
+<ul class="build simple">
+<li>Submit a transaction</li>
+<li>Generate the block for that transaction</li>
+<li>Network determines if the block is part of the authoritative chain</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="consensus">
+
+<h2>Consensus</h2>
+
+<ul class="build simple">
+<li>Because chains are distributed 2 users can have different
+&quot;correct&quot; copies of data</li>
+<li>Reconciled by having a higher value chain</li>
+<li><a class="reference external" href="https://medium.com/loom-network/understanding-blockchain-fundamentals-part-2-proof-of-work-proof-of-stake-b6ae907c7edb">Consensus algorithm</a></li>
+<li>Blockchains must be <a class="reference external" href="https://medium.com/loom-network/understanding-blockchain-fundamentals-part-1-byzantine-fault-tolerance-245f46fe8419">Byzantine Fault Tolerant</a></li>
+<li>Typically based on higher <a class="reference external" href="https://en.wikipedia.org/wiki/Proof-of-work_system">proof of work</a>, or
+<a class="reference external" href="https://en.wikipedia.org/wiki/Proof-of-stake">proof of stake</a></li>
+<li>Any given block will initially have a 'high' probability of not being included.
+That probability will decrease exponentially.</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id3">
+
+<h2>Proof of Work</h2>
+
+<ul class="build simple">
+<li>Start with a <a class="reference external" href="https://en.bitcoin.it/wiki/Nonce">nonce</a> (32-bit number)</li>
+<li>Hash the block</li>
+<li>See if it's under the <a class="reference external" href="https://en.bitcoin.it/wiki/Target">current target</a> (256-bit number)</li>
+<li>If not, increment nonce and try again</li>
+</ul>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="images/proof-of-work.gif"><img alt="images/proof-of-work.gif" src="images/proof-of-work.gif" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://bitsapphire.com/makes-blockchain-protocols-future/">Proof source</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="security">
+
+<h2>Security</h2>
+
+<ul class="build simple">
+<li>Because each block contains a hash of the previous block a bad actor
+would need to change a block then rehash, in order, every block in
+the chain</li>
+<li>Can say with certainty that blocks older than X were made by that
+user at that time with that data</li>
+<li>Doesn't ensure data is valid</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="decentralization">
+
+<h2>Decentralization</h2>
+
+<ul class="build simple">
+<li>No single point of failure</li>
+<li>No central authority that needs to be trusted - consensus algorithm
+decides which is the authoritative chain</li>
+<li>Publicly verifiable | Security through publicity</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="public">
+
+<h2>Public?</h2>
+
+<p>&quot;An issue in this ongoing debate is whether a private system with
+verifiers tasked and authorized (permissioned) by a central authority
+should be considered a blockchain.[51][52][53][54][55]&quot; <a class="reference external" href="https://en.wikipedia.org/wiki/Blockchain">Wikipedia</a></p>
+<ul class="build simple">
+<li>Proponents argue blockchains are structures</li>
+<li>Opponents argue private chains don't support decentralized data
+verification, not protected from operator tampering</li>
+<li>Words are hard.</li>
+<li>A handy <a class="reference external" href="https://assets.sourcemedia.com/dims4/default/caca1a7/2147483647/resize/680x%3E/quality/90/?url=https%3A%2F%2Fassets.sourcemedia.com%2F99%2Fcd%2F7d03260a4e82a2383e406e9f7a6e%2Fab041116blockchain.jpg">visualization</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-1" id="when-should-i-use-blockchains">
+
+<h1>When Should I Use Blockchains?</h1>
+
+
+
+
+
+</article>
+<article class="slide level-1" id="blockchain-beyond-the-hype">
+
+<h1><a class="reference external" href="http://www3.weforum.org/docs/48423_Whether_Blockchain_WP.pdf">Blockchain Beyond the Hype</a></h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="characteristics">
+
+<h2>Characteristics</h2>
+
+<ul class="build simple">
+<li>Accurate | secure | immutable</li>
+<li>Increasing data set</li>
+<li>Digital Assets</li>
+<li>Work directly with consumers | Remove intermediaries</li>
+<li>Primarily transactional data</li>
+<li>Contributors don't trust each other</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="potentials">
+
+<h2>Potentials</h2>
+
+<ul class="simple">
+<li>Facilitating digital transactions<ul>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Digital_currency">Digital currency</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Crowdfunding">Crowdfunding</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Prediction_market">Prediction Markets</a></li>
+</ul>
+</li>
+<li>Voting<ul>
+<li>Registration</li>
+<li>Ballot counting</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="when-shouldn-t-i-use-blockchains">
+
+<h2>When Shouldn't I Use Blockchains?</h2>
+
+<p>&quot;Blockchain was built to solve a social problem, not a technical
+problem&quot;</p>
+<ul class="simple">
+<li>Because it's the ~new shiny~</li>
+<li>When you don't want transactions stored forever</li>
+<li>When your current technology works</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-1" id="the-chainies">
+
+<h1>The Chainies</h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="most-charitable">
+
+<h2>Most Charitable</h2>
+
+<p class="build"><a class="reference external" href="https://insight.wfp.org/what-is-blockchain-and-how-is-it-connected-to-fighting-hunger-7f1b42da9fe">World Food Programme Building Blocks</a></p>
+<div class="build figure align-center" id="id9">
+<a class="reference internal image-reference" href="images/wfp-building-blocks.jpg"><img alt="images/wfp-building-blocks.jpg" src="images/wfp-building-blocks.jpg" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://innovation.wfp.org/project/building-blocks">WFP Source</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="most-democratic">
+
+<h2>Most Democratic</h2>
+
+<p class="build"><a class="reference external" href="https://followmyvote.com/online-voting-platform-faqs/">Follow My Vote</a></p>
+<div class="build figure align-center" id="id10">
+<img alt="images/follow-my-vote.png" src="images/follow-my-vote.png" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://followmyvote.com/">FMV Source</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="most-up-and-coming">
+
+<h2>Most Up-and-Coming</h2>
+
+<p class="build"><a class="reference external" href="https://www.ibm.com/blockchain/industries/supply-chain">Supply Chain Tracking</a></p>
+<div class="build figure align-center" id="id11">
+<a class="reference internal image-reference" href="images/supply-chain.jpg"><img alt="images/supply-chain.jpg" src="images/supply-chain.jpg" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://kryptomoney.com/port-brisbane-adopts-australias-first-blockchain-supply-chain-system/">Supply source</a></span></p>
+</div>
+<ul class="build simple">
+<li>Expensive goods (i.e. Diamonds)</li>
+<li>Food contamination tracing</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="cutest">
+
+<h2>Cutest</h2>
+
+<p class="build"><a class="reference external" href="https://www.cryptokitties.co/">CryptoKitties</a></p>
+<div class="build figure align-center" id="id12">
+<a class="reference internal image-reference" href="images/cryptokitties.png"><img alt="images/cryptokitties.png" src="images/cryptokitties.png" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.cryptokitties.co/">Kitties Source</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="honorable-mentions">
+
+<h2>Honorable Mentions</h2>
+
+<ul class="simple">
+<li>Land registration in <a class="reference external" href="https://www.reuters.com/article/us-sweden-blockchain-idUSKCN0Z22KV">Sweden</a>, <a class="reference external" href="https://www.forbes.com/sites/laurashin/2016/04/21/republic-of-georgia-to-pilot-land-titling-on-blockchain-with-economist-hernando-de-soto-bitfury/#2c22fce144da">Republic of Georgia</a></li>
+<li>Entirely digitized <a class="reference external" href="https://www.technologyreview.com/s/604144/how-blockchain-can-lift-up-the-worlds-poor/">financial services</a><ul>
+<li>Level One project, Bill Melinda Gates Foundation</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://bitcoinmagazine.com/articles/microsoft-building-open-blockchain-based-identity-system-with-blockstack-consensys-1464968713/">Identity management</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Smart_contract">Smart Contracts</a> - Not actual blockchains, intro'd by Ethereum in 2015</li>
+<li><a class="reference external" href="https://www.alexandria.io/#make-more-money">Pay-per-use</a> media</li>
+<li>Make <a class="reference external" href="https://news.bitcoin.com/future-use-cases-for-blockchain-technology-copyright-registration/">copyright registration</a> more user friendly</li>
+<li>Managing <a class="reference external" href="https://viral.media.mit.edu/pub/medrec">medical records</a></li>
+<li><a class="reference external" href="https://storj.io/">Storing files</a></li>
+<li><a class="reference external" href="https://www.forbes.com/sites/bernardmarr/2018/01/22/35-amazing-real-world-examples-of-how-blockchain-is-changing-our-world/#24b53ebf43b5">And more!</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="why-aren-t-blockchains-widely-adopted-yet">
+
+<h2>Why Aren't Blockchains Widely Adopted Yet?</h2>
+
+<ul class="build simple">
+<li>Too early</li>
+<li>A solution looking for a problem</li>
+<li>Migrating existing infrastructure is expensive, and may not be worth
+the costs</li>
+<li>Doesn't necessarily offer sufficient improvement over existing
+technology</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="resources">
+
+<h2>Resources</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Blockchain">Wikipedia page</a></li>
+<li><a class="reference external" href="https://www.oreilly.com/ideas/understanding-the-blockchain">Understanding the Blockchain</a> (O'Reilly)</li>
+<li><a class="reference external" href="https://www.wired.com/story/guide-blockchain/">Guide to Blockchain</a> (Wired)</li>
+<li><a class="reference external" href="https://www.economist.com/briefing/2015/10/31/the-great-chain-of-being-sure-about-things">The Great Chain</a> (The Economist)</li>
+<li><a class="reference external" href="http://unchainedpodcast.co/">Unchained Podcast</a></li>
+<li><a class="reference external" href="https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQs">Proof of Stake Explained</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="questions">
+
+<h2>Questions</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="images/kelly-kapoor-questions.gif"><img alt="images/kelly-kapoor-questions.gif" src="images/kelly-kapoor-questions.gif" style="height: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-1" id="thank-you">
+
+<h1>Thank you!</h1>
+
+
+
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>
