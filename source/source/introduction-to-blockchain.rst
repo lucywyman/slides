@@ -18,7 +18,7 @@ Roadmap
 
 .. rst-class:: build
 
-  .. figure:: static/homer-computer.gif
+  .. figure:: static/working-computer.gif
       :align: center
       :height: 300px
     
@@ -178,13 +178,22 @@ Consensus
 
 .. rst-class:: build
 
-* Because chains are distributed 2 users can have different
-  "correct" copies of data
-* Reconciled by having a higher value chain
-* `Consensus algorithm`_
-* Blockchains must be `Byzantine Fault Tolerant`_
-* Typically based on higher `proof of work`_, or
-  `proof of stake`_
+  * Because chains are distributed 2 users can have different
+    "correct" copies of data
+  * Reconciled by having a higher value chain
+  * `Consensus algorithm`_
+  * Blockchains must be `Byzantine Fault Tolerant`_
+  * Typically based on higher `proof of work`_, or
+    `proof of stake`_
+
+  .. figure:: static/proof-of-steak.gif
+        :align: center
+        :height: 250px
+
+        `Steak Source <https://thumbs.gfycat.com/PersonalFearfulBagworm-size_restricted.gif>`_
+
+.. nextslide::
+
 * Any given block will initially have a 'high' probability of not being included.
   That probability will decrease exponentially.
 
