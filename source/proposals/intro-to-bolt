@@ -1,0 +1,26 @@
+Introduction to Bolt
+--------------------
+
+Imperative and Declarative, together at last
+
+Description
+-----------
+
+# TODO I overuse infrastructure. What are better words?
+
+Bolt is an open source remote task runner that executes ad hoc tasks,
+scripts, and commands across your infrastructure and applications. It's ideal
+for managing tasks that have intermediary states, and integrates with
+existing Puppet tools to provide resource management, tasks associated with
+modules, and visibility and logging.
+
+In this talk we'll cover:
+* A brief introduction to Bolt basics: tasks, plans, and configuration.
+* An update on Bolt features we've added since the last PuppetConf
+* A demo of Bolt in action
+
+This talk is for anyone! Whether you're a veteran Puppet user whose modules are
+riddled with 'exec' statements, or you're new to configuration management and
+looking to quickly automate tasks across your infrastructure, this
+talk will give you the tools you need to manage your infrastructure both
+imperatively and declaratively.
