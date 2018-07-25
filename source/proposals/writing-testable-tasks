@@ -1,0 +1,17 @@
+Writing Testable Bolt Tasks and Plans
+-------------------------------------
+
+Bolt is great at automating ad-hoc tasks, but how do you know if your tasks
+are doing what you expect? Or, more importantly, if they're not doing what
+you expect. This talk will provide an overview of Bolt features that help you
+write testable tasks and plans. We'll cover:
+
+* Best practices for testable task scripts
+* Tools in Bolt for debugging your plans
+* How to fail gracefully if something goes wrong
+* Using the Bolt RSpec helper library to write unit tests
+
+This talk is for anyone who uses Bolt! Whether you're just getting started
+and want to ease your development process, or already have a number of tasks
+and modules that you're hoping 'just work', this talk will provide tools to
+ensure your code does what you expect.
