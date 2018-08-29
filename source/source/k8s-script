@@ -1,5 +1,0 @@
-The Stack
-- So, we're going to be doing this all on a light-weight operating system made for containers, CoreOS (aka container linux). Just got bought by Redhat
-- We're going to manage our CoreOS machines with Puppet. This is actually a bit tricky because XYZ, so we're actually going to have puppet agent running in a container on CoreOS. We're going to mount the directories we care about making changes to the container, and then manage them from within the container running on CoreOS.
-- Then, we're going to deploy a Kubernetes cluster to our CoreOS machine. Kubernetes is used orchestrate your containers: you can group them, scale them, etc. (better)
-
