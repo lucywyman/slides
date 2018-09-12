@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PE Bolt Server &mdash; slides</title>
+    
+    <link rel="stylesheet" href="static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2015.07.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/common.js"></script>
+    
+    <script type="text/javascript" src="static/slides.js"></script>
+    <script type="text/javascript" src="static/sync.js"></script>
+    <script type="text/javascript" src="static/controller.js"></script>
+    <script type="text/javascript" src="static/init.js"></script>
+    
+    
+    <link rel="top" title="slides" href="index.html" />
+    <link rel="next" title="Linux System Fundamentals" href="single-system-fundamentals.html" />
+    <link rel="prev" title="Linux Jargon" href="linux-jargon.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="pe-bolt-server">
+
+<h1>PE Bolt Server</h1>
+
+<p><a class="reference external" href="http://slides.lucywyman.me/pe-bolt-server.html">http://slides.lucywyman.me/pe-bolt-server.html</a></p>
+
+
+
+
+</article>
+<article class="slide level-2" id="what">
+
+<h2>What?</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/bolt-cutters.gif"><img alt="static/bolt-cutters.gif" src="static/bolt-cutters.gif" style="height: 350px;" /></a>
+</div>
+<ul class="build simple">
+<li>An API to expose bolt's SSH and WinRM transports</li>
+<li>A thin ruby webserver (<a class="reference external" href="https://github.com/puma/puma">Puma</a>) wrapper around the <a class="reference external" href="https://github.com/puppetlabs/bolt/blob/master/lib/bolt/executor.rb">bolt executor</a></li>
+<li>A PE service</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="decisions">
+
+<h2>Decisions</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/small-wrench.gif"><img alt="static/small-wrench.gif" src="static/small-wrench.gif" style="height: 250px;" /></a>
+</div>
+<p>&quot;Why isn't bolt-server a clojure service managed by Orchestrator?&quot;</p>
+<ul class="build simple">
+<li>We wanted to be able to use Bolt classes directly</li>
+<li>We didn't want to rewrite any parts of Bolt</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id1">
+
+<h2>Decisions</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/harry-potter-bolt.gif"><img alt="static/harry-potter-bolt.gif" src="static/harry-potter-bolt.gif" style="height: 250px;" /></a>
+</div>
+<p>&quot;Why a webserver instead of sockets?&quot;</p>
+<ul class="build simple">
+<li>Poor library support in ruby for sockets</li>
+<li>Difficult for other teams to adopt</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="why">
+
+<h2>Why?</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/bolt-why.gif"><img alt="static/bolt-why.gif" src="static/bolt-why.gif" style="height: 350px;" /></a>
+</div>
+<ul class="build simple">
+<li>Enable the PE Console to run agentless tasks - part of the Road to Automation story</li>
+<li>Generalize for other tools to use</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="other-resources">
+
+<h2>Other Resources</h2>
+
+<ul class="simple">
+<li>Install from <a class="reference external" href="http://builds.puppetlabs.lan/pe-bolt-server/">http://builds.puppetlabs.lan/pe-bolt-server/</a></li>
+<li>Docs at <code class="code docutils literal"><span class="pre">bolt/developer-docs</span></code></li>
+<li>Available in Johnson builds</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="demo">
+
+<h2>Demo</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/usain-bolt-yeah.gif"><img alt="static/usain-bolt-yeah.gif" src="static/usain-bolt-yeah.gif" style="height: 500px;" /></a>
+</div>
+
+
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>
