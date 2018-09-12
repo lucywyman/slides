@@ -1,0 +1,8 @@
+During a talk at DevOps Days Seattle the speaker stated "Automate as much as you can". While this seems like an obvious statement at first blush, on further inspection there are a number of exceptions to this rule, begging the question: What shouldn't I automate? This talk will give you a framework for deciding whether something is worth automating. We'll discuss:
+
+    The return on investment of time to automate
+    The ethical considerations of automating particular tasks, such as hiring
+    Things that require humans intervention
+    And more!
+
+We'll consider this question through the lens of economics, business, ethics, and psychology to explore the wide world of automation and it's consequences.
