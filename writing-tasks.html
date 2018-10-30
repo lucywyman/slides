@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Get Started Writing Robust Tasks &mdash; slides</title>
+    
+    <link rel="stylesheet" href="static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2015.07.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/common.js"></script>
+    
+    <script type="text/javascript" src="static/slides.js"></script>
+    <script type="text/javascript" src="static/sync.js"></script>
+    <script type="text/javascript" src="static/controller.js"></script>
+    <script type="text/javascript" src="static/init.js"></script>
+    
+    
+    <link rel="top" title="slides" href="index.html" />
+    <link rel="prev" title="What Not To Automate" href="what-not-to-automate.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="get-started-writing-robust-tasks">
+
+<h1>Get Started Writing Robust Tasks</h1>
+
+<p>Lucy Wyman, Software Engineer - Bolt
+<a class="reference external" href="https://slides.lucywyman.me/writing-tasks.html">https://slides.lucywyman.me/writing-tasks.html</a></p>
+
+
+
+
+</article>
+<article class="slide level-1" id="https-pup-pt-installbolt">
+
+<h1><a class="reference external" href="https://pup.pt/installbolt">https://pup.pt/installbolt</a></h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="agenda">
+
+<h2>Agenda</h2>
+
+<ul class="simple">
+<li>Reading parameter input and producing output in your tasks</li>
+<li>Best practices for writing task metadata</li>
+<li>How to test your tasks and plans</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="input">
+
+<h2>Input</h2>
+
+<ul class="build simple">
+<li>Tasks can receive input as either environment variables, a JSON hash
+on standard input, or as PowerShell arguments</li>
+</ul>
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="static/input.gif"><img alt="static/input.gif" src="static/input.gif" style="height: 300px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="id1">
+
+<h2>Input</h2>
+
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># bash.sh</span>
+<span class="nb">echo</span> <span class="s2">&quot;Hello my name is </span><span class="nv">$PT_name</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-ruby"><div class="highlight"><pre><span></span><span class="c1"># ruby.rb</span>
+<span class="n">params</span> <span class="o">=</span> <span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="no">STDIN</span><span class="o">.</span><span class="n">read</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="s2">&quot;Hello my name is </span><span class="si">#{</span><span class="n">params</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-powershell"><div class="highlight"><pre><span></span><span class="c"># powershell.ps1</span>
+<span class="k">param</span><span class="p">(</span>
+<span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$true</span><span class="p">)]</span>
+<span class="no">[String]</span>
+<span class="nv">$Name</span>
+<span class="p">)</span>
+<span class="nb">Write-Host</span> <span class="p">@</span><span class="s2">&quot;Hello my name is $Name&quot;</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="output">
+
+<h2>Output</h2>
+
+<ul class="build simple">
+<li>Fail with a non-zero exit code, and print a specific error message
+to stderr</li>
+<li>Tasks can provide more details about the failure by including their
+own error object in the <code class="code docutils literal"><span class="pre">result[:_error]</span></code></li>
+<li>Return structured data (i.e. JSON to be consumed) by printing a
+single JSON object to stdout</li>
+</ul>
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="static/print.gif"><img alt="static/print.gif" src="static/print.gif" style="height: 300px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="id2">
+
+<h2>Output</h2>
+
+<div class="highlight-ruby"><div class="highlight"><pre><span></span><span class="k">begin</span>
+  <span class="n">params</span> <span class="o">=</span> <span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="no">STDIN</span><span class="o">.</span><span class="n">read</span><span class="p">)</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">result</span><span class="o">[</span><span class="s1">&#39;result&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">params</span><span class="o">[</span><span class="s1">&#39;dividend&#39;</span><span class="o">]</span> <span class="o">/</span> <span class="n">params</span><span class="o">[</span><span class="s1">&#39;divisor&#39;</span><span class="o">]</span>
+
+<span class="k">rescue</span> <span class="no">ZeroDivisionError</span>
+  <span class="n">result</span><span class="o">[</span><span class="ss">:_error</span><span class="o">]</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">msg</span><span class="p">:</span> <span class="s2">&quot;Cannot divide by zero&quot;</span><span class="p">,</span>
+                      <span class="ss">kind</span><span class="p">:</span> <span class="s2">&quot;puppetlabs-example_modules/dividebyzero&quot;</span><span class="p">,</span>
+                      <span class="ss">details</span><span class="p">:</span> <span class="p">{</span> <span class="ss">divisor</span><span class="p">:</span> <span class="n">divisor</span> <span class="p">},</span>
+                      <span class="p">}</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="security">
+
+<h2>Security</h2>
+
+<ul class="simple">
+<li>In Powershell<ul>
+<li>Do not call <code class="code docutils literal"><span class="pre">Invoke-Expression</span></code> or <code class="code docutils literal"><span class="pre">Add-Type</span></code> with user input.</li>
+<li>Use <code class="code docutils literal"><span class="pre">Resolve-Path</span></code> to verify that the path doesn't go outside the locations you expect the task to access</li>
+</ul>
+</li>
+<li>In Bash<ul>
+<li>Put quotations marks around arguments to prevent the vulnerable shells from evaluating them</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://puppet.com/docs/bolt/latest/writing_tasks.html#concept-8077">https://puppet.com/docs/bolt/latest/writing_tasks.html#concept-8077</a> And more!</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="task-metadata">
+
+<h2>Task Metadata</h2>
+
+<ul class="build simple">
+<li>Give it a <code class="code docutils literal"><span class="pre">description</span></code> (duh)</li>
+<li>Specify an <code class="code docutils literal"><span class="pre">input_method</span></code></li>
+<li>Give your parameters descriptions<ul>
+<li>And types! More specific is more better. <a class="reference external" href="https://puppet.com/docs/bolt/1.x/writing_tasks.html#reference-3806">Types Documentation</a></li>
+</ul>
+</li>
+<li>Specify <code class="code docutils literal"><span class="pre">private</span></code> or <code class="code docutils literal"><span class="pre">supports_noop</span></code> if applicable</li>
+</ul>
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="static/metadata.gif"><img alt="static/metadata.gif" src="static/metadata.gif" style="height: 250px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="implementations">
+
+<h2>Implementations</h2>
+
+<ul class="build simple">
+<li>Tasks can have multiple implementations, i.e. a Bash version and
+Powershell version</li>
+<li>Determined based on 'features' - either default or custom</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id3">
+
+<h2>Implementations</h2>
+
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Install the Puppet 5 agent package&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The version of puppet-agent to install&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Optional[String]&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;implementations&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;install_shell.sh&quot;</span><span class="p">,</span> <span class="nt">&quot;requirements&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">]},</span>
+    <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;install_powershell.ps1&quot;</span><span class="p">,</span> <span class="nt">&quot;requirements&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;powershell&quot;</span><span class="p">]}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="sharing-code">
+
+<h2>Sharing Code</h2>
+
+<ul>
+<li><p class="first">Specify other files the task relies on, from module endpoints of any
+module in the modulepath</p>
+</li>
+<li><p class="first">Path consists of</p>
+<blockquote>
+<div><ul class="simple">
+<li>the module name</li>
+<li>one of <code class="code docutils literal"><span class="pre">lib</span></code>, <code class="code docutils literal"><span class="pre">files</span></code>, or <code class="code docutils literal"><span class="pre">tasks</span></code> for the directory within the module</li>
+<li>the remaining path to a file or directory; directories must include a trailing slash /</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id4">
+
+<h2>Sharing Code</h2>
+
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;implementations&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;sql_linux.sh&quot;</span><span class="p">,</span> <span class="nt">&quot;requirements&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+        <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mymodule/files/lib.sh&quot;</span><span class="p">]},</span>
+    <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;sql_windows.ps1&quot;</span><span class="p">,</span> <span class="nt">&quot;requirements&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;powershell&quot;</span><span class="p">],</span>
+        <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mymodule/files/lib.ps1&quot;</span><span class="p">]}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;othermodule/files/emojis/&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="testing-tasks">
+
+<h2>Testing Tasks</h2>
+
+<ul class="simple">
+<li><code class="code docutils literal"><span class="pre">BoltSpec</span></code> ruby library to run bolt tasks, commands, and
+scripts<ul>
+<li><code class="code docutils literal"><span class="pre">run_task</span></code>, <code class="code docutils literal"><span class="pre">run_plan</span></code>, <code class="code docutils literal"><span class="pre">run_command</span></code>, <code class="code docutils literal"><span class="pre">run_script</span></code></li>
+</ul>
+</li>
+<li>Plans to add rspec <code class="code docutils literal"><span class="pre">Result</span></code> and <code class="code docutils literal"><span class="pre">ResultSet</span></code> matchers</li>
+</ul>
+<div class="highlight-ruby"><div class="highlight"><pre><span></span><span class="kp">include</span> <span class="no">Bolt</span><span class="o">::</span><span class="no">Run</span>
+<span class="n">describe</span> <span class="s1">&#39;run_task&#39;</span> <span class="k">do</span>
+  <span class="n">it</span> <span class="s1">&#39;should run a task on a node&#39;</span> <span class="k">do</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">run_task</span><span class="p">(</span><span class="s1">&#39;sample::echo&#39;</span><span class="p">,</span> <span class="s1">&#39;ssh&#39;</span><span class="p">,</span> <span class="ss">config</span><span class="p">:</span> <span class="n">config_data</span><span class="p">,</span>
+                      <span class="ss">inventory</span><span class="p">:</span> <span class="n">inventory_data</span><span class="p">)</span>
+    <span class="n">expect</span><span class="p">(</span><span class="n">result</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="s1">&#39;status&#39;</span><span class="o">]</span><span class="p">)</span><span class="o">.</span><span class="n">to</span> <span class="n">eq</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="shameless-self-promotion">
+
+<h2>Shameless Self-Promotion</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/puppetlabs/puppetlabs-python_task_helper">Python Task Helper</a></li>
+<li><a class="reference external" href="https://github.com/puppetlabs/puppetlabs-ruby_task_helper">Ruby Task Helper</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id5">
+
+<h2>Shameless Self-Promotion</h2>
+
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ruby_task_helper/lib/task_helper.rb&quot;</span><span class="p">],</span>
+  <span class="nt">&quot;input_method&quot;</span><span class="p">:</span> <span class="s2">&quot;stdin&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-ruby"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env ruby</span>
+
+<span class="n">require_relative</span> <span class="s1">&#39;../../ruby_task_helper/lib/task_helper.rb&#39;</span>
+
+<span class="k">class</span> <span class="nc">MyTask</span> <span class="o">&lt;</span> <span class="no">TaskHelper</span>
+  <span class="k">def</span> <span class="nf">task</span><span class="p">(</span><span class="nb">name</span><span class="p">:</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="p">{</span> <span class="ss">greeting</span><span class="p">:</span> <span class="s2">&quot;Hi, my name is </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">MyTask</span><span class="o">.</span><span class="n">run</span> <span class="k">if</span> <span class="bp">__FILE__</span> <span class="o">==</span> <span class="vg">$0</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="resources">
+
+<h2>Resources</h2>
+
+<ul class="simple">
+<li>Bolt Project: <a class="reference external" href="https://github.com/puppetlabs/bolt">https://github.com/puppetlabs/bolt</a></li>
+<li>Bolt Documentation: <a class="reference external" href="https://puppet.com/docs/bolt/latest/bolt.html">https://puppet.com/docs/bolt/latest/bolt.html</a></li>
+<li>Tasks Hands-on Lab:</li>
+<li><a class="reference external" href="https://github.com/puppetlabs/tasks-hands-on-lab#puppet-tasks-hands-on-lab">https://github.com/puppetlabs/tasks-hands-on-lab#puppet-tasks-hands-on-lab</a></li>
+<li>Learning VM:</li>
+<li><a class="reference external" href="https://learn.puppet.com/course/puppet-orchestration-bolt-and-tasks">https://learn.puppet.com/course/puppet-orchestration-bolt-and-tasks</a></li>
+<li>Bolt Slack Channel: #puppet-tasks on <a class="reference external" href="https://puppetcommunity.slack.com">https://puppetcommunity.slack.com</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-1" id="questions">
+
+<h1>Questions?</h1>
+
+
+
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>

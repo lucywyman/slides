@@ -1,8 +1,6 @@
 What Not To Automate
 ====================
 
-A tour of things you should not automate
-
 :code:`$ whoami`
 ----------------
 

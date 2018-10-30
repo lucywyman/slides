@@ -1,7 +1,7 @@
 Introduction to Blockchains
 ===========================
 
-All Aboard the Hype Train
+All Aboard the Hype Chain
 
 http://slides.lucywyman.me/introduction-to-blockchain.html
 
