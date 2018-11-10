@@ -36,6 +36,7 @@
     
     
     <link rel="top" title="slides" href="index.html" />
+    <link rel="next" title="Get Started Writing Robust Tasks" href="writing-tasks.html" />
     <link rel="prev" title="Tmux + Screen" href="tmux-screen.html" /> 
   </head>
   <body>
@@ -50,7 +51,7 @@
 
 <h1>What Not To Automate</h1>
 
-<p>A tour of things you should not automate</p>
+<p><a class="reference external" href="https://slides.lucywyman.me/what-not-to-automate.html">https://slides.lucywyman.me/what-not-to-automate.html</a></p>
 
 
 
@@ -60,10 +61,27 @@
 
 <h2><code class="code docutils literal"><span class="pre">$</span> <span class="pre">whoami</span></code></h2>
 
-<p class="build">Lucy Wyman</p>
+<div class="build figure align-center" id="id6">
+<a class="reference internal image-reference" href="static/silly-typing.gif"><img alt="static/silly-typing.gif" src="static/silly-typing.gif" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://gph.is/1IffoRV">https://gph.is/1IffoRV</a></span></p>
+</div>
+<p>Lucy Wyman</p>
 <p>Software Engineer - <a class="reference external" href="https://github.com/puppetlabs/bolt">Bolt</a></p>
 <p><a class="reference external" href="https://puppet.com">Puppet</a></p>
-<p><a class="reference external" href="https://arghh.github.io/">Source</a></p>
+
+
+
+
+</article>
+<article class="slide level-2" id="agenda">
+
+<h2>Agenda</h2>
+
+<ul class="simple">
+<li>What automation is, and why we automate</li>
+<li>What to consider when automating</li>
+<li>Automation gone wrong</li>
+</ul>
 
 
 
@@ -75,21 +93,103 @@
 
 <p>&quot;Automation is the technology by which a process or procedure is
 performed <strong>without human assistance.</strong>&quot; - <a class="reference external" href="https://en.wikipedia.org/wiki/Automation">Wikipedia</a></p>
+<p>Focus on software automation</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="static/api-test.gif"><img alt="static/api-test.gif" src="static/api-test.gif" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="http://gph.is/2gDV0zj">http://gph.is/2gDV0zj</a></span></p>
+</div>
 
 
 
 
 </article>
-<article class="slide level-2" id="why-do-we-automate">
+<article class="slide level-1" id="why-do-we-automate">
 
-<h2>Why Do We Automate?</h2>
+<h1>Why Do We Automate?</h1>
 
-<ul class="build simple">
-<li>To save human-time</li>
-<li>For consistency | stability | fewer mistakes</li>
-<li>Visibility</li>
-<li>Because we don't enjoy the task</li>
-</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="to-save-human-time">
+
+<h2>To Save Human Time</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/pasta-extruder.gif"><img alt="static/pasta-extruder.gif" src="static/pasta-extruder.gif" style="height: 250px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="for-consistency-stability-fewer-mistakes">
+
+<h2>For Consistency | Stability | Fewer Mistakes</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/chain-link.gif"><img alt="static/chain-link.gif" src="static/chain-link.gif" style="height: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="visibility">
+
+<h2>Visibility</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/marshmallow-cutter.gif"><img alt="static/marshmallow-cutter.gif" src="static/marshmallow-cutter.gif" style="height: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="because-we-don-t-enjoy-a-task">
+
+<h2>Because We Don't Enjoy a Task</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/pretzel-maker.gif"><img alt="static/pretzel-maker.gif" src="static/pretzel-maker.gif" style="height: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="to-save-money">
+
+<h2>To Save Money</h2>
+
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="static/kisses-manufacturing.gif"><img alt="static/kisses-manufacturing.gif" src="static/kisses-manufacturing.gif" style="height: 400px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="http://gph.is/112JVhL">http://gph.is/112JVhL</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="to-be-clear-automation-is-pretty-great">
+
+<h2>To be clear, automation is pretty great</h2>
+
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="static/bb8-yes.gif"><img alt="static/bb8-yes.gif" src="static/bb8-yes.gif" style="height: 400px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="http://gph.is/1peMWbm">http://gph.is/1peMWbm</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-1" id="what-to-consider-when-automating">
+
+<h1>What To Consider When Automating</h1>
+
 
 
 
@@ -99,9 +199,57 @@ performed <strong>without human assistance.</strong>&quot; - <a class="reference
 
 <h2>Is It Worth It?</h2>
 
-<div class="figure align-center">
-<a class="reference internal image-reference" href="images/xkcd-automation.png"><img alt="images/xkcd-automation.png" src="images/xkcd-automation.png" style="height: 400px;" /></a>
+<div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="static/xkcd-automation.png"><img alt="static/xkcd-automation.png" src="static/xkcd-automation.png" style="height: 500px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://xkcd.com/1319/">https://xkcd.com/1319/</a></span></p>
 </div>
+
+
+
+
+</article>
+<article class="slide level-2" id="id13">
+
+<h2>Is It Worth It?</h2>
+
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="static/is_it_worth_the_time.png"><img alt="static/is_it_worth_the_time.png" src="static/is_it_worth_the_time.png" style="height: 500px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://xkcd.com/1205/">https://xkcd.com/1205/</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="costs-savings">
+
+<h2>Costs &amp; Savings</h2>
+
+<table border="1" class="build docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Costs</th>
+<th class="head">Savings</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Time &amp; Money</td>
+<td>Time &amp; Money</td>
+</tr>
+<tr class="row-odd"><td>Maintenance</td>
+<td>Maintenance</td>
+</tr>
+<tr class="row-even"><td>Sanity</td>
+<td>Sanity</td>
+</tr>
+<tr class="row-odd"><td>Security</td>
+<td>Security</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -111,18 +259,170 @@ performed <strong>without human assistance.</strong>&quot; - <a class="reference
 
 <h2>Ethical Considerations</h2>
 
-<ul class="simple">
-<li>Are there a limited number of controlled inputs to consider?</li>
-<li>Are the steps simple</li>
+<ul class="build simple">
+<li>Who profits from this automation?</li>
+<li>Codifying your unconscious bias</li>
+<li>What are the impacts? Who might this impact?</li>
+<li>Do you understand what you do to make this decision?</li>
+<li>Are the parameters limited and well understood?</li>
 </ul>
 
 
 
 
 </article>
-<article class="slide level-2" id="automation-gone-wrong">
+<article class="slide level-2" id="job-loss">
 
-<h2>Automation Gone Wrong</h2>
+<h2>Job Loss</h2>
+
+<ul class="build simple">
+<li>Previous industrial and automation revolutions have shown that
+people just get other, usually better jobs<ul>
+<li><a class="reference external" href="https://youtu.be/th3nnEpITz0?t=160">Automated Teller Machines</a></li>
+</ul>
+</li>
+</ul>
+<div class="build figure align-center" id="id12">
+<a class="reference internal image-reference" href="static/bank-tellers.jpg"><img alt="static/bank-tellers.jpg" src="static/bank-tellers.jpg" style="height: 400px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.aei.org/publication/what-atms-bank-tellers-rise-robots-and-jobs/">https://www.aei.org/publication/what-atms-bank-tellers-rise-robots-and-jobs/</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-1" id="are-profits-of-automation-evenly-distributed">
+
+<h1>Are profits of automation evenly distributed?</h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="when-not-to-automate">
+
+<h2>When Not To Automate</h2>
+
+<ul class="build simple">
+<li>Low-volume tasks<ul>
+<li>Instead write great docs on how to do it!</li>
+</ul>
+</li>
+<li>Tasks that require human context - many decision points</li>
+<li>UX testing</li>
+<li>Complex tasks</li>
+<li>High-risk tasks<ul>
+<li>Instead, have human 'check points' to verify high-risk tasks</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="automation-can">
+
+<h2>Automation Can</h2>
+
+<ul class="simple">
+<li>Make you lose sight of your goal</li>
+<li>Be difficult to adopt</li>
+<li>Cause failure at scale</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-1" id="automation-gone-wrong">
+
+<h1>Automation Gone Wrong</h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="suggestions">
+
+<h2>Suggestions</h2>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en"
+dir="ltr">Dear Amazon, I bought a toilet seat because I needed one.
+Necessity, not desire. I do not collect them. I am not a toilet seat
+addict. No matter how temptingly you email me, I&#39;m not going to
+think, oh go on then, just one more toilet seat, I&#39;ll treat
+myself.</p>&mdash; Jac Rayner (@GirlFromBlupo) <a
+href="https://twitter.com/GirlFromBlupo/status/982156453396996096?ref_src=twsrc%5Etfw">April
+6, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+
+
+</article>
+<article class="slide level-2" id="id14">
+
+<h2>Suggestions</h2>
+
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/amazon-baseball-bat.jpg"><img alt="static/amazon-baseball-bat.jpg" src="static/amazon-baseball-bat.jpg" style="height: 500px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-1" id="breastfeeding-photos-flagged-as-nudity">
+
+<h1><a class="reference external" href="https://bits.blogs.nytimes.com/2009/01/02/breastfeeding-facebook-photos/">Breastfeeding Photos Flagged as Nudity</a></h1>
+
+
+
+
+
+</article>
+<article class="slide level-1" id="stock-exchange-automation">
+
+<h1><a class="reference external" href="https://www.bbc.com/news/magazine-19214294">Stock Exchange Automation</a></h1>
+
+
+
+
+
+</article>
+<article class="slide level-1" id="hiring-ai">
+
+<h1><a class="reference external" href="https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G">Hiring AI</a></h1>
+
+
+
+
+
+</article>
+<article class="slide level-1" id="facial-recognition-software">
+
+<h1><a class="reference external" href="https://www.theguardian.com/technology/2017/dec/04/racist-facial-recognition-white-coders-black-people-police">Facial Recognition Software</a></h1>
+
+
+
+
+
+</article>
+<article class="slide level-1" id="the-takeaway-don-t-be-afraid-of-automation-automate-with-respect">
+
+<h1>The Takeaway: Don't be afraid of automation, automate with respect</h1>
+
+
+
+
+
+</article>
+<article class="slide level-1" id="automate-software-not-too-much-mostly-maths">
+
+<h1><a class="reference external" href="https://michaelpollan.com/reviews/how-to-eat/">Automate software, not too much, mostly maths</a></h1>
 
 
 
@@ -133,6 +433,11 @@ performed <strong>without human assistance.</strong>&quot; - <a class="reference
 
 <h2>Resources</h2>
 
+<ul class="simple">
+<li><a class="reference external" href="https://www.microfocus.com/media/white-paper/six_signs_its_time_to_automate_that_process_wp.pdf">6 Signs It's Time to Automate</a></li>
+<li><a class="reference external" href="https://www.youtube.com/watch?v=th3nnEpITz0">This TED Talk</a></li>
+<li><a class="reference external" href="https://www.denave.com/when-the-going-gets-tough-automation-gone-wrong/">When the Going Gets Tough</a></li>
+</ul>
 
 
 
@@ -142,6 +447,9 @@ performed <strong>without human assistance.</strong>&quot; - <a class="reference
 
 <h2>Questions?</h2>
 
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="static/rdj-question.gif"><img alt="static/rdj-question.gif" src="static/rdj-question.gif" style="height: 400px;" /></a>
+</div>
 
 
 
