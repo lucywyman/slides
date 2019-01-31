@@ -127,6 +127,8 @@ Time & Money    Time & Money
 Maintenance     Maintenance
 Sanity          Sanity
 Security        Security
+Flexibility     Flexibility
+Education       Education
 ==============  ==============
 
 Ethical Considerations
