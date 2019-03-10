@@ -35,10 +35,8 @@
     <script type="text/javascript" src="static/init.js"></script>
     
     
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="slides" href="index.html" />
-    <link rel="next" title="Dr. Jekyll and Mr. Pelican" href="jekyll-pelican.html" />
+    <link rel="next" title="Introduction to Bolt" href="introduction-to-bolt.html" />
     <link rel="prev" title="How Can I Contribute?" href="how-can-i-contribute.html" /> 
   </head>
   <body>
@@ -53,7 +51,7 @@
 
 <h1>Introduction to Blockchains</h1>
 
-<p>All Aboard the Hype Train</p>
+<p>All Aboard the Hype Chain</p>
 <p><a class="reference external" href="http://slides.lucywyman.me/introduction-to-blockchain.html">http://slides.lucywyman.me/introduction-to-blockchain.html</a></p>
 
 
@@ -79,11 +77,10 @@
 
 <h2><code class="code docutils literal"><span class="pre">$</span> <span class="pre">whoami</span></code></h2>
 
-<div class="build figure align-center" id="id5">
-<a class="reference internal image-reference" href="images/working-computer.gif"><img alt="images/working-computer.gif" src="images/working-computer.gif" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text"><a class="reference external" href="https://media.giphy.com/media/citBl9yPwnUOs/giphy.gif">Source</a></span></p>
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="static/family-picture.jpg"><img alt="static/family-picture.jpg" src="static/family-picture.jpg" style="height: 300px;" /></a>
 </div>
-<p>Lucy Wyman</p>
+<p>Lucy Wyman | <cite>&#64;lucyCwyman</cite></p>
 <p>Software Engineer - <a class="reference external" href="https://github.com/puppetlabs/bolt">Bolt</a></p>
 <p><a class="reference external" href="https://puppet.com">Puppet</a></p>
 
@@ -117,14 +114,16 @@
 
 
 </article>
-<article class="slide level-2" id="id14">
+<article class="slide level-2" id="id12">
 
 <h2>A Hash Function</h2>
 
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">hash</span><span class="p">(</span><span class="s1">&#39;Hello OSCON!&#39;</span><span class="p">)</span>
-<span class="go">&#39;83d1c98aea13290ef72bc7172343742e606e6e115330f41b3e55f2286e30b1cb&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">hash</span><span class="p">(</span><span class="s1">&#39;Longer input, same length output&#39;</span><span class="p">)</span>
-<span class="go">&#39;380e12f12589eda081e21c794e6379053c75a54c3394ddad0d84026c1a6947ab&#39;</span>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="mf">2.4</span><span class="o">.</span><span class="mi">4</span> <span class="p">:</span><span class="mi">001</span> <span class="o">&gt;</span> <span class="n">require</span> <span class="s1">&#39;digest&#39;</span>
+<span class="o">=&gt;</span> <span class="n">true</span>
+<span class="mf">2.4</span><span class="o">.</span><span class="mi">4</span> <span class="p">:</span><span class="mi">002</span> <span class="o">&gt;</span> <span class="n">Digest</span><span class="p">::</span><span class="n">SHA256</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(</span><span class="s2">&quot;Hello SCaLE!&quot;</span><span class="p">)</span>
+<span class="o">=&gt;</span> <span class="s2">&quot;0bb4b1b2992676414a822941f3160c7669404acb8bb8da18278e4f6aabf83b92&quot;</span>
+<span class="mf">2.4</span><span class="o">.</span><span class="mi">4</span> <span class="p">:</span><span class="mi">003</span> <span class="o">&gt;</span> <span class="n">Digest</span><span class="p">::</span><span class="n">SHA256</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(</span><span class="s2">&quot;Longer input, same length output&quot;</span><span class="p">)</span>
+<span class="o">=&gt;</span> <span class="s2">&quot;380e12f12589eda081e21c794e6379053c75a54c3394ddad0d84026c1a6947ab&quot;</span>
 </pre></div>
 </div>
 
@@ -215,21 +214,21 @@ with my public key and know it's from me</li>
 <li>Decentralized | Distributed | &quot;Public&quot;</li>
 <li>&quot;A distributed digital ledger&quot;</li>
 </ul>
-<div class="build figure align-center" id="id6">
-<a class="reference internal image-reference" href="images/heath-ledger.jpeg"><img alt="images/heath-ledger.jpeg" src="images/heath-ledger.jpeg" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.ranker.com/list/handsome-heath-ledger-pictures-10-things-i-hate-about-you/brandon-michaels">Heath Source</a></span></p>
+<div class="build figure align-center" id="id5">
+<a class="reference internal image-reference" href="static/chain.gif"><img alt="static/chain.gif" src="static/chain.gif" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://media.giphy.com/media/yvzK4m2EoIKs9K0GoF/giphy.gif">Gif source</a></span></p>
 </div>
 
 
 
 
 </article>
-<article class="slide level-2" id="id15">
+<article class="slide level-2" id="id13">
 
 <h2>Another Link in the Chain</h2>
 
-<div class="figure align-center" id="id7">
-<img alt="images/blockchain.png" src="images/blockchain.png" />
+<div class="figure align-center" id="id6">
+<img alt="static/blockchain.png" src="static/blockchain.png" />
 <p class="caption"><span class="caption-text"><a class="reference external" href="https://medium.com/&#64;lhartikk/a-blockchain-in-200-lines-of-code-963cc1cc0e54">Chain Source</a></span></p>
 </div>
 
@@ -241,23 +240,24 @@ with my public key and know it's from me</li>
 
 <h2>For Example</h2>
 
-<div class="code ruby highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Blockchain</span>
-  <span class="k">def</span> <span class="nf">initialize</span>
-    <span class="nd">@chain</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">first_block</span><span class="p">]</span>
-  <span class="n">end</span>
+<div class="code ruby highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Blockchain</span> <span class="o">&lt;</span> <span class="n">Array</span>
+<span class="n">attr_reader</span> <span class="p">:</span><span class="n">chain</span>
 
-  <span class="k">def</span> <span class="nf">first_block</span>
-    <span class="k">return</span> <span class="n">Block</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">,</span> <span class="s2">&quot;Hello blockchain!&quot;</span><span class="p">)</span>
-  <span class="n">end</span>
+<span class="k">def</span> <span class="nf">initialize</span>
+  <span class="nd">@chain</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">first_block</span><span class="p">]</span>
+<span class="n">end</span>
 
-  <span class="k">def</span> <span class="nf">add_block</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="nd">@chain</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="n">previous_hash</span> <span class="o">=</span> <span class="nd">@chain</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">hash</span>
-    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">Time</span><span class="o">.</span><span class="n">now</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;#</span><span class="si">{name}</span><span class="s2"> has registered to vote in Washington!&quot;</span>
-    <span class="n">block</span> <span class="o">=</span> <span class="n">Block</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">previous_hash</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-    <span class="nd">@chain</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
-  <span class="n">end</span>
+<span class="k">def</span> <span class="nf">first_block</span>
+  <span class="k">return</span> <span class="n">Block</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">,</span> <span class="s2">&quot;Hello blockchain!&quot;</span><span class="p">)</span>
+<span class="n">end</span>
+
+<span class="k">def</span> <span class="nf">add_block</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+  <span class="n">index</span> <span class="o">=</span> <span class="nd">@chain</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
+  <span class="n">previous_hash</span> <span class="o">=</span> <span class="nd">@chain</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">hash</span>
+  <span class="n">timestamp</span> <span class="o">=</span> <span class="n">Time</span><span class="o">.</span><span class="n">now</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;#</span><span class="si">{name}</span><span class="s2"> voted for Hermione Granger&quot;</span>
+  <span class="n">block</span> <span class="o">=</span> <span class="n">Block</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">previous_hash</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+  <span class="nd">@chain</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
 <span class="n">end</span>
 </pre></div>
 </div>
@@ -302,16 +302,12 @@ with my public key and know it's from me</li>
 <li>Typically based on higher <a class="reference external" href="https://en.wikipedia.org/wiki/Proof-of-work_system">proof of work</a>, or
 <a class="reference external" href="https://en.wikipedia.org/wiki/Proof-of-stake">proof of stake</a></li>
 </ul>
-<div class="build figure align-center" id="id8">
-<a class="reference internal image-reference" href="images/proof-of-steak.gif"><img alt="images/proof-of-steak.gif" src="images/proof-of-steak.gif" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-text"><a class="reference external" href="https://thumbs.gfycat.com/PersonalFearfulBagworm-size_restricted.gif">Steak Source</a></span></p>
-</div>
 
 
 
 
 </article>
-<article class="slide level-2" id="id16">
+<article class="slide level-2" id="id14">
 
 <h2>Consensus</h2>
 
@@ -334,8 +330,8 @@ That probability will decrease exponentially.</li>
 <li>See if it's under the <a class="reference external" href="https://en.bitcoin.it/wiki/Target">current target</a> (256-bit number)</li>
 <li>If not, increment nonce and try again</li>
 </ul>
-<div class="figure align-center" id="id9">
-<a class="reference internal image-reference" href="images/proof-of-work.gif"><img alt="images/proof-of-work.gif" src="images/proof-of-work.gif" style="height: 250px;" /></a>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="static/proof-of-work.gif"><img alt="static/proof-of-work.gif" src="static/proof-of-work.gif" style="height: 250px;" /></a>
 <p class="caption"><span class="caption-text"><a class="reference external" href="https://bitsapphire.com/makes-blockchain-protocols-future/">Proof source</a></span></p>
 </div>
 
@@ -467,7 +463,7 @@ problem&quot;</p>
 
 
 </article>
-<article class="slide level-1" id="the-chainies">
+<article class="slide level-1" id="the-blockies">
 
 <h1>The Blockies</h1>
 
@@ -481,8 +477,8 @@ problem&quot;</p>
 <h2>Most Charitable</h2>
 
 <p class="build"><a class="reference external" href="https://insight.wfp.org/what-is-blockchain-and-how-is-it-connected-to-fighting-hunger-7f1b42da9fe">World Food Programme Building Blocks</a></p>
-<div class="build figure align-center" id="id10">
-<a class="reference internal image-reference" href="images/wfp-building-blocks.jpg"><img alt="images/wfp-building-blocks.jpg" src="images/wfp-building-blocks.jpg" style="height: 200px;" /></a>
+<div class="build figure align-center" id="id8">
+<a class="reference internal image-reference" href="static/wfp-building-blocks.jpg"><img alt="static/wfp-building-blocks.jpg" src="static/wfp-building-blocks.jpg" style="height: 200px;" /></a>
 <p class="caption"><span class="caption-text"><a class="reference external" href="https://innovation.wfp.org/project/building-blocks">WFP Source</a></span></p>
 </div>
 
@@ -495,8 +491,8 @@ problem&quot;</p>
 <h2>Most Democratic</h2>
 
 <p class="build"><a class="reference external" href="https://followmyvote.com/online-voting-platform-faqs/">Follow My Vote</a></p>
-<div class="build figure align-center" id="id11">
-<img alt="images/follow-my-vote.png" src="images/follow-my-vote.png" />
+<div class="build figure align-center" id="id9">
+<img alt="static/follow-my-vote.png" src="static/follow-my-vote.png" />
 <p class="caption"><span class="caption-text"><a class="reference external" href="https://followmyvote.com/">FMV Source</a></span></p>
 </div>
 
@@ -509,8 +505,8 @@ problem&quot;</p>
 <h2>Most Up-and-Coming</h2>
 
 <p class="build"><a class="reference external" href="https://www.ibm.com/blockchain/industries/supply-chain">Supply Chain Tracking</a></p>
-<div class="build figure align-center" id="id12">
-<a class="reference internal image-reference" href="images/supply-chain.jpg"><img alt="images/supply-chain.jpg" src="images/supply-chain.jpg" style="height: 300px;" /></a>
+<div class="build figure align-center" id="id10">
+<a class="reference internal image-reference" href="static/supply-chain.jpg"><img alt="static/supply-chain.jpg" src="static/supply-chain.jpg" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-text"><a class="reference external" href="https://kryptomoney.com/port-brisbane-adopts-australias-first-blockchain-supply-chain-system/">Supply source</a></span></p>
 </div>
 <ul class="build simple">
@@ -527,8 +523,8 @@ problem&quot;</p>
 <h2>Cutest</h2>
 
 <p class="build"><a class="reference external" href="https://www.cryptokitties.co/">CryptoKitties</a></p>
-<div class="build figure align-center" id="id13">
-<a class="reference internal image-reference" href="images/cryptokitties.png"><img alt="images/cryptokitties.png" src="images/cryptokitties.png" style="height: 350px;" /></a>
+<div class="build figure align-center" id="id11">
+<a class="reference internal image-reference" href="static/cryptokitties.png"><img alt="static/cryptokitties.png" src="static/cryptokitties.png" style="height: 350px;" /></a>
 <p class="caption"><span class="caption-text"><a class="reference external" href="https://www.cryptokitties.co/">Kitties Source</a></span></p>
 </div>
 
@@ -598,7 +594,7 @@ technology</li>
 <h2>Questions</h2>
 
 <div class="figure align-center">
-<a class="reference internal image-reference" href="images/kelly-kapoor-questions.gif"><img alt="images/kelly-kapoor-questions.gif" src="images/kelly-kapoor-questions.gif" style="height: 400px;" /></a>
+<a class="reference internal image-reference" href="static/kelly-kapoor-questions.gif"><img alt="static/kelly-kapoor-questions.gif" src="static/kelly-kapoor-questions.gif" style="height: 400px;" /></a>
 </div>
 
 

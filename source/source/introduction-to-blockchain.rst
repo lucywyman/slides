@@ -18,13 +18,11 @@ Roadmap
 
 .. rst-class:: build
 
-  .. figure:: static/working-computer.gif
+  .. figure:: static/family-picture.jpg
       :align: center
       :height: 300px
     
-      `Source <https://media.giphy.com/media/citBl9yPwnUOs/giphy.gif>`_
-
-Lucy Wyman
+Lucy Wyman | `@lucyCwyman`
 
 Software Engineer - `Bolt`_
 
@@ -32,6 +30,7 @@ Software Engineer - `Bolt`_
 
 .. _Bolt: https://github.com/puppetlabs/bolt
 .. _Puppet: https://puppet.com
+.. _@lucyCwyman: https://twitter.com/lucycwyman
 
 What *is* a Blockchain?
 =======================
@@ -52,10 +51,12 @@ A Hash Function
 
 .. code::
 
-  >>> hash('Hello OSCON!')
-  '83d1c98aea13290ef72bc7172343742e606e6e115330f41b3e55f2286e30b1cb'
-  >>> hash('Longer input, same length output')
-  '380e12f12589eda081e21c794e6379053c75a54c3394ddad0d84026c1a6947ab'
+    2.4.4 :001 > require 'digest'
+    => true
+    2.4.4 :002 > Digest::SHA256.hexdigest("Hello SCaLE!")
+    => "0bb4b1b2992676414a822941f3160c7669404acb8bb8da18278e4f6aabf83b92" 
+    2.4.4 :003 > Digest::SHA256.hexdigest("Longer input, same length output")
+    => "380e12f12589eda081e21c794e6379053c75a54c3394ddad0d84026c1a6947ab"
 
 Public Key Encryption
 ---------------------
@@ -124,11 +125,11 @@ Another Link in the Chain
   * Decentralized | Distributed | "Public"
   * "A distributed digital ledger"
 
-  .. figure:: static/heath-ledger.jpeg
-      :align: center
+  .. figure:: static/chain.gif
       :height: 300px
+      :align: center
 
-      `Heath Source <https://www.ranker.com/list/handsome-heath-ledger-pictures-10-things-i-hate-about-you/brandon-michaels>`_
+      `Gif source <https://media.giphy.com/media/yvzK4m2EoIKs9K0GoF/giphy.gif>`_
 
 .. nextslide::
 
@@ -142,23 +143,24 @@ For Example
 
 .. code:: ruby
 
-  class Blockchain
-    def initialize
-      @chain = [self.first_block]
-    end 
+  class Blockchain < Array
+  attr_reader :chain
 
-    def first_block
-      return Block.new(0, "0", Time.now, "Hello blockchain!")
-    end 
+  def initialize
+    @chain = [self.first_block]
+  end 
 
-    def add_block(name)
-      index = @chain[-1].index + 1 
-      previous_hash = @chain[-1].hash
-      timestamp = Time.now
-      data = "#{name} has registered to vote in Washington!"
-      block = Block.new(index, previous_hash, timestamp, data)
-      @chain.push(block)
-    end 
+  def first_block
+    return Block.new(0, "0", Time.now, "Hello blockchain!")
+  end 
+
+  def add_block(name)
+    index = @chain[-1].index + 1 
+    previous_hash = @chain[-1].hash
+    timestamp = Time.now
+    data = "#{name} voted for Hermione Granger"
+    block = Block.new(index, previous_hash, timestamp, data)
+    @chain.push(block)
   end
 
 How do Blockchains Work?
@@ -185,12 +187,6 @@ Consensus
   * Blockchains must be `Byzantine Fault Tolerant`_
   * Typically based on higher `proof of work`_, or
     `proof of stake`_
-
-  .. figure:: static/proof-of-steak.gif
-        :align: center
-        :height: 250px
-
-        `Steak Source <https://thumbs.gfycat.com/PersonalFearfulBagworm-size_restricted.gif>`_
 
 .. nextslide::
 
@@ -309,7 +305,7 @@ problem"
 * When you don't want transactions stored forever
 * When your current technology works
 
-The Chainies
+The Blockies
 ============
 
 Most Charitable
