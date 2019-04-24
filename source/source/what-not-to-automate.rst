@@ -3,25 +3,21 @@ What Not To Automate
 
 https://slides.lucywyman.me/what-not-to-automate.html
 
-:code:`$ whoami`
-----------------
 
-.. rst-class:: build
+.. |ss| raw:: html
 
-.. figure:: static/silly-typing.gif
-    :align: center
-    :height: 300px
+   <strike>
 
-    https://gph.is/1IffoRV
+.. |se| raw:: html
 
-Lucy Wyman
+   </strike>
 
-Software Engineer - `Bolt`_
+|ss| Automation is bad |se|
+===========================
 
-`Puppet`_
 
-.. _Bolt: https://github.com/puppetlabs/bolt
-.. _Puppet: https://puppet.com
+Automate everything*
+====================
 
 Agenda
 ------
@@ -30,8 +26,39 @@ Agenda
 * What to consider when automating
 * Automation gone wrong
 
+:code:`$ whoami`
+----------------
+
+.. raw:: html
+
+    <blockquote class="twitter-tweet" data-lang="en"><p lang="en"
+    dir="ltr">Grandma: I hear they&#39;re turning shipping containers into
+    affordable housing!<br><br>Me to Eli: Even at Christmas, it&#39;s just
+    docker docker docker</p>&mdash; Lucy Wyman (@lucycwyman) <a
+    href="https://twitter.com/lucycwyman/status/1078850614384197632?ref_src=twsrc%5Etfw">December
+    29, 2018</a></blockquote>
+    <script async src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"></script>
+
+Lucy Wyman
+
+Software Engineer | `Bolt Influencer`_ at `Puppet`_
+
+.. _Bolt Influencer: https://github.com/puppetlabs/bolt
+.. _Puppet: https://puppet.com
+
 What Is Automation?
 -------------------
+
+.. figure:: static/automation-definition.jpg
+    :align: center
+    :height: 300px
+
+    `Heidi Waterhouse`_
+
+.. _Heidi Waterhouse: https://docs.google.com/presentation/d/1BtN8H8MI6LzkJQHqhFH4d1OWO4jallCTublqKJiZxN0/edit#slide=id.g2ed31b77db_0_173
+
+.. nextslide::
 
 "Automation is the technology by which a process or procedure is
 performed **without human assistance.**" - `Wikipedia`_
