@@ -1,7 +1,8 @@
-Cloud Terminology
-=================
+Clouds
+======
 
 A Meteorological Adventure
+https://slides.lucywyman.me/clouds.html
 
 Definition
 ----------
@@ -128,14 +129,25 @@ Fun Facts
 =========
 
 Shooting Clouds
-===============
+---------------
+
+.. figure:: static/bugs-bunny-cloud.gif
+    :align: center
+    :height: 400px
 
 Weaponized Weather
-==================
+------------------
+
+.. figure:: static/weather-stop-sign.gif
+    :align: center
+    :height: 400px
 
 `International Commission on Clouds and Precipitation`_
-=======================================================
+-------------------------------------------------------
 
+.. figure:: static/young-hercules.jpg
+    :align: center
+    :height: 400px
 
 Sources
 -------
