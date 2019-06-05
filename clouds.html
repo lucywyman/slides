@@ -10,10 +10,8 @@
     <link rel="stylesheet" href="static/basic.css" type="text/css" />
     <link rel="stylesheet" href="static/styles.css" type="text/css" />
     <link rel="stylesheet" href="static/single.css" type="text/css" />
-    
-    <link rel="stylesheet" href="static/custom.css" type="text/css" />
-    
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
     
     
     
@@ -29,6 +27,7 @@
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/language_data.js"></script>
     <script type="text/javascript" src="static/common.js"></script>
     
     <script type="text/javascript" src="static/slides.js"></script>
@@ -41,7 +40,7 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="slides" href="index.html" />
     <link rel="next" title="Git and Github" href="git-intro.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="index.html" /> 
+    <link rel="prev" title="EZ Cloud Provisioning with Bolt" href="barcamp-2019.html" /> 
   </head>
   <body>
 
@@ -65,9 +64,9 @@
 
 <h2>Definition</h2>
 
-<p>&quot;In meteorology,a cloud is an aerosol comprising a visible mass of
+<p>“In meteorology a cloud is an aerosol comprising a visible mass of
 minute liquid droplets or frozen crystals, both of which are made of
-water or various chemicals.&quot; ~ <a class="reference external" href="https://en.wikipedia.org/wiki/Cloud">Wikipedia</a></p>
+water or various chemicals.” ~ <a class="reference external" href="https://en.wikipedia.org/wiki/Cloud">Wikipedia</a></p>
 
 
 
@@ -98,13 +97,118 @@ water or various chemicals.&quot; ~ <a class="reference external" href="https://
 
 
 </article>
+<article class="slide level-1" id="low-level-clouds">
+
+<h1>Low-Level Clouds</h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="stratus-st">
+
+<h2>Stratus (St)</h2>
+
+<p>Grey blanket</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/stratus.jpg"><img alt="static/stratus.jpg" src="static/stratus.jpg" style="height: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="cumulus-cu">
+
+<h2>Cumulus (Cu)</h2>
+
+<p>Puffy, white, cottony</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/cumulus.jpg"><img alt="static/cumulus.jpg" src="static/cumulus.jpg" style="height: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="stratocumulus-sc">
+
+<h2>Stratocumulus (Sc)</h2>
+
+<p>Puffy, patchy, grayish or whitish</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/stratocumulus.jpg"><img alt="static/stratocumulus.jpg" src="static/stratocumulus.jpg" style="height: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-1" id="mid-level-clouds">
+
+<h1>Mid-Level Clouds</h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="altocumulus-ac">
+
+<h2>Altocumulus (Ac)</h2>
+
+<p>White or grey patches - like sheep!</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/altocumulus.jpg"><img alt="static/altocumulus.jpg" src="static/altocumulus.jpg" style="height: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="nimbostratus-ns">
+
+<h2>Nimbostratus (Ns)</h2>
+
+<p>Thick, dark grey layer</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/nimbostratus.jpg"><img alt="static/nimbostratus.jpg" src="static/nimbostratus.jpg" style="height: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="altostratus-as">
+
+<h2>Altostratus (As)</h2>
+
+<p>Grey or bluish-grey sheets</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/altostratus.jpg"><img alt="static/altostratus.jpg" src="static/altostratus.jpg" style="height: 400px;" /></a>
+</div>
+
+
+
+
+</article>
+<article class="slide level-1" id="high-level-clouds">
+
+<h1>High-Level Clouds</h1>
+
+
+
+
+
+</article>
 <article class="slide level-2" id="cirrus-ci">
 
 <h2>Cirrus (Ci)</h2>
 
 <p>Delicate, white, patchy, silky, made of ice</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="images/cirrus.jpg"><img alt="images/cirrus.jpg" src="images/cirrus.jpg" style="height: 400px;" /></a>
+<a class="reference internal image-reference" href="static/cirrus.jpg"><img alt="static/cirrus.jpg" src="static/cirrus.jpg" style="height: 400px;" /></a>
 </div>
 
 
@@ -117,7 +221,7 @@ water or various chemicals.&quot; ~ <a class="reference external" href="https://
 
 <p>Thin, white, patch ribbon or sheet</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="images/cirrocumulus.jpg"><img alt="images/cirrocumulus.jpg" src="images/cirrocumulus.jpg" style="height: 400px;" /></a>
+<a class="reference internal image-reference" href="static/cirrocumulus.jpg"><img alt="static/cirrocumulus.jpg" src="static/cirrocumulus.jpg" style="height: 400px;" /></a>
 </div>
 
 
@@ -128,90 +232,19 @@ water or various chemicals.&quot; ~ <a class="reference external" href="https://
 
 <h2>Cirrostratus (Cs)</h2>
 
-<p>Transparent, white, smooth, sheet</p>
-<div class="figure">
-<img alt="images/" src="images/" />
+<p>Transparent, white veil</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/cirrostratus.jpg"><img alt="static/cirrostratus.jpg" src="static/cirrostratus.jpg" style="height: 400px;" /></a>
 </div>
 
 
 
 
 </article>
-<article class="slide level-2" id="altostratus-as">
+<article class="slide level-1" id="the-snowflake">
 
-<h2>Altostratus (As)</h2>
+<h1>The Snowflake</h1>
 
-<p>Grey or blue sheet, fibrous, uniform</p>
-
-
-
-
-</article>
-<article class="slide level-2" id="altocumulus-ac">
-
-<h2>Altocumulus (Ac)</h2>
-
-<p>White or grey sheet, rounded and rolling</p>
-
-
-
-
-</article>
-<article class="slide level-2" id="nimbostratus-ns">
-
-<h2>Nimbostratus (Ns)</h2>
-
-<p>Thick, dark grey layer</p>
-
-
-
-
-</article>
-<article class="slide level-2" id="stratocumulus-sc">
-
-<h2>Stratocumulus (Sc)</h2>
-
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Grey or whitish, or both grey and whitish, patch, sheet or layer of cloud
-which almost always has dark parts, composed of tessellations, rounded
-masses, rolls, etc., which are non-fibrous (except for virga) and which
-may or may not be merged; most of the regularly arranged small elements
-have an apparent width of more than five degrees.</p>
-</div>
-
-
-
-
-</article>
-<article class="slide level-2" id="stratus-st">
-
-<h2>Stratus (St)</h2>
-
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Generally grey cloud layer with a fairly uniform base, which may give
-drizzle, ice prisms or snow grains. When the sun is visible through the
-cloud, its outline is clearly discernible. Stratus does not produce halo
-phenomena except, possible, at very low temperatures.</p>
-</div>
-
-
-
-
-</article>
-<article class="slide level-2" id="cumulus-cu">
-
-<h2>Cumulus (Cu)</h2>
-
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Detached clouds, generally dense and with sharp outlines, developing
-vertically in the form of rising mounds, domes or towers, of which the
-bulging upper parts often resembles a cauliflower. The sunlit parts of
-these clouds are mostly brilliant white; their base is relatively dark
-and nearly horizontal.</p>
-</div>
 
 
 
@@ -221,42 +254,45 @@ and nearly horizontal.</p>
 
 <h2>Cumulonimbus (Cb)</h2>
 
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Heavy and dense cloud, with a considerable vertical extent, in the form
-of a mountain or huge towers. At least part of its upper portion is
-usually smooth, or fibrous or striated, and nearly always flattened; this
-part often spreads out in the shape of an anvil or vast plume. Under the
-base of this cloud which is often very dark, there are frequently low
-ragged clouds ether merged with it or not, and precipitation sometimes in
-the form of virga.</p>
+<p>Heavy, dense, vertical</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="static/cumulonimbus.jpeg"><img alt="static/cumulonimbus.jpeg" src="static/cumulonimbus.jpeg" style="height: 400px;" /></a>
 </div>
 
 
 
 
 </article>
-<article class="slide level-2" id="shooting-clouds">
+<article class="slide level-1" id="fun-facts">
 
-<h2>Shooting Clouds</h2>
+<h1>Fun Facts</h1>
 
-<p>People have actually tried to do that, on several occasions, with an
-attempt to end global warming by shooting crystal salt seeds at
-clouds, causing a permanent low hanging cloud cover that will
-deflect the sunlight and stop global warming. The experiment proved
-to be unsuccessful when the scientists realized that excess cloud
-cover might actually warm the planet by trapping heat. In fact, a
-2009 Stanford University Study shows that aircrafts, which create
-clouds are accountable for 4 to 8 percent of the warming that has
-occurred since record keeping began in 1850.</p>
 
 
 
 
 </article>
-<article class="slide level-2" id="the-international-cloud-committee">
+<article class="slide level-1" id="shooting-clouds">
 
-<h2>The International Cloud Committee</h2>
+<h1>Shooting Clouds</h1>
+
+
+
+
+
+</article>
+<article class="slide level-1" id="weaponized-weather">
+
+<h1>Weaponized Weather</h1>
+
+
+
+
+
+</article>
+<article class="slide level-1" id="international-commission-on-clouds-and-precipitation">
+
+<h1><a class="reference external" href="http://www.iccp-iamas.org">International Commission on Clouds and Precipitation</a></h1>
 
 
 
@@ -268,8 +304,9 @@ occurred since record keeping began in 1850.</p>
 <h2>Sources</h2>
 
 <ul class="simple">
-<li><a class="reference external" href="https://www.cloudyn.com/blog/10-fun-facts-you-didnt-know-about-clouds/">10 Fun Facts You Didn't Know About Clouds</a></li>
+<li><a class="reference external" href="https://www.cloudyn.com/blog/10-fun-facts-you-didnt-know-about-clouds/">10 Fun Facts You Didn’t Know About Clouds</a></li>
 <li><a class="reference external" href="http://www.skystef.be/clasclouds-terms.htm">Glossary of Terms</a></li>
+<li><a class="reference external" href="https://cloudatlas.wmo.int/cirrus-ci.html">Cloud Atlas</a></li>
 </ul>
 
 
