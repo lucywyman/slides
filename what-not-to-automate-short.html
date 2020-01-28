@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>What Not To Automate &mdash; slides</title>
+    
+    <link rel="stylesheet" href="static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="static/single.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2015.07.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/language_data.js"></script>
+    <script type="text/javascript" src="static/common.js"></script>
+    
+    <script type="text/javascript" src="static/slides.js"></script>
+    <script type="text/javascript" src="static/sync.js"></script>
+    <script type="text/javascript" src="static/controller.js"></script>
+    <script type="text/javascript" src="static/init.js"></script>
+    
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="slides" href="index.html" />
+    <link rel="next" title="Get Started Writing Robust Tasks" href="writing-tasks.html" />
+    <link rel="prev" title="What Not To Automate" href="what-not-to-automate.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="what-not-to-automate">
+
+<h1>What Not To Automate</h1>
+
+<p><a class="reference external" href="https://slides.lucywyman.me/what-not-to-automate-short.html">https://slides.lucywyman.me/what-not-to-automate-short.html</a></p>
+
+
+
+
+</article>
+<article class="slide level-1" id="automate-everything">
+
+<h1>Automate everything*</h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="agenda">
+
+<h2>Agenda</h2>
+
+<ul class="simple">
+<li>Automation: what and why</li>
+<li>To automate, or not to automate</li>
+<li>Automation gone wrong</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="automation">
+
+<h2>Automation</h2>
+
+<p>“Automation is the technology by which a process or procedure is
+performed <strong>without human assistance.</strong>” - <a class="reference external" href="https://en.wikipedia.org/wiki/Automation">Wikipedia</a></p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="static/api-test.gif"><img alt="static/api-test.gif" src="static/api-test.gif" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="http://gph.is/2gDV0zj">http://gph.is/2gDV0zj</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="why-do-we-automate">
+
+<h2>Why Do We Automate?</h2>
+
+<ul class="simple">
+<li>To save time &amp; money<ul>
+<li>Maintenance &amp; education</li>
+</ul>
+</li>
+<li>For consistency | stability | fewer mistakes</li>
+<li>Visibility</li>
+<li>Because we don’t enjoy a task</li>
+</ul>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="static/bb8-yes.gif"><img alt="static/bb8-yes.gif" src="static/bb8-yes.gif" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="http://gph.is/1peMWbm">http://gph.is/1peMWbm</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-1" id="should-i-automate-this">
+
+<h1>Should I Automate This?</h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="practical-considerations">
+
+<h2>Practical Considerations</h2>
+
+<ul class="simple">
+<li>See slide #6</li>
+<li><a class="reference external" href="https://xkcd.com/1205/">https://xkcd.com/1205/</a></li>
+</ul>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="static/xkcd-automation.png"><img alt="static/xkcd-automation.png" src="static/xkcd-automation.png" style="height: 400px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://xkcd.com/1319/">https://xkcd.com/1319/</a></span></p>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="ethical-considerations">
+
+<h2>Ethical Considerations</h2>
+
+<ul class="simple">
+<li>What are the impacts?</li>
+<li>Are parameters limited and well understood?</li>
+<li>Codifying unconscious bias</li>
+<li><strong>Are profits and costs fairly distributed?</strong></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id1">
+
+<h2>What Not to Automate</h2>
+
+<ul class="simple">
+<li>Low-volume tasks<ul>
+<li>Instead write great docs on how to do it!</li>
+</ul>
+</li>
+<li>Tasks that require human context</li>
+<li>Complex tasks</li>
+<li>High-risk tasks<ul>
+<li>Instead, have human ‘check points’ to verify high-risk tasks</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-1" id="automation-gone-wrong">
+
+<h1>Automation Gone Wrong</h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="suggestions">
+
+<h2>Suggestions</h2>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en"
+dir="ltr">Dear Amazon, I bought a toilet seat because I needed one.
+Necessity, not desire. I do not collect them. I am not a toilet seat
+addict. No matter how temptingly you email me, I&#39;m not going to
+think, oh go on then, just one more toilet seat, I&#39;ll treat
+myself.</p>&mdash; Jac Rayner (@GirlFromBlupo) <a
+href="https://twitter.com/GirlFromBlupo/status/982156453396996096?ref_src=twsrc%5Etfw">April
+6, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js"
+charset="utf-8"></script><p>Context</p>
+
+
+
+
+</article>
+<article class="slide level-1" id="stock-exchange-automation">
+
+<h1><a class="reference external" href="https://www.bbc.com/news/magazine-19214294">Stock Exchange Automation</a></h1>
+
+<p>Failure at scale</p>
+
+
+
+
+</article>
+<article class="slide level-1" id="hiring-ai">
+
+<h1><a class="reference external" href="https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G">Hiring AI</a></h1>
+
+<p>Complex and high risk</p>
+
+
+
+
+</article>
+<article class="slide level-1" id="facial-recognition-software">
+
+<h1><a class="reference external" href="https://www.theguardian.com/technology/2017/dec/04/racist-facial-recognition-white-coders-black-people-police">Facial Recognition Software</a></h1>
+
+<p>Faulty and high risk</p>
+
+
+
+
+</article>
+<article class="slide level-1" id="automate-software-not-too-much-mostly-maths">
+
+<h1><a class="reference external" href="https://michaelpollan.com/reviews/how-to-eat/">Automate software, not too much, mostly maths</a></h1>
+
+
+
+
+
+</article>
+<article class="slide level-2" id="resources">
+
+<h2>Resources</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="https://www.microfocus.com/media/white-paper/six_signs_its_time_to_automate_that_process_wp.pdf">6 Signs It’s Time to Automate</a></li>
+<li><a class="reference external" href="https://www.youtube.com/watch?v=th3nnEpITz0">This TED Talk</a></li>
+<li><a class="reference external" href="https://www.denave.com/when-the-going-gets-tough-automation-gone-wrong/">When the Going Gets Tough</a></li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-1" id="thank-you">
+
+<h1>Thank You!</h1>
+
+
+
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>
