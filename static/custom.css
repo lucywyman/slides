@@ -1,3 +1,7 @@
+body{
+  background-color: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(199, 223, 229)), to(rgb(222, 248, 255)))
+}
+
 .codeblock-sm {
     font-size: 0.8em;
 }
