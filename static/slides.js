@@ -92,22 +92,18 @@ function updateSlides() {
     speakAndSyncToNode(slideEls[curSlide]);
   }
 
-/*  var container = document.getElementById('slide_container');
-  var boxes = document.getElementsByClassName('slide');
-  var newcolor = newColor();
-  console.log(newcolor);
-  container.style.backgroundColor = newcolor;
-  for (i=0; i<boxes.length; i++){
-    boxes[i].style.backgroundColor = newcolor;
-  }*/
-
   updateHash();
-};
 
-function newColor() {
-  colors = ['#FEFFE1', '#FBECE9', '#D6FFD9', '#E3FFFB', '#D2E0F2']
-  return colors[Math.floor(Math.random()*(colors.length+1))-1];
-}
+  // notifyListeners(
+  //     {command: 'cur_slide',
+  //      content: curSlide,
+  //      prev_slide: curSlide > 0 ? getSlideEl(curSlide - 1).outerHTML : '',
+  //      slide: getSlideEl(curSlide).outerHTML,
+  //      next_slide: curSlide < slideEls.length - 1 ? getSlideEl(curSlide + 1).outerHTML : ''
+  //     }
+  // );
+
+};
 
 function buildNextItem() {
   var toBuild  = slideEls[curSlide].querySelectorAll('.to-build');

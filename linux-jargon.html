@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="static/basic.css" type="text/css" />
     <link rel="stylesheet" href="static/styles.css" type="text/css" />
     <link rel="stylesheet" href="static/single.css" type="text/css" />
-    
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     
     
+    
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="static/single.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -24,6 +26,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="static/documentation_options.js"></script>
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
@@ -38,8 +41,8 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="slides" href="index.html" />
-    <link rel="next" title="Who Orchestrates the Orchestrators?" href="puppet-on-coreos.html" />
-    <link rel="prev" title="Dr. Jekyll and Mr. Pelican" href="jekyll-pelican-text.html" /> 
+    <link rel="next" title="PE Bolt Server" href="pe-bolt-server.html" />
+    <link rel="prev" title="Introduction to Bolt" href="introduction-to-bolt.html" /> 
   </head>
   <body>
 
@@ -66,31 +69,15 @@ Rest easy, gentle n00b, and come along for the ride.</p>
 
 
 </article>
-<article class="slide level-2" id="whoami">
-
-<h2><code class="code docutils literal"><span class="pre">$</span> <span class="pre">whoami</span></code></h2>
-
-<div class="build figure align-center">
-<a class="reference internal image-reference" href="images/programmer-valentine.gif"><img alt="images/programmer-valentine.gif" src="images/programmer-valentine.gif" style="height: 300px;" /></a>
-</div>
-<p>Lucy Wyman</p>
-<p>Software Engineer - <a class="reference external" href="https://github.com/puppetlabs/bolt">Bolt</a></p>
-<p><a class="reference external" href="https://puppet.com">Puppet</a></p>
-<p><a class="reference external" href="https://www.reddit.com/r/gifs/comments/5tyymj/programmer_valentain_day/">Source</a></p>
-
-
-
-
-</article>
 <article class="slide level-2" id="hacker">
 
 <h2>Hacker</h2>
 
 <div class="figure align-center">
-<a class="reference internal image-reference" href="images/hacking.gif"><img alt="images/hacking.gif" src="images/hacking.gif" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="static/hacking.gif"><img alt="static/hacking.gif" src="static/hacking.gif" style="width: 400px;" /></a>
 </div>
-<p>&quot;A human who engages in activities (such as programming or other
-media) in a spirit of playfulness and exploration&quot; ~ <a class="reference external" href="https://en.wikipedia.org/wiki/Hacker_culture">Wikipedia</a></p>
+<p>“A human who engages in activities (such as programming or other
+media) in a spirit of playfulness and exploration” ~ <a class="reference external" href="https://en.wikipedia.org/wiki/Hacker_culture">Wikipedia</a></p>
 
 
 
@@ -103,8 +90,6 @@ media) in a spirit of playfulness and exploration&quot; ~ <a class="reference ex
 <ul class="build simple">
 <li><strong>AFAIK</strong> - as far as I know</li>
 <li><strong>AFK</strong> - away from keyboard</li>
-<li><strong>BDFL</strong> - <a class="reference external" href="https://en.wikipedia.org/wiki/Benevolent_dictator_for_life">Benevolent Dictator for Life</a></li>
-<li><strong>BOFH</strong> - <a class="reference external" href="http://bofh.bjash.com/">Bastard Operator from Hell</a></li>
 <li><strong>IIRC</strong> - if I recall correctly</li>
 <li><strong>IMHO</strong> - in my humble opinion</li>
 <li><strong>IRC</strong> - internet relay chat</li>
@@ -128,7 +113,7 @@ media) in a spirit of playfulness and exploration&quot; ~ <a class="reference ex
 <li><strong>DHCP</strong> - Dynamic Host Control Protocol</li>
 <li><strong>DNS</strong> - Domain Name System</li>
 <li><strong>EMACS</strong> - Editing MACroS - inferior text editor</li>
-<li><strong>EO[f | l | d | m]</strong> - End of [file | line | day | message]</li>
+<li><strong>EO[F | L | D | M]</strong> - End of [file | line | day | message]</li>
 </ul>
 
 
@@ -143,11 +128,11 @@ media) in a spirit of playfulness and exploration&quot; ~ <a class="reference ex
 <li><strong>FIFO</strong> - First In First Out</li>
 <li><strong>FIXME/TODO</strong> - (Highlighted) note to fix something</li>
 <li><strong>GCC</strong> - Gnu Compiler Collection</li>
-<li><strong>GNU</strong> - Gnu's Not Unix</li>
+<li><strong>GNU</strong> - Gnu’s Not Unix</li>
 <li><strong>GUI</strong> - Graphical User Interface</li>
 <li><strong>INTERCAL</strong> - Compiler Language With No Pronounceable Acronym</li>
 <li><strong>ISP</strong> - Internet Service Provider</li>
-<li><strong>[K | M ]IPS</strong> - [Kilo | Mega]Instructions Per Second</li>
+<li><strong>[K | M]IPS</strong> - [Kilo | Mega] Instructions Per Second</li>
 </ul>
 
 
@@ -162,9 +147,9 @@ media) in a spirit of playfulness and exploration&quot; ~ <a class="reference ex
 <li><strong>MOTD</strong> - Message of the Day</li>
 <li><a class="reference external" href="http://rlv.zcache.com/mao_rtfm_front_t_shirts-ra90bd4e0d5984c1c9b741c4812232282_jgogh_1024.jpg?rlvnet=1">RTFM</a> - Read the cussing manual</li>
 <li><strong>TTY</strong> - Teletype terminal</li>
-<li><strong>Vim</strong> - Vi iMproved, superior text editor</li>
+<li><strong>VIM</strong> - Vi iMproved, superior text editor</li>
 <li><strong>WYSIWYG</strong> - What you see is what you get</li>
-<li><strong>yaourt</strong> - Yet AnOther User Repository Tool. CLI for pacman,
+<li><strong>YAOURT</strong> - Yet AnOther User Repository Tool. CLI for pacman,
 arch linux package manager</li>
 </ul>
 
@@ -188,62 +173,6 @@ arch linux package manager</li>
 
 
 </article>
-<article class="slide level-2" id="utilities-must-haves">
-
-<h2>Utilities: Must haves</h2>
-
-<ul class="build simple">
-<li>man</li>
-<li>ls</li>
-<li>cd</li>
-<li>less</li>
-<li>cat</li>
-<li>grep</li>
-<li>find</li>
-<li>cowsay</li>
-</ul>
-
-
-
-
-</article>
-<article class="slide level-2" id="utilities-you-probably-already-know">
-
-<h2>Utilities: You probably already know</h2>
-
-<ul class="build simple">
-<li>alsamixer</li>
-<li>tree</li>
-<li>htop</li>
-<li>curl/wget</li>
-<li>wc</li>
-<li>cal</li>
-<li>tmux</li>
-<li>xargs</li>
-<li>rsync/scp</li>
-</ul>
-
-
-
-
-</article>
-<article class="slide level-2" id="utilities-out-there">
-
-<h2>Utilities: Out there</h2>
-
-<ul class="build simple">
-<li>rtorrent</li>
-<li>gparted</li>
-<li>mdadm</li>
-<li>lshw</li>
-<li>indent</li>
-<li>apropos</li>
-</ul>
-
-
-
-
-</article>
 <article class="slide level-2" id="directories">
 
 <h2>Directories</h2>
@@ -256,7 +185,7 @@ arch linux package manager</li>
 <li><strong>/lib</strong> - Library files to support installed binaries</li>
 <li><strong>/opt</strong> - Additional applications</li>
 <li><strong>/proc</strong> - Information about system processes</li>
-<li><strong>/root</strong> - Root user's home directory</li>
+<li><strong>/root</strong> - Root user’s home directory</li>
 <li><strong>/sbin</strong> - System binaries (things your system runs)</li>
 <li><strong>/tmp</strong> - Temporary files</li>
 <li><strong>/usr</strong> - Binaries, libraries, docs, and source code for programs
@@ -274,16 +203,16 @@ etc.)</li>
 <h2>Technical Words</h2>
 
 <ul class="build simple">
-<li><strong>Backdoor</strong> - A hole or &quot;way in&quot; to a secure system deliberately
+<li><strong>Backdoor</strong> - A hole or “way in” to a secure system deliberately
 placed, usually by developers</li>
 <li><strong>[Big | Little]-endian</strong> - Whether the most significant bit is at
 the lowest (Big-endian) or highest (little-endian) address.</li>
 <li><strong>Daemon</strong> - A process that runs in the background</li>
 <li><strong>Fork bomb</strong> - A program which creates two versions of itself upon
 startup, growing exponentially until you run out of memory</li>
-<li><strong>Partition</strong> - &quot;The creation of one or more regions on a hard disk
+<li><strong>Partition</strong> - “The creation of one or more regions on a hard disk
 or other secondary storage, so that an operating system can manage
-information in each region separately.&quot;</li>
+information in each region separately.”</li>
 </ul>
 
 
@@ -317,12 +246,12 @@ systems</li>
 <h2>Work Culture Words</h2>
 
 <ul class="build simple">
-<li><strong>Astroturfing</strong> - &quot;The use of paid shills to create the impression
-of a popular movement&quot;</li>
-<li><strong>Bikeshedding</strong> - &quot;Technical disputes over minor, marginal issues
-conducted while more serious ones are being overlooked&quot;</li>
+<li><strong>Astroturfing</strong> - “The use of paid shills to create the impression
+of a popular movement”</li>
+<li><strong>Bikeshedding</strong> - “Technical disputes over minor, marginal issues
+conducted while more serious ones are being overlooked”</li>
 <li><strong>Capture the Flag (CTF)</strong> - A contest in which participants try to
-hack into a system to retrieve a &quot;flag&quot; (on purpose)</li>
+hack into a system to retrieve a “flag” (on purpose)</li>
 <li><strong>Code monkey</strong> - Passionless code producer</li>
 <li><strong>Copyleft - GPL</strong> - The GNU General Public License</li>
 </ul>
@@ -341,6 +270,8 @@ hack into a system to retrieve a &quot;flag&quot; (on purpose)</li>
 <li><strong>Grok</strong> - To understand something all the way through, or very well</li>
 <li><strong>Halt and Catch Fire</strong> - Machine code instruction that causes
 meaningful operation to stop</li>
+<li><strong>Heisenbug</strong> - A bug that only appears sometimes, intended to drive
+developers insane</li>
 </ul>
 
 
@@ -352,8 +283,6 @@ meaningful operation to stop</li>
 <h2>Work Culture Words</h2>
 
 <ul class="build simple">
-<li><strong>Heisenbug</strong> - A bug that only appears sometimes, intended to drive
-developers insane</li>
 <li><strong>Idempotent</strong> - An element that acts the same if used once as when used
 multiple times</li>
 <li><strong>Lorem ipsum</strong> - Paragraph text used as a placeholder</li>
@@ -373,11 +302,14 @@ readable</li>
 
 <h2>Books</h2>
 
-<ul class="build simple">
+<div class="build figure align-center">
+<a class="reference internal image-reference" href="static/hackers-movie.gif"><img alt="static/hackers-movie.gif" src="static/hackers-movie.gif" style="width: 400px;" /></a>
+</div>
+<ul class="simple">
 <li><a class="reference external" href="https://www.youtube.com/watch?v=4U9MI0u2VIE">Hackers clip</a></li>
 <li><strong>The Dragon Book</strong> - Compilers: Principles, Techniques, and Tools
 by Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman.</li>
-<li><strong>Pink Shirt Book</strong> - Programmers Guide to the IBM PC by &quot;The Peter Norton&quot;</li>
+<li><strong>Pink Shirt Book</strong> - Programmers Guide to the IBM PC by “The Peter Norton”</li>
 <li><strong>GEB</strong> - Godel, Escher, Bach by Douglas Hofstadter</li>
 <li><strong>The Devil Book (aka Unix Bible)</strong> -  The Design and Implementation
 of the 4.3BSD Unix Operating System by Samuel J. Leffler, Marshall Kirk
@@ -413,9 +345,9 @@ Computer System Evaluation Criteria</li>
 <li><a class="reference external" href="http://catb.org/jargon/html/A/all-your-base-are-belong-to-us.html">All your base are belong to us</a> - A poor Japanese to English translation in the opening scenes of Zero Wing</li>
 <li><a class="reference external" href="http://catb.org/jargon/html/magic-story.html">The magic switch</a></li>
 <li><a class="reference external" href="http://bash.org/?244321">hunter2</a></li>
-<li><a class="reference external" href="http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags">Hackers (1995)</a> - &quot;Should have been titled Crackers, because cracking is
-what the movie was about. It's understandable that they didn't however;
-titles redolent of snack food are probably a tough sell in Hollywood.&quot;</li>
+<li><a class="reference external" href="http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags">Hackers (1995)</a> - “Should have been titled Crackers, because cracking is
+what the movie was about. It’s understandable that they didn’t however;
+titles redolent of snack food are probably a tough sell in Hollywood.”</li>
 <li><a class="reference external" href="http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags">This StackOverflow post</a></li>
 <li>The Evil Bit (<a class="reference external" href="https://tools.ietf.org/html/rfc3514">RFC 3514</a>)</li>
 </ul>

@@ -9,26 +9,6 @@ http://slides.lucywyman.me/linux-jargon.html
 	This talk will be your guide, cultural and technical.
 	Rest easy, gentle n00b, and come along for the ride.
 
-:code:`$ whoami`
-----------------
-
-.. rst-class:: build
-
-    .. figure:: static/programmer-valentine.gif
-        :align: center
-        :height: 300px
-
-Lucy Wyman
-
-Software Engineer - `Bolt`_
-
-`Puppet`_
-
-`Source <https://www.reddit.com/r/gifs/comments/5tyymj/programmer_valentain_day/>`_
-
-.. _Puppet: https://puppet.com
-.. _Bolt: https://github.com/puppetlabs/bolt
-
 Hacker
 ------
 
@@ -46,15 +26,10 @@ Conversational Acronyms
 
 * **AFAIK** - as far as I know
 * **AFK** - away from keyboard
-* **BDFL** - `Benevolent Dictator for Life`_
-* **BOFH** - `Bastard Operator from Hell`_
 * **IIRC** - if I recall correctly
 * **IMHO** - in my humble opinion
-* **IRC** - internet relay chat
 * **TLA** - three letter acronym
 * **YMMV** - your mileage may vary
-
-.. _Bastard Operator from Hell: http://bofh.bjash.com/
 
 Technical Acronyms
 ------------------
@@ -68,20 +43,19 @@ Technical Acronyms
 * **DHCP** - Dynamic Host Control Protocol
 * **DNS** - Domain Name System
 * **EMACS** - Editing MACroS - inferior text editor
-* **EO[f | l | d | m]** - End of [file | line | day | message]
+* **EO[F | L | D | M]** - End of [file | line | day | message]
 
 .. nextslide::
 
 .. rst-class:: build
 
 * **FIFO** - First In First Out
-* **FIXME/TODO** - (Highlighted) note to fix something
 * **GCC** - Gnu Compiler Collection
 * **GNU** - Gnu's Not Unix
 * **GUI** - Graphical User Interface
 * **INTERCAL** - Compiler Language With No Pronounceable Acronym
 * **ISP** - Internet Service Provider
-* **[K | M ]IPS** - [Kilo | Mega]Instructions Per Second
+* **[K | M]IPS** - [Kilo | Mega] Instructions Per Second
 
 .. nextslide::
 
@@ -90,9 +64,9 @@ Technical Acronyms
 * **MOTD** - Message of the Day
 * `RTFM`_ - Read the cussing manual
 * **TTY** - Teletype terminal
-* **Vim** - Vi iMproved, superior text editor
+* **VIM** - Vi iMproved, superior text editor
 * **WYSIWYG** - What you see is what you get
-* **yaourt** - Yet AnOther User Repository Tool. CLI for pacman,
+* **YAOURT** - Yet AnOther User Repository Tool. CLI for pacman,
   arch linux package manager
 
 Security Acronyms
@@ -111,47 +85,6 @@ Security Acronyms
 .. _Public key cryptosystem: https://en.wikipedia.org/wiki/RSA_(cryptosystem)
 .. _Secure Hash Algorithm: https://en.wikipedia.org/wiki/Secure_Hash_Algorithm
 .. _Diffie-Hellman: https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange
-
-Utilities: Must haves
----------------------
-
-.. rst-class:: build
-
-* man
-* ls
-* cd
-* less
-* cat
-* grep
-* find
-* cowsay
-
-Utilities: You probably already know
-------------------------------------
-
-.. rst-class:: build
-
-* alsamixer
-* tree
-* htop
-* curl/wget
-* wc
-* cal
-* tmux
-* xargs
-* rsync/scp
-
-Utilities: Out there
---------------------
-
-.. rst-class:: build
-
-* rtorrent
-* gparted
-* mdadm
-* lshw
-* indent
-* apropos
 
 Directories
 -----------
@@ -228,13 +161,13 @@ Work Culture Words
 * **Grok** - To understand something all the way through, or very well
 * **Halt and Catch Fire** - Machine code instruction that causes
   meaningful operation to stop 
+* **Heisenbug** - A bug that only appears sometimes, intended to drive 
+  developers insane
 
 .. nextslide::
 
 .. rst-class:: build
 
-* **Heisenbug** - A bug that only appears sometimes, intended to drive 
-  developers insane
 * **Idempotent** - An element that acts the same if used once as when used
   multiple times
 * **Lorem ipsum** - Paragraph text used as a placeholder
@@ -243,23 +176,8 @@ Work Culture Words
 * **Syntactic sugar** - Features added to a language to make it more human
   readable
 * `XKCD mouse`_ 
+* **Yak shaving** A task that leads you to perform another related task and so on, and so on — all distracting you from your original goal.
 * **Zero day** - An undisclosed vulnerability that can be exploited
-
-Books
------
-
-.. rst-class:: build
-
-* `Hackers clip`_
-* **The Dragon Book** - Compilers: Principles, Techniques, and Tools
-  by Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman.
-* **Pink Shirt Book** - Programmers Guide to the IBM PC by "The Peter Norton"
-* **GEB** - Godel, Escher, Bach by Douglas Hofstadter
-* **The Devil Book (aka Unix Bible)** -  The Design and Implementation
-  of the 4.3BSD Unix Operating System by Samuel J. Leffler, Marshall Kirk
-  McKusick, Michael J. Karels and John S. Quarterman.
-* **Ugly Red Book** -  Trusted Network Interpretation of the Trusted
-  Computer System Evaluation Criteria
 
 Punctuation
 -----------
